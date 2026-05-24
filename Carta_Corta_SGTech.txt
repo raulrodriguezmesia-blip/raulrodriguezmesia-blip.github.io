@@ -1,0 +1,22 @@
+Asunto: Candidatura - Desarrollador Java Junior - Raul Rodriguez
+
+Estimado Equipo de SG Tech:
+
+Me postulo como Desarrollador Java Junior para apoyar sus proyectos de transformación digital.
+
+Mi portafolio (github.com/raulrodriguezmesia-blip/java-junior-portfolio) incluye:
+- Aplicación CRUD completa en consola
+- 19 tests unitarios (JUnit 5, 80% cobertura)
+- Persistencia en JSON/TXT/CSV
+- Consumo de APIs REST (HttpClient)
+- Stack: Java 11, Maven, Git
+
+Experiencia en sistemas empresariales (MARVICOM) optimizando procesos logísticos.
+
+Disponibilidad inmediata (remoto/near-shore).
+
+Adjunto CV. Quedo atento.
+
+Raul Rodriguez Mesia
++51 966 105 289
+github.com/raulrodriguezmesia-blip

@@ -1,0 +1,26 @@
+Para: talent@primeit.es
+Asunto: Candidatura - Desarrollador Java Backend - Raul Rodriguez Mesia
+
+Cuerpo del email:
+
+Buenos dias,
+
+Me dirijo a ustedes para presentar mi candidatura para formar parte de su equipo de desarrollo de software.
+
+Adjunto encontrara mi Curriculum Vitae y carta de presentacion.
+
+Soy Ingeniero en Informatica con mas de 5 anos de experiencia en desarrollo Java-backend, especializado en Spring Boot, Hibernate/JPA y APIs RESTful. Tengo disponibilidad inmediata y estoy abierto a modalidad remota, nearshore o presencial.
+
+Quedo a su disposicion para ampliar cualquier informacion.
+
+Saludos cordiales,
+
+Raul Rodriguez Mesia
+Telefono: +51 966 105 289
+Email: raulrodriguezmesia@gmail.com
+GitHub: https://github.com/raulrodriguezmesia-blip
+
+---
+Archivos adjuntos:
+- CV_RaulRodriguezMesia_PrimeIT.doc
+- Carta_Presentacion_PrimeIT.txt

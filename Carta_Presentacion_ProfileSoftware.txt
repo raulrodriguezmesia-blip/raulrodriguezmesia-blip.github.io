@@ -1,0 +1,42 @@
+Raúl Rodríguez Mesia
+Ingeniero en Informática | Desarrollador Java Backend
+Perú - Tumbes
+Teléfono: +51 966 105 289 | Celular: +51 920 157 695
+Email: raulrodriguezmesia@gmail.com
+LinkedIn: https://www.linkedin.com/in/raul-rodriguez-mesia/
+GitHub: https://github.com/raulrodriguezmesia-blip
+
+Tumbes - Peru, 24 de abril de 2026
+
+A la atención del Departamento de Recursos Humanos
+Profile Software Services
+
+Asunto: Postulación para posición de Desarrollador Java Backend
+
+Estimados señores,
+
+Me dirijo a ustedes para expresar mi interés en formar parte del equipo de desarrollo de Profile Software Services. Como Ingeniero en Informática con más de 5 años de experiencia en el desarrollo de software empresarial, considero que mi perfil se alinea con los estándares de calidad y agilidad que caracterizan a su empresa.
+
+Mi especialización en el ecosistema Java, con enfoque actual en Spring Boot y microservicios, me permite diseñar e implementar APIs REST escalables y arquitecturas orientadas a servicios. A lo largo de mi trayectoria, he desarrollado soluciones para entidades gubernamentales y empresas logísticas, optimizando procesos críticos y gestionando flujos de datos complejos.
+
+Mi experiencia laboral incluye:
+
+- Desarrollo y mantenimiento de sistemas empresariales con Java y MySQL, resolviendo incidencias críticas bajo presión
+- Implementación de APIs REST con Spring Boot, aplicando principios de microservicios y documentación Swagger/OpenAPI
+- Optimización de consultas SQL y manejo eficiente de grandes volúmenes de datos
+- Trabajo colaborativo en equipos multidisciplinarios bajo metodologías ágiles (Scrum)
+
+Además, ofrezco disponibilidad inmediata en modalidad remota, nearshore o presencial, adaptándome a las necesidades de sus clientes internacionales. Mi dominio del inglés técnico me permite leer documentación y colaborar en entornos multiculturales.
+
+Adjunto encontrarán mi CV con detalles adicionales sobre mi formación académica, proyectos personales y certificaciones en progreso (Oracle Certified Associate y AWS Cloud Practitioner).
+
+Quedo a su entera disposición para una entrevista técnica o cualquier proceso de selección que consideren pertinente. Agradezco de antemano su tiempo y consideración.
+
+Atentamente,
+
+Raúl Rodríguez Mesia
+Ingeniero en Informática
+Celular: +51 920 157 695
+Email: raulrodriguezmesia@gmail.com
+GitHub: https://github.com/raulrodriguezmesia-blip
+LinkedIn: https://www.linkedin.com/in/raul-rodriguez-mesia/

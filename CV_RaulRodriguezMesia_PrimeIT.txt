@@ -1,0 +1,113 @@
+RAUL RODRIGUEZ MESIA
+Ingeniero en Informatica | Desarrollador Java Backend
+Peru - Tumbes
+Telefono: +51 966 105 289 | Celular: +51 920 157 695
+Email: raulrodriguezmesia@gmail.com
+GitHub: https://github.com/raulrodriguezmesia-blip
+LinkedIn: https://www.linkedin.com/in/raul-rodriguez-mesia/
+
+DISPONIBLE: Inmediata | Modalidad: Remoto | Nearshore | Presencial
+
+PERFIL PROFESIONAL
+Ingeniero en Informatica con mas de 5 anos de trayectoria en desarrollo de software empresarial y arquitecturas escalables. Especialista en el ecosistema Java, con enfoque actual en el desarrollo de microservicios mediante Spring Boot y el diseno de APIs REST. Experto en logica algoritmica, optimizacion de procesos productivos y gestion de flujos de datos complejos. Solida experiencia en la integracion de bases de datos relacionales y herramientas modernas de desarrollo. Capacidad para trabajar en equipo en proyectos internacionales y bajo presion con deadlines ajustados.
+
+HABILIDADES TECNICAS
+Backend: Java (Experto), Spring Boot, Spring MVC, Spring Security, Spring Data JPA, RESTful APIs, Hibernate/JPA, JUnit 5, Mockito
+Lenguajes: Python 3.12, PHP, JavaScript (ES6+), SQL, HTML/CSS
+Bases de Datos: MySQL, PostgreSQL, Oracle (Conceptos), modelado y normalizacion
+Cloud y DevOps: Docker, Docker Compose, AWS (EC2, S3), CI/CD basico
+Herramientas: Git/GitHub, IntelliJ IDEA, Eclipse, VS Code, Apache2, XAMPP, Postman
+Otros: JSON, JWT, OAuth 2.0, Swagger/OpenAPI, Maven, Gradle, metodologias agiles, Scrum
+
+PROYECTOS PERSONALES (GITHUB)
+Repositorio: https://github.com/raulrodriguezmesia-blip
+
+1. Sistema Alcaldia (Alcaldia) - PROYECTO DESTACADO
+   - Sistema de gestion de empleados con seguridad avanzada
+   - Control de acceso a pantalla principal con autenticacion
+   - Sistema de creacion de Backup y contingencia de datos
+   - Encriptacion de contrasenas (SHA-256 / BCrypt)
+   - 8 commits activos
+   - Tecnologia: Java, JDBC, MySQL, Eclipse IDE
+
+2. Spring Boot API REST (springboot)
+   - Desarrollo de APIs REST con Spring Boot
+   - Implementacion de controladores RESTful
+   - Gestion de dependencias con Maven
+   - Tecnologia: Java, Spring Boot, Maven
+
+3. Sistema de Excepciones (excepciones)
+   - Manejo de excepciones en Java y Spring Boot
+   - Distincion entre excepciones checked y unchecked
+   - Gestion de errores en tiempo de ejecucion
+   - Tecnologia: Java, Spring Boot
+
+4. Ferreteria JPA-Hibernate (ferreteria)
+   - Aplicacion web con JPA-Hibernate
+   - Consultas a base de datos relacionales
+   - Gestion de entidades y relaciones
+   - Tecnologia: Java, JPA, Hibernate, MySQL
+
+PROYECTOS DESTACADOS
+Sistema de Inventario Policial (Java + MySQL)
+- Diseno y desarrollo de sistema de control de inventario para centro policial
+- Implementacion de modulos de registro y consulta
+- Optimizacion de consultas SQL reduciendo tiempos de respuesta en 30%
+- Tecnologia: Java SE, MySQL, JDBC
+
+Plataforma Web Infocentro (PHP + MySQL)
+- Desarrollo de modulo web para gestion de prestamos y catalogos
+- Digitalizacion de mas de 500 registros fisicos
+- Tecnologia: PHP, JavaScript, MySQL, HTML/CSS
+
+Sistema MARVICOM (Soporte y Optimizacion)
+- Soporte y mantenimiento del sistema empresarial de logistica
+- Analisis y optimizacion de flujos de datos para rutas y envios
+- Gestion de modulos aduaneros y fiscales
+- Logros: Atencion a mas de 100 usuarios internos
+
+EXPERIENCIA PROFESIONAL
+AREQUIPA EXPRESO MARVISUR EIRL | PERU
+Soporte Operativo y Logistica | 2020 - 2025
+- Soporte tecnico y mantenimiento del sistema empresarial MARVICOM
+- Analisis de flujos logisticos y gestion de datos criticos mediante sistemas aduaneros y financieros
+- Optimizacion de procesos operativos mediante la aplicacion de logica computacional en incidencias
+- Atencion a mas de 100 usuarios internos
+- Trabajo colaborativo en equipo multidisciplinario
+
+CJ CONEXIONES C.A. (AGENTE MOVISTAR) | VENEZUELA
+Asistente de Soporte IT | 2016
+- Soporte tecnico de hardware y administracion de sistemas de ventas para telecomunicaciones
+- Configuracion y mantenimiento de equipos de red
+
+CENTRO DE COORDINACION POLICIAL No. 03 POLIGUARICO | VENEZUELA
+Desarrollador de Software | 2015
+- Diseno y desarrollo de sistema de control de inventario utilizando Java y MySQL
+- Automatizacion de registros, reduciendo tiempos de respuesta administrativa en un 30%
+- Optimizacion de consultas SQL para manejo eficiente de grandes volumenes de datos
+
+INFOCENTRO (BIBLIOTECA ADOLFO ANTONIO MACHADO) | VENEZUELA
+Desarrollador Web | 2014
+- Desarrollo de modulos web funcionales utilizando PHP, JavaScript y MySQL
+- Digitalizacion y migracion de registros fisicos a plataformas digitales
+
+FORMACION ACADEMICA
+Instituto Universitario de Tecnologia de los Llanos (IUTLL) | Venezuela
+Ingeniero en Informatica | 2017
+
+FORMACION COMPLEMENTARIA
+- Especializacion en Java Spring Boot: Microservicios y APIs RESTful
+- Actualizacion Tecnica: Python 3.12 (56h)
+- Programacion Avanzada en Java (56h)
+- Organizador del 8vo Congreso Nacional de Software Libre (CNSL)
+- Proyecto Socio Tecnologico | Infocentro (250h)
+
+CERTIFICACIONES (EN PROGRESO)
+- Oracle Certified Associate, Java SE
+- AWS Certified Cloud Practitioner
+
+IDIOMAS
+- Espanol: Nativo
+- Ingles: Intermedio (lectura tecnica)
+
+REFERENCIAS: Disponibles bajo solicitud

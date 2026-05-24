@@ -1,0 +1,125 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">
+<head><meta charset="utf-8"><title>CV Raul Rodriguez Mesia - PrimeIT</title>
+<style>
+body { font-family: Arial, sans-serif; font-size: 11pt; margin: 1in; }
+h1 { font-size: 16pt; font-weight: bold; margin-bottom: 2pt; }
+h2 { font-size: 12pt; font-weight: bold; margin-top: 12pt; margin-bottom: 6pt; border-bottom: 1px solid #000; }
+h3 { font-size: 11pt; font-weight: bold; margin-bottom: 2pt; }
+p { margin-bottom: 6pt; line-height: 1.2; }
+ul { margin-top: 2pt; margin-bottom: 6pt; }
+li { margin-bottom: 2pt; line-height: 1.2; }
+.highlight { background-color: #e6f2ff; padding: 4pt; }
+</style></head>
+<body>
+
+<h1>RAUL RODRIGUEZ MESIA</h1>
+<p><strong>Ingeniero en Informatica | Desarrollador Java Backend</strong><br>
+Peru - Tumbes<br>
+Telefono: +51 966 105 289 | Celular: +51 920 157 695<br>
+Email: raulrodriguezmesia@gmail.com<br>
+GitHub: <a href="https://github.com/raulrodriguezmesia-blip">https://github.com/raulrodriguezmesia-blip</a><br>
+LinkedIn: <a href="https://www.linkedin.com/in/raul-rodriguez-mesia/">https://www.linkedin.com/in/raul-rodriguez-mesia/</a></p>
+<p class="highlight"><strong>DISPONIBLE:</strong> Inmediata | <strong>Modalidad:</strong> Remoto | Nearshore | Presencial</p>
+
+<h2>PERFIL PROFESIONAL</h2>
+<p>Ingeniero en Informatica con mas de 5 anos de trayectoria en desarrollo de software empresarial y arquitecturas escalables. Especialista en el ecosistema Java, con enfoque actual en el desarrollo de microservicios mediante Spring Boot y el diseno de APIs REST. Experto en logica algoritmica, optimizacion de procesos productivos y gestion de flujos de datos complejos. Capacidad para trabajar en equipo en proyectos internacionales y bajo presion con deadlines ajustados.</p>
+
+<h2>HABILIDADES TECNICAS</h2>
+<p><strong>Backend:</strong> Java (Experto), Spring Boot, Spring MVC, Spring Security, Spring Data JPA, RESTful APIs, Hibernate/JPA, JUnit 5, Mockito<br>
+<strong>Lenguajes:</strong> Python 3.12, PHP, JavaScript (ES6+), SQL, HTML/CSS<br>
+<strong>Bases de Datos:</strong> MySQL, PostgreSQL, Oracle (Conceptos), modelado y normalizacion<br>
+<strong>Cloud y DevOps:</strong> Docker, Docker Compose, AWS (EC2, S3), CI/CD basico<br>
+<strong>Herramientas:</strong> Git/GitHub, IntelliJ IDEA, Eclipse, VS Code, Apache2, XAMPP, Postman<br>
+<strong>Otros:</strong> JSON, JWT, OAuth 2.0, Swagger/OpenAPI, Maven, Gradle, metodologias agiles, Scrum</p>
+
+<h2>PROYECTOS PERSONALES (GITHUB)</h2>
+<p>Repositorio: <a href="https://github.com/raulrodriguezmesia-blip">https://github.com/raulrodriguezmesia-blip</a></p>
+
+<h3>1. Sistema Alcaldia (Alcaldia) - PROYECTO DESTACADO</h3>
+<ul>
+<li>Sistema de gestion de empleados con seguridad avanzada</li>
+<li>Control de acceso a pantalla principal con autenticacion</li>
+<li>Sistema de creacion de Backup y contingencia de datos</li>
+<li>Encriptacion de contrasenas (SHA-256 / BCrypt)</li>
+<li>8 commits activos</li>
+<li><strong>Tecnologia:</strong> Java, JDBC, MySQL, Eclipse IDE</li>
+</ul>
+
+<h3>2. Spring Boot API REST (springboot)</h3>
+<ul>
+<li>Desarrollo de APIs REST con Spring Boot</li>
+<li>Implementacion de controladores RESTful</li>
+<li>Gestion de dependencias con Maven</li>
+<li><strong>Tecnologia:</strong> Java, Spring Boot, Maven</li>
+</ul>
+
+<h3>3. Ferreteria JPA-Hibernate (ferreteria)</h3>
+<ul>
+<li>Aplicacion web con JPA-Hibernate</li>
+<li>Consultas a base de datos relacionales</li>
+<li><strong>Tecnologia:</strong> Java, JPA, Hibernate, MySQL</li>
+</ul>
+
+<h2>EXPERIENCIA PROFESIONAL</h2>
+
+<h3>AREQUIPA EXPRESO MARVISUR EIRL | PERU</h3>
+<p><em>Soporte Operativo y Logistica | 2020 - 2025</em></p>
+<ul>
+<li>Soporte tecnico y mantenimiento del sistema empresarial MARVICOM</li>
+<li>Analisis de flujos logisticos y gestion de datos criticos mediante sistemas aduaneros y financieros</li>
+<li>Optimizacion de procesos operativos mediante la aplicacion de logica computacional en incidencias</li>
+<li>Atencion a mas de 100 usuarios internos</li>
+<li>Trabajo colaborativo en equipo multidisciplinario</li>
+</ul>
+
+<h3>CJ CONEXIONES C.A. (AGENTE MOVISTAR) | VENEZUELA</h3>
+<p><em>Asistente de Soporte IT | 2016</em></p>
+<ul>
+<li>Soporte tecnico de hardware y administracion de sistemas de ventas para telecomunicaciones</li>
+<li>Configuracion y mantenimiento de equipos de red</li>
+</ul>
+
+<h3>CENTRO DE COORDINACION POLICIAL No. 03 POLIGUARICO | VENEZUELA</h3>
+<p><em>Desarrollador de Software | 2015</em></p>
+<ul>
+<li>Diseno y desarrollo de sistema de control de inventario utilizando Java y MySQL</li>
+<li>Automatizacion de registros, reduciendo tiempos de respuesta administrativa en un 30%</li>
+<li>Optimizacion de consultas SQL para manejo eficiente de grandes volumenes de datos</li>
+</ul>
+
+<h3>INFOCENTRO (BIBLIOTECA ADOLFO ANTONIO MACHADO) | VENEZUELA</h3>
+<p><em>Desarrollador Web | 2014</em></p>
+<ul>
+<li>Desarrollo de modulos web funcionales utilizando PHP, JavaScript y MySQL</li>
+<li>Digitalizacion y migracion de registros fisicos a plataformas digitales</li>
+</ul>
+
+<h2>FORMACION ACADEMICA</h2>
+<p><strong>Instituto Universitario de Tecnologia de los Llanos (IUTLL)</strong> | Venezuela<br>
+Ingeniero en Informatica | 2017</p>
+
+<h2>FORMACION COMPLEMENTARIA</h2>
+<ul>
+<li>Especializacion en Java Spring Boot: Microservicios y APIs RESTful</li>
+<li>Actualizacion Tecnica: Python 3.12 (56h)</li>
+<li>Programacion Avanzada en Java (56h)</li>
+<li>Organizador del 8vo Congreso Nacional de Software Libre (CNSL)</li>
+<li>Proyecto Socio Tecnologico | Infocentro (250h)</li>
+</ul>
+
+<h2>CERTIFICACIONES (EN PROGRESO)</h2>
+<ul>
+<li>Oracle Certified Associate, Java SE</li>
+<li>AWS Certified Cloud Practitioner</li>
+</ul>
+
+<h2>IDIOMAS</h2>
+<ul>
+<li>Espanol: Nativo</li>
+<li>Ingles: Intermedio (lectura tecnica)</li>
+</ul>
+
+<h2>REFERENCIAS</h2>
+<p>Disponibles bajo solicitud</p>
+
+</body></html>

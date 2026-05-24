@@ -1,0 +1,72 @@
+RAUL RODRIGUEZ MESIA
+Desarrollador Java Backend
+Tumbes, Perú | +51 966 105 289
+raulrodriguezmesia@gmail.com
+GitHub: github.com/raulrodriguezmesia-blip
+LinkedIn: linkedin.com/in/raul-rodriguez-mesia/
+
+04/05/2026
+
+SPACE BRANDS
+Equipo de Selección
+
+
+**Asunto: Candidatura a Desarrollador Java - Apoyo en Transformación Digital**
+
+Estimado Equipo de Selección de SPACE BRANDS:
+
+Me dirijo a ustedes para expresar mi interés en formar parte de SPACE BRANDS como Desarrollador Java. 
+He seguido con atención el trabajo de su empresa en transformación digital y consultoría IT, 
+con presencia nacional e internacional, y me entusiasma la posibilidad de contribuir a proyectos 
+que impulsen la innovación tecnológica en organizaciones.
+
+Como Ingeniero en Informática con enfoque en desarrollo backend Java, he construido un portafolio 
+que refleja mi compromiso con la calidad y la mejora continua:
+
+**Proyecto Destacado - Java Developer Portfolio**
+GitHub: github.com/raulrodriguezmesia-blip/java-portfolio
+
+• Aplicación consola CRUD completa con validaciones y persistencia multi-formato (JSON, TXT, CSV)
+• Consumo de APIs REST externas usando HttpClient nativo de Java 11
+• Testing robusto: 19 tests unitarios con JUnit 5 (80% cobertura)
+• Arquitectura en capas y principios SOLID para código mantenible
+• Stack: Java 11, Maven, Jackson, Git, JUnit 5
+
+Aprendizaje AWS - mayo 2026:
+Certificaciones en Progreso: AWS Cloud Practitioner Oracle Certified Associate
+Experiencia Practica Reciente:
+Desplegado CV profesional en Amazon S3 con web hosting
+https://cv-raul-rodriguez-mesa-2026.s3.us-east-1.amazonaws.com/index.html
+Creado buckets S3 con politicas de acceso publico
+Desarrollados simuladores interactivos AWS (Fases 1, 2, 3)
+Implementadas arquitecturas serverless: Lambda, DynamoDB, API Gateway, RDS
+Configurados SQS, SNS, EventBridge, ECS/Fargate
+Aplicadas mejores practicas IAM y seguridad S3
+Proyectos AWS: FA SE 1 (EC2,S3,IAM,VPC) | FA SE 2 (Lambda,DynamoDB,RDS) | FA SE 3 (SQS,SNS,EventBridge,ECS)
+PROYECTOS PERSONALES
+
+Mi experiencia previa en desarrollo de sistemas empresariales (MARVICOM para gestión logística) 
+me ha permitido trabajar directamente con usuarios finales, optimizar procesos operativos y 
+entregar soluciones que generan valor real. Entiendo que en SG Tech cada cliente tiene 
+necesidades únicas, y valoro la adaptabilidad y el compromiso con resultados duraderos.
+
+Me interesa particularmente su enfoque en:
+• Consultoría estratégica y mejora de procesos — mi experiencia en optimización de flujos logísticos es directamente aplicable
+• Innovación tecnológica — mantengo aprendizaje continuo en Java, testing y buenas prácticas
+• Atención a diversos sectores — he trabajado en retail, logística, seguridad pública
+
+Pongo a disposición mis habilidades en Java Core, persistencia de datos, APIs REST y testing 
+automatizado para apoyar los proyectos de transformación digital de sus clientes. 
+Mi disponibilidad es inmediata para modalidad remota, near-shore o presencial según requerimientos.
+
+Agradezco su consideración y estaré atento a la oportunidad de conversar sobre cómo puedo 
+contribuir a SPACE BRANDS.
+
+Atentamente,
+
+**Raul Rodriguez Mesia**
+
+---
+Anexos:
+• GitHub: https://github.com/raulrodriguezmesia-blip
+• LinkedIn: linkedin.com/in/raul-rodriguez-mesia
