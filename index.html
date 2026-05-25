@@ -1,72 +1,129 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portafolio Futurista</title>
-<link rel="stylesheet" href="styles.css">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://formspree.io; script-src 'self' 'unsafe-inline' https://formspree.io; worker-src 'self' blob:; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio Futurista</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
 <header class="hero">
-<div class="hero-content">
-<h1>Raul Rodriguez Mesia</h1>
-<p>Ingeniero en Informática &amp; Desarrollador Full Stack</p>
-<a href="#projects" class="cta-button">Ver Proyectos</a>
-</div>
+  <div class="hero-content">
+    <h1>Raul Rodriguez Mesia</h1>
+    <p>Ingeniero en Informática & Desarrollador Full Stack</p>
+    <a href="#projects" class="cta-button">Ver Proyectos</a>
+  </div>
+  <div class="hero-image">
+    <img src="assets/img1.jpg" alt="Tecnología futurista">
+  </div>
 </header>
 
-<section id="about" class="section">
-<h2>Sobre Mí</h2>
-<div class="about-content">
-<p>Desarrollo de aplicaciones backend, APIs REST y sistemas de gestión con Java, Spring Boot y tecnologías web.</p>
-<div class="skills">
-<span class="skill-tag">Java</span>
-<span class="skill-tag">Spring Boot</span>
-<span class="skill-tag">JavaScript</span>
-<span class="skill-tag">HTML/CSS</span>
-<span class="skill-tag">SQL</span>
-</div>
-</div>
-</section>
+<!-- SOLUCIÓN ACCESIBILIDAD: Etiqueta <main> añadida como landmark principal -->
+<main>
+  <section id="about" class="section">
+    <h2>Sobre Mí</h2>
+    <div class="about-content">
+      <img src="assets/img2.jpg" alt="Foto de Raul" class="about-img">
+      <div class="about-text">
+        <p>Desarrollo de aplicaciones backend, APIs REST y sistemas de gestión con Java, Spring Boot y tecnologías web.</p>
+        <div class="skills">
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">Spring Boot</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">HTML/CSS</span>
+          <span class="skill-tag">SQL</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="projects" class="section">
-<h2>Proyectos</h2>
-<div class="projects-grid">
-<div class="project-card">
-<h3>Sistema de Control de Acceso</h3>
-<p>Aplicación Java con Spring Boot para gestión de acceso y backups.</p>
-<a href="#" class="project-link">Ver Detalle</a>
-</div>
-<div class="project-card">
-<h3>Sistema de Ferretería</h3>
-<p>Gestión de inventario con JPA/Hibernate y interfaz web.</p>
-<a href="#" class="project-link">Ver Detalle</a>
-</div>
-<div class="project-card">
-<h3>API REST con Spring Boot</h3>
-<p>API RESTful completa con documentación Swagger.</p>
-<a href="#" class="project-link">Ver Detalle</a>
-</div>
-<div class="project-card">
-<h3>CRUD en Consola</h3>
-<p>Proyecto Java Junior para aprender fundamentos de POO.</p>
-<a href="#" class="project-link">Ver Detalle</a>
-</div>
-</div>
-</section>
+  <section id="projects" class="section">
+    <h2>Proyectos</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="assets/img3.jpg" alt="Sistema de Control de Acceso" class="project-img">
+        <h3>Sistema de Control de Acceso</h3>
+        <p>Aplicación Java con Spring Boot para gestión de acceso y backups.</p>
+        <a href="#" class="project-link">Ver Detalle</a>
+      </div>
+      <div class="project-card">
+        <img src="assets/img1.jpg" alt="Sistema de Ferretería" class="project-img">
+        <h3>Sistema de Ferretería</h3>
+        <p>Gestión de inventario con JPA/Hibernate y interfaz web.</p>
+        <a href="#" class="project-link">Ver Detalle</a>
+      </div>
+      <div class="project-card">
+        <img src="assets/img2.jpg" alt="API REST con Spring Boot" class="project-img">
+        <h3>API REST con Spring Boot</h3>
+        <p>API RESTful completa con documentación Swagger.</p>
+        <a href="#" class="project-link">Ver Detalle</a>
+      </div>
+      <div class="project-card">
+        <img src="assets/img3.jpg" alt="CRUD en Consola" class="project-img">
+        <h3>CRUD en Consola</h3>
+        <p>Proyecto Java Junior para aprender fundamentos de POO.</p>
+        <a href="#" class="project-link">Ver Detalle</a>
+      </div>
+    </div>
+  </section>
 
-<section id="contact" class="section">
-<h2>Contacto</h2>
-<form id="contact-form">
-<input type="text" placeholder="Nombre" required>
-<input type="email" placeholder="Email" required>
-<textarea placeholder="Mensaje" required></textarea>
-<button type="submit">Enviar Mensaje</button>
-</form>
-</section>
+  <section id="contact" class="section">
+    <h2>Contacto</h2>
+    <form id="contact-form" action="https://formspree.io/f/TU_ID_DE_FORMSPREE" method="POST">
+      <input type="text" name="nombre" placeholder="Nombre" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+      <button type="submit">Enviar Mensaje</button>
+      <p id="form-status" style="margin-top: 1rem; min-height: 1.5em;"></p>
+    </form>
+  </section>
+</main>
 
 <footer>
-<p>&copy; 2026 Raul Rodriguez Mesia</p>
+  <p>&copy; 2026 Raul Rodriguez Mesia</p>
 </footer>
+
+<script>
+  const contactForm = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
+
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const form = e.target;
+    
+    status.textContent = 'Enviando...';
+    status.style.color = 'white';
+
+    fetch(form.action, {
+      method: form.method,
+      body: new FormData(form),
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        status.textContent = '¡Mensaje enviado! Gracias por contactarme.';
+        status.style.color = '#00ff00';
+        form.reset();
+      } else {
+        response.json().then(data => {
+          if (data.errors) {
+            status.textContent = data.errors.map(err => err.message).join(', ');
+          } else {
+            status.textContent = 'Oops! Hubo un problema al enviar.';
+          }
+          status.style.color = '#ff4444';
+        });
+      }
+    }).catch(error => {
+      status.textContent = 'Error de red. Intenta de nuevo.';
+      status.style.color = '#ff4444';
+      console.error('Error:', error);
+    });
+  });
+</script>
+
 </body>
 </html>
