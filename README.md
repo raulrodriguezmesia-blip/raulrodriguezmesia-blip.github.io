@@ -1,72 +1,61 @@
-# ¡Hola! Soy Raul Rodriguez Mesia
+# Raúl Rodriguez Mesia | Portafolio
 
-## ¿Quién soy?
-Ingeniero en Informática apasionado por el desarrollo de software, bases de datos y administración de sistemas. Me especializo en Java y Spring Boot, siempre buscando aprender nuevas tecnologías y contribuir a proyectos innovadores.
+Portafolio profesional estático para GitHub Pages.
 
-## ¡Haz clic aquí para ver mi perfil de LinkedIn!
-[Perfil de LinkedIn](https://www.linkedin.com/in/raul-rodriguez-mesia/)
+## Estructura actual
 
-## ¡A mundillo técnico
+```text
+.
+├── index.html
+├── styles.css
+├── script.js
+├── README.md
+└── Raul_Rodriguez_Mesia_CV.pdf
+```
 
-### ¡Lenguajes
-- **Java** - Intermedio/Avanzado
-- **SQL** - Intermedio
-- **HTML/CSS/JS** - Básico
+## Contenido incluido
 
-### ¡Frameworks y Tecnologías
-- **Spring Boot** - Desarrollo de APIs REST
-- **JPA/Hibernate** - Persistencia de datos
-- **Maven** - Gestión de dependencias
-- **Git** - Control de versiones
+- Página principal responsive y accesible.
+- Secciones: inicio, sobre mí, skills, proyectos, experiencia y contacto.
+- Filtro de proyectos por categoría.
+- Cambio de tema claro/oscuro.
+- Formulario de contacto con apertura de cliente de correo.
+- CV descargable.
 
-## ¡Proyectos Destacados
+## Personalización rápida
 
-### 1. ✨ Sistema de Control de Acceso - Alcaldia
-**Java** | [Ver repositorio](https://github.com/raulrodriguezmesia-blip/Alcaldia)
+Antes de publicar o compartir el portafolio, actualiza estos puntos:
 
-- Desarrollo de sistema de control de acceso a pantalla principal
-- Implementación de funcionalidad de creación de resaudol Backup
-- Arquitectura modular con separación de responsabilidades
+1. En `index.html`, cambia el correo de contacto:
 
-### 2. ⚙️ Sistema de Ferretería
-**Java + JPA/Hibernate** | [Ver repositorio](https://github.com/raulrodriguezmesia-blip/ferreteria)
+```html
+<form id="contact-form" class="contact-form" data-email="tu-email@dominio.com">
+```
 
-- Aplicación web para gestión de inventario
-- Consultas web optimizadas con JPA
-- Diseño de base de datos relacional
+por tu email real:
 
-### 3. ⏳ API REST con Spring Boot
-**Spring Boot** | [Ver repositorio](https://github.com/raulrodriguezmesia-blip/springboot)
+```html
+<form id="contact-form" class="contact-form" data-email="tu-correo@ejemplo.com">
+```
 
-- Desarrollo de APIs RESTful
-- Arquitectura RESTful (Representational State Transfer)
-- Manejo de peticiones y respuestas eficientes
+2. Reemplaza `Raul_Rodriguez_Mesia_CV.pdf` por tu CV actualizado si lo necesitas.
 
-### 4. ️ CRUD en Consola
-**Java** | [Ver repositorio](https://github.com/raulrodriguezmesia-blip/java-junior-portfolio)
+3. Añade más proyectos en la sección `#proyectos` usando la misma estructura de tarjetas.
 
-- Proyecto mínimo viable para desarrollador Java Junior
-- Implementación de CRUD en consola
-- Persistencia en archivos para aprendizajóbás básico
+## Ejecutar localmente
 
-### 5. ⏠ Excepciones en Java
-**Java + Spring Boot** | [Ver repositorio](https://github.com/raulrodriguezmesia-blip/excepciones)
+Abre `index.html` directamente en el navegador o ejecuta un servidor local:
 
-- Manejo de excepciones checked vs unchecked
-- Buenas prácticas en el manejo de errores
-- Implementación de mecanismos de validación
+```powershell
+python -m http.server 8000
+```
 
-## ¡Observación sobre Credenciales
-Los enlaces internos o credenciales no se comparten en repositorios públicos por razones de seguridad. Para proyectos sensibles, prefiero compartir información en archivos cifrados o mediante canales seguros.
+Luego abre:
 
-## ¡ logarithms
-- 10 repositorios públicos
-- 5 árboles acumuladas en proyectos
+```text
+http://localhost:8000
+```
 
-## ¡Contacto
-- **GitHub:** [raulrodriguezmesia-blip](https://github.com/raulrodriguezmesia-blip)
-- **LinkedIn:** [raul-rodriguez-mesia](https://www.linkedin.com/in/raul-rodriguez-mesia/)
+## Despliegue
 
----
-
-*"La programación no es solo escribir código, es resolver problemas creativamente."* 🚀
+Este repositorio está preparado para GitHub Pages desde la rama `main` usando la raíz del proyecto.

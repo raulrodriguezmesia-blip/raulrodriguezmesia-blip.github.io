@@ -1,129 +1,317 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="dark">
 <head>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://formspree.io; script-src 'self' 'unsafe-inline' https://formspree.io; worker-src 'self' blob:; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio Futurista</title>
+  <meta name="description" content="Portafolio profesional de Raúl Rodriguez Mesia: Ingeniero en Informática, desarrollador Java, Spring Boot y Full Stack.">
+  <meta name="keywords" content="Raúl Rodriguez Mesia, portafolio, Java, Spring Boot, Full Stack, Backend, DevOps">
+  <meta name="author" content="Raúl Rodriguez Mesia">
+  <meta property="og:title" content="Raúl Rodriguez Mesia | Portafolio">
+  <meta property="og:description" content="Portafolio profesional de desarrollo de software con proyectos en Java, Spring Boot, APIs REST y aplicaciones web.">
+  <meta property="og:type" content="website">
+  <title>Raúl Rodriguez Mesia | Portafolio</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Saltar al contenido principal</a>
 
-<header class="hero" role="banner" name="main-header">
-  <div class="hero-content">
-    <h1>Raul Rodriguez Mesia</h1>
-    <p>Ingeniero en Informática & Desarrollador Full Stack</p>
-    <a href="#projects" class="cta-button">Ver Proyectos</a>
-  </div>
-  <div class="hero-image">
-    <img src="assets/img1.jpg" alt="Tecnología futurista">
-  </div>
-</header>
+  <header class="site-header" data-reveal>
+    <nav class="nav container" aria-label="Navegación principal">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <span class="brand-mark">RR</span>
+        <span>Raúl Rodriguez</span>
+      </a>
 
-<!-- SOLUCIÓN ACCESIBILIDAD: Etiqueta <main> añadida como landmark principal -->
-<main role="main" name="main-content">
-  <section id="about" class="section" name="about-section">
-    <h2>Sobre Mí</h2>
-    <div class="about-content">
-      <img src="assets/img2.jpg" alt="Foto de Raul" class="about-img">
-      <div class="about-text">
-        <p>Desarrollo de aplicaciones backend, APIs REST y sistemas de gestión con Java, Spring Boot y tecnologías web.</p>
-        <div class="skills">
-          <span class="skill-tag">Java</span>
-          <span class="skill-tag">Spring Boot</span>
-          <span class="skill-tag">JavaScript</span>
-          <span class="skill-tag">HTML/CSS</span>
-          <span class="skill-tag">SQL</span>
+      <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-menu" id="nav-menu">
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#skills">Skills</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+
+      <button class="theme-toggle" type="button" aria-label="Cambiar tema">
+        <span class="theme-icon" aria-hidden="true">☾</span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero container" id="inicio">
+      <div class="hero-copy" data-reveal>
+        <p class="eyebrow">Ingeniero en Informática · Desarrollador Backend / Full Stack</p>
+        <h1>Construyo soluciones digitales sólidas, escalables y orientadas a resultados.</h1>
+        <p class="hero-text">
+          Especializado en Java, Spring Boot, APIs REST, bases de datos y desarrollo web.
+          Mi enfoque combina arquitectura limpia, código mantenible y una comunicación clara para convertir ideas en productos útiles.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#proyectos">Ver proyectos</a>
+          <a class="btn btn-secondary" href="Raul_Rodriguez_Mesia_CV.pdf" target="_blank" rel="noopener">Descargar CV</a>
+        </div>
+        <div class="hero-links" aria-label="Enlaces profesionales">
+          <a href="https://github.com/raulrodriguezmesia-blip" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/raul-rodriguez-mesia/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="#contacto">Contactar</a>
         </div>
       </div>
+
+      <div class="hero-visual" data-reveal aria-hidden="true">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="code-card">
+          <div class="code-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <pre><code>class Portfolio {
+  focus = "Java + Spring Boot";
+  stack = ["Backend", "APIs", "SQL", "Web"];
+  mindset = "Clean Code";
+
+  buildSolution(problem) {
+    return new ScalableSystem(problem);
+  }
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats container" aria-label="Resumen profesional" data-reveal>
+      <article>
+        <strong>+4</strong>
+        <span>Proyectos destacados</span>
+      </article>
+      <article>
+        <strong>Java</strong>
+        <span>Backend principal</span>
+      </article>
+      <article>
+        <strong>REST</strong>
+        <span>APIs y servicios</span>
+      </article>
+      <article>
+        <strong>SQL</strong>
+        <span>Datos relacionales</span>
+      </article>
+    </section>
+
+    <section class="section container" id="sobre-mi">
+      <div class="section-heading" data-reveal>
+        <p class="eyebrow">Perfil profesional</p>
+        <h2>Sobre mí</h2>
+        <p>
+          Soy un desarrollador enfocado en crear aplicaciones backend confiables, integraciones limpias y experiencias web funcionales.
+          Me interesa resolver problemas reales con buenas prácticas, documentación clara y tecnología adecuada para cada caso.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <article class="glass-card" data-reveal>
+          <h3>Lo que aporto</h3>
+          <ul class="check-list">
+            <li>Desarrollo backend con Java y Spring Boot.</li>
+            <li>Diseño e implementación de APIs REST.</li>
+            <li>Modelado de bases de datos relacionales.</li>
+            <li>Aplicaciones web responsivas con HTML, CSS y JavaScript.</li>
+            <li>Control de versiones con Git y trabajo colaborativo.</li>
+          </ul>
+        </article>
+
+        <article class="glass-card" data-reveal>
+          <h3>Objetivo</h3>
+          <p>
+            Continuar creciendo como desarrollador de software, participar en proyectos desafiantes y aportar soluciones
+            que mejoren procesos, productos y experiencia de usuario.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" id="skills">
+      <div class="section-heading" data-reveal>
+        <p class="eyebrow">Tecnologías</p>
+        <h2>Skills principales</h2>
+      </div>
+
+      <div class="skills-grid">
+        <article class="skill-card" data-reveal>
+          <span class="skill-icon">☕</span>
+          <h3>Backend Java</h3>
+          <p>Programación orientada a objetos, patrones de diseño, APIs, validaciones y arquitectura modular.</p>
+        </article>
+        <article class="skill-card" data-reveal>
+          <span class="skill-icon">🌱</span>
+          <h3>Spring Boot</h3>
+          <p>REST controllers, servicios, repositorios, JPA/Hibernate, seguridad básica y documentación.</p>
+        </article>
+        <article class="skill-card" data-reveal>
+          <span class="skill-icon">🗄️</span>
+          <h3>SQL / JPA</h3>
+          <p>Modelado de datos, consultas, relaciones, persistencia y optimización de operaciones básicas.</p>
+        </article>
+        <article class="skill-card" data-reveal>
+          <span class="skill-icon">🧩</span>
+          <h3>Frontend Web</h3>
+          <p>HTML semántico, CSS moderno, JavaScript vanilla, diseño responsivo y accesibilidad.</p>
+        </article>
+        <article class="skill-card" data-reveal>
+          <span class="skill-icon">🛠️</span>
+          <h3>DevOps básico</h3>
+          <p>Git, documentación técnica, despliegues estáticos y buenas prácticas de mantenimiento.</p>
+        </article>
+        <article class="skill-card" data-reveal>
+          <span class="skill-icon">🚀</span>
+          <h3>Metodología</h3>
+          <p>Análisis de requerimientos, desarrollo incremental, pruebas manuales y comunicación clara.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" id="proyectos">
+      <div class="section-heading split" data-reveal>
+        <div>
+          <p class="eyebrow">Portafolio</p>
+          <h2>Proyectos destacados</h2>
+        </div>
+        <div class="filters" role="group" aria-label="Filtrar proyectos">
+          <button class="filter-btn is-active" type="button" data-filter="all">Todos</button>
+          <button class="filter-btn" type="button" data-filter="backend">Backend</button>
+          <button class="filter-btn" type="button" data-filter="fullstack">Full Stack</button>
+          <button class="filter-btn" type="button" data-filter="java">Java</button>
+        </div>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card" data-category="backend java fullstack" data-reveal>
+          <div class="project-top">
+            <span class="project-badge">Spring Boot</span>
+            <span class="project-badge">SQL</span>
+          </div>
+          <h3>Sistema de Control de Acceso</h3>
+          <p>Aplicación para gestión de accesos, usuarios y respaldos, pensada para escenarios administrativos.</p>
+          <a class="project-link" href="https://github.com/raulrodriguezmesia-blip/Alcaldia" target="_blank" rel="noopener">Ver repositorio →</a>
+        </article>
+
+        <article class="project-card" data-category="fullstack java" data-reveal>
+          <div class="project-top">
+            <span class="project-badge">Java</span>
+            <span class="project-badge">JPA</span>
+          </div>
+          <h3>Sistema de Ferretería</h3>
+          <p>Gestión de inventario y operaciones comerciales con persistencia de datos y flujo de negocio definido.</p>
+          <a class="project-link" href="https://github.com/raulrodriguezmesia-blip/ferreteria" target="_blank" rel="noopener">Ver repositorio →</a>
+        </article>
+
+        <article class="project-card" data-category="backend java" data-reveal>
+          <div class="project-top">
+            <span class="project-badge">REST API</span>
+            <span class="project-badge">Spring</span>
+          </div>
+          <h3>API REST con Spring Boot</h3>
+          <p>Implementación de servicios REST para gestionar recursos, peticiones HTTP y respuestas estructuradas.</p>
+          <a class="project-link" href="https://github.com/raulrodriguezmesia-blip/springboot" target="_blank" rel="noopener">Ver repositorio →</a>
+        </article>
+
+        <article class="project-card" data-category="java" data-reveal>
+          <div class="project-top">
+            <span class="project-badge">POO</span>
+            <span class="project-badge">CRUD</span>
+          </div>
+          <h3>CRUD Java Junior</h3>
+          <p>Proyecto base para consolidar fundamentos de Java, estructuras de datos y operaciones CRUD.</p>
+          <a class="project-link" href="https://github.com/raulrodriguezmesia-blip/java-junior-portfolio" target="_blank" rel="noopener">Ver repositorio →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" id="experiencia">
+      <div class="section-heading" data-reveal>
+        <p class="eyebrow">Trayectoria</p>
+        <h2>Ruta de aprendizaje</h2>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item" data-reveal>
+          <span class="timeline-dot"></span>
+          <div>
+            <h3>Fundamentos de programación</h3>
+            <p>Java, lógica, POO, estructuras de control y resolución de problemas.</p>
+          </div>
+        </article>
+        <article class="timeline-item" data-reveal>
+          <span class="timeline-dot"></span>
+          <div>
+            <h3>Backend y bases de datos</h3>
+            <p>Spring Boot, APIs REST, JPA/Hibernate, SQL y modelado relacional.</p>
+          </div>
+        </article>
+        <article class="timeline-item" data-reveal>
+          <span class="timeline-dot"></span>
+          <div>
+            <h3>Desarrollo web integral</h3>
+            <p>HTML semántico, CSS moderno, JavaScript y experiencia de usuario responsiva.</p>
+          </div>
+        </article>
+        <article class="timeline-item" data-reveal>
+          <span class="timeline-dot"></span>
+          <div>
+            <h3>Próximos pasos</h3>
+            <p>Profundizar en testing, seguridad, cloud, Docker y arquitecturas escalables.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container contact-section" id="contacto">
+      <div class="contact-card" data-reveal>
+        <div>
+          <p class="eyebrow">Contacto</p>
+          <h2>Hablemos de tu próximo proyecto</h2>
+          <p>
+            Si buscas alguien para apoyar en backend, APIs, mantenimiento de aplicaciones o desarrollo web,
+            puedes escribirme y coordinar una conversación.
+          </p>
+          <div class="contact-links">
+            <a href="https://github.com/raulrodriguezmesia-blip" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/raul-rodriguez-mesia/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="Raul_Rodriguez_Mesia_CV.pdf" target="_blank" rel="noopener">CV PDF</a>
+          </div>
+        </div>
+
+        <form id="contact-form" class="contact-form" data-email="tu-email@dominio.com">
+          <label>
+            Nombre
+            <input name="nombre" type="text" placeholder="Tu nombre" autocomplete="name" required>
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" placeholder="tu@email.com" autocomplete="email" required>
+          </label>
+          <label>
+            Mensaje
+            <textarea name="mensaje" rows="5" placeholder="Cuéntame qué necesitas..." required></textarea>
+          </label>
+          <button class="btn btn-primary" type="submit">Enviar mensaje</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© <span id="year"></span> Raúl Rodriguez Mesia. Todos los derechos reservados.</p>
+      <a href="#inicio">Volver arriba ↑</a>
     </div>
-  </section>
+  </footer>
 
-  <section id="projects" class="section" name="projects-section">
-    <h2>Proyectos</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <img src="assets/img3.jpg" alt="Sistema de Control de Acceso" class="project-img">
-        <h3>Sistema de Control de Acceso</h3>
-        <p>Aplicación Java con Spring Boot para gestión de acceso y backups.</p>
-        <a href="#" class="project-link">Ver Detalle</a>
-      </div>
-      <div class="project-card">
-        <img src="assets/img1.jpg" alt="Sistema de Ferretería" class="project-img">
-        <h3>Sistema de Ferretería</h3>
-        <p>Gestión de inventario con JPA/Hibernate y interfaz web.</p>
-        <a href="#" class="project-link">Ver Detalle</a>
-      </div>
-      <div class="project-card">
-        <img src="assets/img2.jpg" alt="API REST con Spring Boot" class="project-img">
-        <h3>API REST con Spring Boot</h3>
-        <p>API RESTful completa con documentación Swagger.</p>
-        <a href="#" class="project-link">Ver Detalle</a>
-      </div>
-      <div class="project-card">
-        <img src="assets/img3.jpg" alt="CRUD en Consola" class="project-img">
-        <h3>CRUD en Consola</h3>
-        <p>Proyecto Java Junior para aprender fundamentos de POO.</p>
-        <a href="#" class="project-link">Ver Detalle</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="section" name="contact-section">
-    <h2>Contacto</h2>
-    <form id="contact-form" action="https://formspree.io/f/TU_ID_DE_FORMSPREE" method="POST">
-      <input type="text" name="nombre" placeholder="Nombre" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <textarea name="mensaje" placeholder="Mensaje" required></textarea>
-      <button type="submit">Enviar Mensaje</button>
-      <p id="form-status" style="margin-top: 1rem; min-height: 1.5em;"></p>
-    </form>
-  </section>
-</main>
-
-<footer role="contentinfo" name="main-footer">
-  <p>&copy; 2026 Raul Rodriguez Mesia</p>
-</footer>
-
-<script>
-  const contactForm = document.getElementById('contact-form');
-  const status = document.getElementById('form-status');
-
-  contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const form = e.target;
-    
-    status.textContent = 'Enviando...';
-    status.style.color = 'white';
-
-    fetch(form.action, {
-      method: form.method,
-      body: new FormData(form),
-      headers: {
-        'Accept': 'application/json'
-      }
-    }).then(response => {
-      if (response.ok) {
-        status.textContent = '¡Mensaje enviado! Gracias por contactarme.';
-        status.style.color = '#00ff00';
-        form.reset();
-      } else {
-        response.json().then(data => {
-          if (data.errors) {
-            status.textContent = data.errors.map(err => err.message).join(', ');
-          } else {
-            status.textContent = 'Oops! Hubo un problema al enviar.';
-          }
-          status.style.color = '#ff4444';
-        });
-      }
-    }).catch(error => {
-      status.textContent = 'Error de red. Intenta de nuevo.';
-      status.style.color = '#ff4444';
-      console.error('Error:', error);
-    });
-  });
-</script>
-
+  <script src="script.js" defer></script>
 </body>
 </html>
