@@ -18,6 +18,14 @@ LinkedIn: https://www.linkedin.com/in/raul-rodriguez-mesia/
 
 GitHub: https://github.com/raulrodriguezmesia-blip
 
+## Contacto
+
+- Email: raulrodriguezmesia@gmail.com
+- Teléfono: +51 966 105 289
+- Celular: +51 920 157 695
+- GitHub: https://github.com/raulrodriguezmesia-blip
+- LinkedIn: https://www.linkedin.com/in/raul-rodriguez-mesia/
+
 ## Fuentes profesionales usadas
 
 La información consolidada en este portafolio proviene de:
@@ -68,18 +76,18 @@ LinkedIn no permite acceso completo mediante scraping automático, por lo que no
 - **Java Junior Portfolio**: CRUD en consola con validaciones, persistencia multi-formato, consumo de API REST y JUnit 5.
 - **AWS Portfolio**: prácticas con S3, IAM, Lambda, DynamoDB, API Gateway, RDS, SQS, SNS, EventBridge, ECS/Fargate y Docker.
 
-## Personalización pendiente
+## Personalización
 
-Antes de compartirlo como portafolio definitivo, reemplaza el correo temporal del formulario:
+El formulario de contacto ya está configurado con:
 
-```html
-<form id="contact-form" class="contact-form" data-email="tu-email@dominio.com">
+```text
+raulrodriguezmesia@gmail.com
 ```
 
-por un correo real:
+Si en el futuro deseas cambiar el correo, reemplaza este valor en `index.html`:
 
 ```html
-<form id="contact-form" class="contact-form" data-email="tu-correo@ejemplo.com">
+<form id="contact-form" class="contact-form" data-email="raulrodriguezmesia@gmail.com">
 ```
 
 También puedes reemplazar `Raul_Rodriguez_Mesia_CV.pdf` por un CV actualizado.
