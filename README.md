@@ -1,6 +1,33 @@
 # Raúl Rodriguez Mesia | Portafolio
 
-Portafolio profesional estático para GitHub Pages.
+Portafolio profesional estático para GitHub Pages, orientado a reclutadores técnicos y oportunidades en backend, cloud e inteligencia artificial aplicada.
+
+## Perfil profesional
+
+**Raúl Rodriguez Mesia** es Ingeniero en Informática con enfoque en:
+
+- Backend Developer con Java y Spring Boot.
+- Cloud Specialist AWS en formación práctica.
+- Python, machine learning y FastAPI.
+- AI Agents, Microsoft Foundry y análisis de código.
+- APIs REST, SQL, Docker, serverless y GitHub Pages.
+
+Ubicación pública del perfil GitHub: **Perú - Tumbes**.
+
+LinkedIn: https://www.linkedin.com/in/raul-rodriguez-mesia/
+
+GitHub: https://github.com/raulrodriguezmesia-blip
+
+## Fuentes profesionales usadas
+
+La información consolidada en este portafolio proviene de:
+
+- repositorios públicos de GitHub de `raulrodriguezmesia-blip`;
+- READMEs técnicos de proyectos visibles;
+- resumen público indexado del perfil de LinkedIn proporcionado;
+- repositorio del evento **Agents League Hackathon 2026**.
+
+LinkedIn no permite acceso completo mediante scraping automático, por lo que no se agregaron datos sensibles, privados o no verificables.
 
 ## Estructura actual
 
@@ -10,47 +37,60 @@ Portafolio profesional estático para GitHub Pages.
 ├── styles.css
 ├── script.js
 ├── README.md
-└── Raul_Rodriguez_Mesia_CV.pdf
+├── robots.txt
+├── sitemap.xml
+├── Raul_Rodriguez_Mesia_CV.pdf
+└── assets/
+    ├── favicon.svg
+    └── og-image.svg
 ```
 
-## Contenido incluido
+## Secciones del portafolio
 
-- Página principal responsive y accesible.
-- Secciones: inicio, sobre mí, skills, proyectos, experiencia y contacto.
-- Filtro de proyectos por categoría.
-- Cambio de tema claro/oscuro.
-- Formulario de contacto con apertura de cliente de correo.
-- CV descargable.
+- Inicio con propuesta de valor profesional.
+- Perfil profesional.
+- Skills técnicos por área.
+- Certificaciones y aprendizaje AWS.
+- Proyectos destacados.
+- Agents League Hackathon 2026.
+- Práctica aplicada en AWS.
+- Trayectoria profesional.
+- Repositorios públicos.
+- Contacto.
 
-## Personalización rápida
+## Proyectos incluidos
 
-Antes de publicar o compartir el portafolio, actualiza estos puntos:
+- **Eros Code Analysis Agent**: agente de IA para análisis de código en el Agents League Hackathon 2026.
+- **AWS Cost Optimizer ML**: modelo de predicción de costos AWS con RandomForest, FastAPI y Docker.
+- **Sistema Alcaldía**: sistema administrativo con Java, JDBC, MySQL, seguridad y backup.
+- **Sistema de Ferretería**: gestión de inventario con JPA/Hibernate.
+- **Spring Boot API REST**: API RESTful con Spring Boot, Maven y Swagger/OpenAPI.
+- **Java Junior Portfolio**: CRUD en consola con validaciones, persistencia multi-formato, consumo de API REST y JUnit 5.
+- **AWS Portfolio**: prácticas con S3, IAM, Lambda, DynamoDB, API Gateway, RDS, SQS, SNS, EventBridge, ECS/Fargate y Docker.
 
-1. En `index.html`, cambia el correo de contacto:
+## Personalización pendiente
+
+Antes de compartirlo como portafolio definitivo, reemplaza el correo temporal del formulario:
 
 ```html
 <form id="contact-form" class="contact-form" data-email="tu-email@dominio.com">
 ```
 
-por tu email real:
+por un correo real:
 
 ```html
 <form id="contact-form" class="contact-form" data-email="tu-correo@ejemplo.com">
 ```
 
-2. Reemplaza `Raul_Rodriguez_Mesia_CV.pdf` por tu CV actualizado si lo necesitas.
-
-3. Añade más proyectos en la sección `#proyectos` usando la misma estructura de tarjetas.
+También puedes reemplazar `Raul_Rodriguez_Mesia_CV.pdf` por un CV actualizado.
 
 ## Ejecutar localmente
-
-Abre `index.html` directamente en el navegador o ejecuta un servidor local:
 
 ```powershell
 python -m http.server 8000
 ```
 
-Luego abre:
+Abrir:
 
 ```text
 http://localhost:8000
@@ -59,3 +99,9 @@ http://localhost:8000
 ## Despliegue
 
 Este repositorio está preparado para GitHub Pages desde la rama `main` usando la raíz del proyecto.
+
+URL esperada:
+
+```text
+https://raulrodriguezmesia-blip.github.io/
+```
