@@ -3,6 +3,8 @@
 <head>
   <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://formspree.io; script-src 'self' 'unsafe-inline' https://formspree.io; worker-src 'self' blob:; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
   <meta charset="UTF-8">
+  <meta name="description" content="Portafolio de Raúl Rodríguez Mesía, Ingeniero en Informática y Desarrollador Full Stack especializado en Java, Spring Boot, APIs REST y desarrollo web.">
+  <meta name="theme-color" content="#0a0a0a">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portafolio Futurista</title>
   <link rel="stylesheet" href="styles.css">
@@ -71,13 +73,39 @@
 
   <section id="contact" class="section">
     <h2>Contacto</h2>
-    <form id="contact-form" action="https://formspree.io/f/TU_ID_DE_FORMSPREE" method="POST">
-      <input type="text" name="nombre" placeholder="Nombre" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <textarea name="mensaje" placeholder="Mensaje" required></textarea>
-      <button type="submit">Enviar Mensaje</button>
-      <p id="form-status" style="margin-top: 1rem; min-height: 1.5em;"></p>
-    </form>
+    <div class="contact-wrapper">
+      <form id="contact-form" class="contact-form" action="https://formspree.io/f/TU_ID_DE_FORMSPREE" method="POST" novalidate>
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" type="text" name="nombre" placeholder="Tu nombre" required autocomplete="name" aria-required="true">
+          <span class="field-hint" aria-live="polite"></span>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email" placeholder="tucorreo@email.com" required autocomplete="email" aria-required="true" inputmode="email">
+          <span class="field-hint" aria-live="polite"></span>
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" placeholder="¿En qué puedo ayudarte?" required aria-required="true"></textarea>
+          <span class="field-hint" aria-live="polite"></span>
+        </div>
+        <button type="submit" class="submit-btn" aria-live="polite">
+          <span class="btn-text">Enviar Mensaje</span>
+          <span class="btn-loader" hidden aria-hidden="true">Enviando...</span>
+          <span class="btn-icon" aria-hidden="true">&#10148;</span>
+        </button>
+        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+      </form>
+      <aside class="contact-aside" aria-label="Información de contacto">
+        <h3>¡Conectemos!</h3>
+        <p>¿Tienes una idea, proyecto o colaboración?</p>
+        <ul class="contact-list">
+          <li><span aria-hidden="true">&#9993;</span> hola@raulrodriguez.dev</li>
+          <li><span aria-hidden="true">&#127968;</span> Lima, Perú</li>
+        </ul>
+      </aside>
+    </div>
   </section>
 </main>
 
@@ -88,13 +116,72 @@
 <script>
   const contactForm = document.getElementById('contact-form');
   const status = document.getElementById('form-status');
+  const submitBtn = contactForm.querySelector('.submit-btn');
+  const btnText = submitBtn.querySelector('.btn-text');
+  const btnLoader = submitBtn.querySelector('.btn-loader');
+  const btnIcon = submitBtn.querySelector('.btn-icon');
+  const hints = contactForm.querySelectorAll('.field-hint');
+
+  function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  function setFieldHint(input, message) {
+    const hint = input.closest('.form-group').querySelector('.field-hint');
+    if (!hint) return;
+    hint.textContent = message || '';
+    input.setAttribute('aria-invalid', message ? 'true' : 'false');
+  }
+
+  function setStatus(message, type) {
+    status.className = 'form-status ' + (type ? 'is-' + type : '');
+    status.textContent = message;
+  }
+
+  function setLoading(isLoading) {
+    submitBtn.disabled = isLoading;
+    btnText.hidden = isLoading;
+    btnLoader.hidden = !isLoading;
+    btnIcon.hidden = isLoading;
+  }
 
   contactForm.addEventListener('submit', function(e) {
     e.preventDefault();
     const form = e.target;
-    
-    status.textContent = 'Enviando...';
-    status.style.color = 'white';
+
+    // Reset feedback
+    setStatus('', '');
+    hints.forEach(h => (h.textContent = ''));
+
+    const nombre = form.nombre.value.trim();
+    const email = form.email.value.trim();
+    const mensaje = form.mensaje.value.trim();
+    let isValid = true;
+
+    if (!nombre) {
+      setFieldHint(form.nombre, 'Por favor ingresa tu nombre.');
+      isValid = false;
+    }
+    if (!email) {
+      setFieldHint(form.email, 'Por favor ingresa tu correo.');
+      isValid = false;
+    } else if (!validateEmail(email)) {
+      setFieldHint(form.email, 'Ingresa un correo válido.');
+      isValid = false;
+    }
+    if (!mensaje) {
+      setFieldHint(form.mensaje, 'Escribe un mensaje para enviar.');
+      isValid = false;
+    }
+
+    if (!isValid) {
+      const first = contactForm.querySelector('[aria-invalid="true"]');
+      if (first) first.focus();
+      return;
+    }
+
+    setLoading(true);
+    setStatus('Enviando...', '');
 
     fetch(form.action, {
       method: form.method,
@@ -102,26 +189,32 @@
       headers: {
         'Accept': 'application/json'
       }
-    }).then(response => {
+    })
+    .then(response => {
+      setLoading(false);
       if (response.ok) {
-        status.textContent = '¡Mensaje enviado! Gracias por contactarme.';
-        status.style.color = '#00ff00';
+        setStatus('¡Mensaje enviado! Gracias por contactarme.', 'success');
         form.reset();
       } else {
-        response.json().then(data => {
+        return response.json().then(data => {
           if (data.errors) {
-            status.textContent = data.errors.map(err => err.message).join(', ');
+            setStatus(data.errors.map(err => err.message).join(', '), 'error');
           } else {
-            status.textContent = 'Oops! Hubo un problema al enviar.';
+            setStatus('Oops! Hubo un problema al enviar. Intenta más tarde.', 'error');
           }
-          status.style.color = '#ff4444';
-        });
+        }).catch(() => setStatus('Oops! No pudimos procesar la respuesta.', 'error'));
       }
-    }).catch(error => {
-      status.textContent = 'Error de red. Intenta de nuevo.';
-      status.style.color = '#ff4444';
+    })
+    .catch(error => {
+      setLoading(false);
+      setStatus('Error de red. Revisa tu conexión e intenta de nuevo.', 'error');
       console.error('Error:', error);
     });
+  });
+
+  // Limpiar hints al escribir
+  contactForm.querySelectorAll('input, textarea').forEach(el => {
+    el.addEventListener('input', () => setFieldHint(el, ''));
   });
 </script>
 
