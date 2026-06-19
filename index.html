@@ -96,6 +96,13 @@
           <span class="btn-icon" aria-hidden="true">&#10148;</span>
         </button>
         <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+        <div id="success-animation" class="success-animation" hidden aria-hidden="true">
+          <div class="success-icon">
+            <span class="success-circle"></span>
+            <span class="success-check">&#10003;</span>
+          </div>
+          <p class="success-message">¡Gracias por contactarme! Tu mensaje ha sido enviado.</p>
+        </div>
       </form>
       <aside class="contact-aside" aria-label="Información de contacto">
         <h3>¡Conectemos!</h3>
@@ -194,6 +201,9 @@
       setLoading(false);
       if (response.ok) {
         setStatus('¡Mensaje enviado! Gracias por contactarme.', 'success');
+        const successAnim = document.getElementById('success-animation');
+        successAnim.hidden = false;
+        successAnim.classList.add('is-visible');
         form.reset();
       } else {
         return response.json().then(data => {
