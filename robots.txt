@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://raulrodriguezmesia-blip.github.io/sitemap.xml
