@@ -35,6 +35,9 @@
   </script>
 </head>
 <body>
+  <!-- Canvas de fondo animado tecnológico -->
+  <canvas id="bg-canvas" aria-hidden="true" aria-label="Fondo animado tecnológico"></canvas>
+  
   <a class="skip-link" href="#main">Saltar al contenido principal</a>
 
   <header class="site-header" data-reveal>
@@ -582,5 +585,139 @@
   </footer>
 
   <script src="script.js" defer></script>
+  
+  <!-- Fondo animado tecnológico - Canvas -->
+  <script>
+    (function() {
+      const canvas = document.getElementById('bg-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      
+      // Configuración responsive
+      let width, height;
+      let particles = [];
+      let mouse = { x: null, y: null, radius: 120 };
+      let isMobile = false;
+      let animationId;
+      
+      // Detectar dispositivo móvil
+      function detectMobile() {
+        isMobile = /Android|iPhone|iPad|iPod|webOS/i.test(navigator.userAgent) || window.innerWidth < 768;
+      }
+      
+      // Redimensionar canvas
+      function resize() {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = width;
+        canvas.height = height;
+        initParticles();
+      }
+      
+      // Inicializar partículas
+      function initParticles() {
+        detectMobile();
+        const count = isMobile ? Math.floor((width * height) / 18000) : Math.floor((width * height) / 8000);
+        particles = [];
+        
+        for (let i = 0; i < count; i++) {
+          particles.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            vx: (Math.random() - 0.5) * 0.6,
+            vy: (Math.random() - 0.5) * 0.6,
+            radius: Math.random() * 2 + 1,
+            opacity: Math.random() * 0.15 + 0.1
+          });
+        }
+      }
+      
+      // Dibujar partículas y conexiones
+      function draw() {
+        ctx.clearRect(0, 0, width, height);
+        
+        // Actualizar y dibujar partículas
+        particles.forEach((p, i) => {
+          // Movimiento
+          p.x += p.vx;
+          p.y += p.vy;
+          
+          // Rebotar en bordes
+          if (p.x < 0 || p.x > width) p.vx *= -1;
+          if (p.y < 0 || p.y > height) p.vy *= -1;
+          
+          // Mantener dentro del canvas
+          p.x = Math.max(0, Math.min(width, p.x));
+          p.y = Math.max(0, Math.min(height, p.y));
+          
+          // Dibujar partícula
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(56, 189, 248, ${p.opacity})`;
+          ctx.fill();
+          
+          // Conexiones entre partículas cercanas
+          for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[j].x - p.x;
+            const dy = particles[j].y - p.y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            const maxDist = isMobile ? 100 : 150;
+            
+            if (dist < maxDist) {
+              const opacity = (1 - dist / maxDist) * 0.2;
+              ctx.beginPath();
+              ctx.moveTo(p.x, p.y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.strokeStyle = `rgba(6, 182, 212, ${opacity})`;
+              ctx.lineWidth = 0.5;
+              ctx.stroke();
+            }
+          }
+          
+          // Interacción con mouse (solo desktop)
+          if (!isMobile && mouse.x !== null) {
+            const dx = p.x - mouse.x;
+            const dy = p.y - mouse.y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            
+            if (dist < mouse.radius) {
+              const force = (mouse.radius - dist) / mouse.radius;
+              const angle = Math.atan2(dy, dx);
+              p.x += Math.cos(angle) * force * 1.5;
+              p.y += Math.sin(angle) * force * 1.5;
+            }
+          }
+        });
+        
+        animationId = requestAnimationFrame(draw);
+      }
+      
+      // Eventos
+      window.addEventListener('resize', () => {
+        resize();
+      });
+      
+      if (!isMobile) {
+        window.addEventListener('mousemove', (e) => {
+          mouse.x = e.clientX;
+          mouse.y = e.clientY;
+        });
+        
+        window.addEventListener('mouseout', () => {
+          mouse.x = null;
+          mouse.y = null;
+        });
+      }
+      
+      // Iniciar
+      detectMobile();
+      resize();
+      draw();
+      
+      // Cleanup para SPA o navegación
+      window.addEventListener('beforeunload', () => {
+        cancelAnimationFrame(animationId);
+      });
+    })();
+  </script>
 </body>
-</html>
