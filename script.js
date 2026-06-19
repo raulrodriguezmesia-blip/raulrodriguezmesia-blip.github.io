@@ -107,6 +107,123 @@
   const form = document.getElementById('contact-form');
   const status = document.getElementById('form-status');
 
+  const bgCanvas = document.getElementById('bg-canvas');
+  const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+  const particleCount = isTouchDevice ? 45 : 90;
+  const connectionDistance = isTouchDevice ? 95 : 130;
+  const mouseDistance = 150;
+
+  if (bgCanvas && !prefersReducedMotion) {
+    const ctx = bgCanvas.getContext('2d');
+    const mouse = { x: 0, y: 0, active: !isTouchDevice };
+    let particles = [];
+    let width = 0;
+    let height = 0;
+
+    function random(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+
+    function resizeCanvas() {
+      width = window.innerWidth;
+      height = window.innerHeight;
+      bgCanvas.width = width * window.devicePixelRatio;
+      bgCanvas.height = height * window.devicePixelRatio;
+      bgCanvas.style.width = `${width}px`;
+      bgCanvas.style.height = `${height}px`;
+      ctx.setTransform(window.devicePixelRatio, 0, 0, window.devicePixelRatio, 0, 0);
+      createParticles();
+    }
+
+    function createParticles() {
+      particles = Array.from({ length: particleCount }, () => ({
+        x: random(0, width),
+        y: random(0, height),
+        vx: random(-0.25, 0.25),
+        vy: random(-0.25, 0.25),
+        size: random(1.2, 2.4),
+        color: Math.random() > 0.5 ? '56, 189, 248' : '6, 182, 212',
+        alpha: random(0.15, 0.25)
+      }));
+    }
+
+    function updateParticles() {
+      particles.forEach((particle) => {
+        particle.x += particle.vx;
+        particle.y += particle.vy;
+
+        if (particle.x < 0 || particle.x > width) particle.vx *= -1;
+        if (particle.y < 0 || particle.y > height) particle.vy *= -1;
+
+        if (!isTouchDevice && mouse.active) {
+          const dx = mouse.x - particle.x;
+          const dy = mouse.y - particle.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < mouseDistance) {
+            const force = (mouseDistance - distance) / mouseDistance;
+            particle.x -= (dx / distance) * force * 0.65;
+            particle.y -= (dy / distance) * force * 0.65;
+          }
+        }
+      });
+    }
+
+    function drawConnections() {
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < connectionDistance) {
+            const opacity = (1 - distance / connectionDistance) * 0.22;
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.strokeStyle = `rgba(56, 189, 248, ${opacity})`;
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
+        }
+      }
+    }
+
+    function drawParticles() {
+      particles.forEach((particle) => {
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${particle.color}, ${particle.alpha})`;
+        ctx.fill();
+      });
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, width, height);
+      updateParticles();
+      drawConnections();
+      drawParticles();
+      requestAnimationFrame(animate);
+    }
+
+    window.addEventListener('resize', resizeCanvas, { passive: true });
+
+    if (!isTouchDevice) {
+      window.addEventListener('mousemove', (event) => {
+        mouse.x = event.clientX;
+        mouse.y = event.clientY;
+        mouse.active = true;
+      }, { passive: true });
+
+      window.addEventListener('mouseleave', () => {
+        mouse.active = false;
+      }, { passive: true });
+    }
+
+    resizeCanvas();
+    animate();
+  }
+
   form?.addEventListener('submit', (event) => {
     event.preventDefault();
 
@@ -114,7 +231,6 @@
     const name = String(formData.get('nombre') || '').trim();
     const email = String(formData.get('email') || '').trim();
     const message = String(formData.get('mensaje') || '').trim();
-    const targetEmail = form.dataset.email || '';
 
     setStatus('');
 
@@ -123,15 +239,29 @@
       return;
     }
 
-    if (!targetEmail || targetEmail.includes('dominio.com')) {
-      setStatus('Configura un correo real en data-email antes de publicar el portafolio.', 'error');
-      return;
-    }
+    setLoading(true);
+    setStatus('Enviando...', '');
 
-    const subject = encodeURIComponent(`Portafolio - ${name}`);
-    const body = encodeURIComponent(`${message}\n\nNombre: ${name}\nEmail: ${email}`);
-    window.location.href = `mailto:${targetEmail}?subject=${subject}&body=${body}`;
-    setStatus('Abriendo tu cliente de correo...', 'success');
+    fetch(form.action, {
+      method: form.method,
+      body: new FormData(form),
+      headers: {
+        Accept: 'application/json'
+      }
+    })
+      .then((response) => {
+        setLoading(false);
+        if (response.ok) {
+          setStatus('¡Mensaje enviado! Gracias por contactarme.', 'success');
+          form.reset();
+        } else {
+          setStatus('Oops! Hubo un problema al enviar. Intenta más tarde.', 'error');
+        }
+      })
+      .catch(() => {
+        setLoading(false);
+        setStatus('Error de red. Revisa tu conexión e intenta de nuevo.', 'error');
+      });
   });
 
   function setStatus(message, type) {
@@ -139,5 +269,12 @@
     status.textContent = message;
     status.classList.remove('success', 'error');
     if (type) status.classList.add(type);
+  }
+
+  function setLoading(isLoading) {
+    const submitBtn = form.querySelector('button[type="submit"]');
+    if (!submitBtn) return;
+    submitBtn.disabled = isLoading;
+    submitBtn.textContent = isLoading ? 'Enviando...' : 'Enviar mensaje';
   }
 })();

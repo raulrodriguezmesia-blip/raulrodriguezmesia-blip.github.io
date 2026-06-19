@@ -1061,14 +1061,23 @@ pre {
   }
 }
 
-@media (max-width: 760px) {
-  .profile-grid,
-  .cert-grid,
-  .cloud-grid {
-    grid-template-columns: 1fr;
-  }
+/* ===== Animated Tech Background ===== */
+#bg-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(56, 189, 248, 0.12), transparent 28rem),
+    radial-gradient(circle at 85% 10%, rgba(6, 182, 212, 0.10), transparent 30rem),
+    radial-gradient(circle at 50% 90%, rgba(155, 92, 255, 0.10), transparent 32rem),
+    #0a0f1d;
+}
 
-  .hackathon-card {
-    border-radius: var(--radius);
+@media (prefers-reduced-motion: reduce) {
+  #bg-canvas {
+    opacity: 0.65;
   }
 }
