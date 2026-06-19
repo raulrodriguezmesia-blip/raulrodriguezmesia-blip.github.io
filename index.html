@@ -12,6 +12,12 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://raulrodriguezmesia-blip.github.io/">
   <meta property="og:image" content="https://raulrodriguezmesia-blip.github.io/assets/og-image.svg">
+  <meta property="og:locale" content="es_PE">
+  <meta property="og:site_name" content="Raúl Rodriguez Mesia">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Raúl Rodriguez Mesia | Backend Developer & Cloud Specialist">
+  <meta name="twitter:description" content="Portafolio profesional con proyectos en Java, Spring Boot, Python, AWS, AI Agents, APIs REST, serverless y aplicaciones web.">
+  <meta name="twitter:image" content="https://raulrodriguezmesia-blip.github.io/assets/og-image.svg">
   <meta name="theme-color" content="#07111f">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="canonical" href="https://raulrodriguezmesia-blip.github.io/">
@@ -68,7 +74,7 @@
     </nav>
   </header>
 
-  <main id="main">
+  <main id="main" tabindex="-1">
     <section class="hero container" id="inicio">
       <div class="hero-copy" data-reveal>
         <p class="eyebrow">Backend Developer · Cloud Specialist AWS · AI Agent Developer</p>
@@ -540,24 +546,24 @@
         <form id="contact-form" class="contact-form" action="https://formspree.io/f/mgobjbny" method="POST" novalidate>
           <div class="form-group">
             <label for="nombre">Nombre</label>
-            <input id="nombre" type="text" name="nombre" placeholder="Tu nombre" required autocomplete="name">
-            <span class="field-hint" aria-live="polite"></span>
+            <input id="nombre" type="text" name="nombre" placeholder="Tu nombre" required autocomplete="name" aria-describedby="nombre-hint" aria-invalid="false">
+            <span id="nombre-hint" class="field-hint" aria-live="polite"></span>
           </div>
           <div class="form-group">
             <label for="email">Email</label>
-            <input id="email" type="email" name="email" placeholder="tu@email.com" required autocomplete="email" inputmode="email">
-            <span class="field-hint" aria-live="polite"></span>
+            <input id="email" type="email" name="email" placeholder="tu@email.com" required autocomplete="email" inputmode="email" aria-describedby="email-hint" aria-invalid="false">
+            <span id="email-hint" class="field-hint" aria-live="polite"></span>
           </div>
           <div class="form-group">
             <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntame qué necesitas..." required></textarea>
-            <span class="field-hint" aria-live="polite"></span>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntame qué necesitas..." required aria-describedby="mensaje-hint" aria-invalid="false"></textarea>
+            <span id="mensaje-hint" class="field-hint" aria-live="polite"></span>
           </div>
           <button type="submit" class="submit-btn">
             <span class="btn-text">Enviar mensaje</span>
             <span class="btn-loader" hidden>Enviando...</span>
           </button>
-          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+          <p id="form-status" class="form-status" role="status" aria-live="polite" aria-atomic="true"></p>
           <div id="success-animation" class="success-animation" hidden aria-hidden="true">
             <div class="success-icon">
               <span class="success-circle"></span>

@@ -36,6 +36,15 @@
     navToggle.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
   });
 
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && navMenu?.classList.contains('is-open')) {
+      navMenu.classList.remove('is-open');
+      navToggle?.setAttribute('aria-expanded', 'false');
+      navToggle?.setAttribute('aria-label', 'Abrir menú');
+      navToggle?.focus();
+    }
+  });
+
   navMenu?.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
       navMenu.classList.remove('is-open');
@@ -51,7 +60,13 @@
 
   const setActiveLink = (id) => {
     navLinks.forEach((link) => {
-      link.classList.toggle('is-active', link.getAttribute('href') === `#${id}`);
+      const isActive = link.getAttribute('href') === `#${id}`;
+      link.classList.toggle('is-active', isActive);
+      if (isActive) {
+        link.setAttribute('aria-current', 'page');
+      } else {
+        link.removeAttribute('aria-current');
+      }
     });
   };
 
@@ -71,10 +86,16 @@
   const projectCards = Array.from(document.querySelectorAll('.project-card'));
 
   filterButtons.forEach((button) => {
+    button.setAttribute('aria-pressed', button.classList.contains('is-active') ? 'true' : 'false');
+
     button.addEventListener('click', () => {
       const filter = button.dataset.filter;
 
-      filterButtons.forEach((item) => item.classList.toggle('is-active', item === button));
+      filterButtons.forEach((item) => {
+        const isActive = item === button;
+        item.classList.toggle('is-active', isActive);
+        item.setAttribute('aria-pressed', String(isActive));
+      });
 
       projectCards.forEach((card) => {
         const categories = card.dataset.category?.split(' ') || [];
@@ -247,10 +268,30 @@
     const email = String(formData.get('email') || '').trim();
     const message = String(formData.get('mensaje') || '').trim();
 
+    clearFormErrors();
     setStatus('');
 
-    if (!name || !email || !message) {
-      setStatus('Por favor completa todos los campos.', 'error');
+    if (!name) {
+      setFieldError('nombre', 'Ingresa tu nombre.');
+      setStatus('Revisa los campos marcados.', 'error');
+      return;
+    }
+
+    if (!email) {
+      setFieldError('email', 'Ingresa tu email.');
+      setStatus('Revisa los campos marcados.', 'error');
+      return;
+    }
+
+    if (!isValidEmail(email)) {
+      setFieldError('email', 'Ingresa un email válido.');
+      setStatus('Revisa los campos marcados.', 'error');
+      return;
+    }
+
+    if (!message) {
+      setFieldError('mensaje', 'Escribe un mensaje.');
+      setStatus('Revisa los campos marcados.', 'error');
       return;
     }
 
@@ -269,6 +310,7 @@
         if (response.ok) {
           setStatus('¡Mensaje enviado! Gracias por contactarme.', 'success');
           form.reset();
+          clearFormErrors();
         } else {
           setStatus('Oops! Hubo un problema al enviar. Intenta más tarde.', 'error');
         }
@@ -286,8 +328,32 @@
     if (type) status.classList.add(type);
   }
 
+  function setFieldError(fieldId, message) {
+    const field = document.getElementById(fieldId);
+    const hint = document.getElementById(`${fieldId}-hint`);
+    if (!field || !hint) return;
+
+    field.setAttribute('aria-invalid', 'true');
+    hint.textContent = message;
+  }
+
+  function clearFormErrors() {
+    ['nombre', 'email', 'mensaje'].forEach((fieldId) => {
+      const field = document.getElementById(fieldId);
+      const hint = document.getElementById(`${fieldId}-hint`);
+      if (!field || !hint) return;
+
+      field.setAttribute('aria-invalid', 'false');
+      hint.textContent = '';
+    });
+  }
+
+  function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
   function setLoading(isLoading) {
-    const submitBtn = form.querySelector('button[type="submit"]');
+    const submitBtn = form?.querySelector('button[type="submit"]');
     if (!submitBtn) return;
     submitBtn.disabled = isLoading;
     submitBtn.textContent = isLoading ? 'Enviando...' : 'Enviar mensaje';

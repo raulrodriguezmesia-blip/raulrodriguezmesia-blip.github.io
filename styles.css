@@ -79,6 +79,14 @@ a {
   color: inherit;
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(33, 212, 253, 0.75);
+  outline-offset: 3px;
+}
+
 img,
 svg {
   max-width: 100%;
@@ -574,6 +582,10 @@ pre {
   background: linear-gradient(135deg, var(--primary), var(--accent));
 }
 
+.filter-btn:focus-visible {
+  outline-offset: 3px;
+}
+
 .projects-grid {
   grid-template-columns: repeat(4, 1fr);
 }
@@ -724,7 +736,6 @@ pre {
   background: rgba(255, 255, 255, 0.06);
   color: var(--text);
   padding: 0.9rem 1rem;
-  outline: none;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -736,6 +747,12 @@ pre {
 .contact-form textarea:focus {
   border-color: var(--primary-2);
   box-shadow: 0 0 0 4px rgba(79, 140, 255, 0.18);
+}
+
+.contact-form input[aria-invalid="true"],
+.contact-form textarea[aria-invalid="true"] {
+  border-color: var(--danger);
+  box-shadow: 0 0 0 4px rgba(255, 107, 138, 0.16);
 }
 
 .form-status {
