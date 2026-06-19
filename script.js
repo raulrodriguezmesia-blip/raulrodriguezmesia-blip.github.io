@@ -106,38 +106,105 @@
 
   const form = document.getElementById('contact-form');
   const status = document.getElementById('form-status');
+  const submitBtn = form?.querySelector('.submit-btn');
+  const btnText = submitBtn?.querySelector('.btn-text');
+  const btnLoader = submitBtn?.querySelector('.btn-loader');
+  const hints = form ? Array.from(form.querySelectorAll('.field-hint')) : [];
+  const successAnim = document.getElementById('success-animation');
 
-  form?.addEventListener('submit', (event) => {
-    event.preventDefault();
+  function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
 
-    const formData = new FormData(form);
-    const name = String(formData.get('nombre') || '').trim();
-    const email = String(formData.get('email') || '').trim();
-    const message = String(formData.get('mensaje') || '').trim();
-    const targetEmail = form.dataset.email || '';
-
-    setStatus('');
-
-    if (!name || !email || !message) {
-      setStatus('Por favor completa todos los campos.', 'error');
-      return;
-    }
-
-    if (!targetEmail || targetEmail.includes('dominio.com')) {
-      setStatus('Configura un correo real en data-email antes de publicar el portafolio.', 'error');
-      return;
-    }
-
-    const subject = encodeURIComponent(`Portafolio - ${name}`);
-    const body = encodeURIComponent(`${message}\n\nNombre: ${name}\nEmail: ${email}`);
-    window.location.href = `mailto:${targetEmail}?subject=${subject}&body=${body}`;
-    setStatus('Abriendo tu cliente de correo...', 'success');
-  });
+  function setFieldHint(input, message) {
+    const hint = input.closest('.form-group')?.querySelector('.field-hint');
+    if (!hint) return;
+    hint.textContent = message || '';
+    input.setAttribute('aria-invalid', message ? 'true' : 'false');
+  }
 
   function setStatus(message, type) {
     if (!status) return;
     status.textContent = message;
-    status.classList.remove('success', 'error');
-    if (type) status.classList.add(type);
+    status.className = 'form-status ' + (type ? 'is-' + type : '');
   }
+
+  function setLoading(isLoading) {
+    if (!submitBtn) return;
+    submitBtn.disabled = isLoading;
+    if (btnText) btnText.hidden = isLoading;
+    if (btnLoader) btnLoader.hidden = !isLoading;
+  }
+
+  form?.addEventListener('submit', (event) => {
+    event.preventDefault();
+    setStatus('', '');
+    hints.forEach((h) => (h.textContent = ''));
+
+    const nameInput = form.querySelector('#nombre');
+    const emailInput = form.querySelector('#email');
+    const messageInput = form.querySelector('#mensaje');
+
+    const name = String(nameInput?.value || '').trim();
+    const email = String(emailInput?.value || '').trim();
+    const message = String(messageInput?.value || '').trim();
+    let isValid = true;
+
+    if (!name) {
+      setFieldHint(nameInput, 'Por favor ingresa tu nombre.');
+      isValid = false;
+    }
+    if (!email) {
+      setFieldHint(emailInput, 'Por favor ingresa tu correo.');
+      isValid = false;
+    } else if (!validateEmail(email)) {
+      setFieldHint(emailInput, 'Ingresa un correo válido.');
+      isValid = false;
+    }
+    if (!message) {
+      setFieldHint(messageInput, 'Escribe un mensaje para enviar.');
+      isValid = false;
+    }
+
+    if (!isValid) {
+      const firstInvalid = form.querySelector('[aria-invalid="true"]');
+      firstInvalid?.focus();
+      setStatus('Corrige los campos marcados.', 'error');
+      return;
+    }
+
+    setLoading(true);
+    setStatus('Enviando...', '');
+
+    fetch(form.action, {
+      method: form.method,
+      body: new FormData(form),
+      headers: { Accept: 'application/json' }
+    })
+      .then((response) => {
+        setLoading(false);
+        if (response.ok) {
+          setStatus('¡Mensaje enviado! Gracias por contactarme.', 'success');
+          form.reset();
+          hints.forEach((h) => (h.textContent = ''));
+          if (successAnim) {
+            successAnim.hidden = false;
+            successAnim.classList.add('is-visible');
+          }
+        } else {
+          return response.json().then((data) => {
+            const msg = data?.errors?.map((err) => err.message).join(', ');
+            setStatus(msg || 'Oops! Hubo un problema al enviar. Intenta más tarde.', 'error');
+          }).catch(() => setStatus('Oops! No pudimos procesar la respuesta.', 'error'));
+        }
+      })
+      .catch(() => {
+        setLoading(false);
+        setStatus('Error de red. Revisa tu conexión e intenta de nuevo.', 'error');
+      });
+  });
+
+  form?.querySelectorAll('input, textarea').forEach((el) => {
+    el.addEventListener('input', () => setFieldHint(el, ''));
+  });
 })();
