@@ -109,9 +109,10 @@
 
   const bgCanvas = document.getElementById('bg-canvas');
   const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-  const particleCount = isTouchDevice ? 45 : 90;
-  const connectionDistance = isTouchDevice ? 95 : 130;
-  const mouseDistance = 150;
+  const particleCount = isTouchDevice ? 32 : 70;
+  const connectionDistance = isTouchDevice ? 82 : 118;
+  const mouseDistance = 140;
+  const reducedPixelRatio = Math.min(window.devicePixelRatio || 1, 1.5);
 
   if (bgCanvas && !prefersReducedMotion) {
     const ctx = bgCanvas.getContext('2d');
@@ -119,6 +120,7 @@
     let particles = [];
     let width = 0;
     let height = 0;
+    let animationId = 0;
 
     function random(min, max) {
       return Math.random() * (max - min) + min;
@@ -127,11 +129,11 @@
     function resizeCanvas() {
       width = window.innerWidth;
       height = window.innerHeight;
-      bgCanvas.width = width * window.devicePixelRatio;
-      bgCanvas.height = height * window.devicePixelRatio;
+      bgCanvas.width = Math.floor(width * reducedPixelRatio);
+      bgCanvas.height = Math.floor(height * reducedPixelRatio);
       bgCanvas.style.width = `${width}px`;
       bgCanvas.style.height = `${height}px`;
-      ctx.setTransform(window.devicePixelRatio, 0, 0, window.devicePixelRatio, 0, 0);
+      ctx.setTransform(reducedPixelRatio, 0, 0, reducedPixelRatio, 0, 0);
       createParticles();
     }
 
@@ -139,11 +141,11 @@
       particles = Array.from({ length: particleCount }, () => ({
         x: random(0, width),
         y: random(0, height),
-        vx: random(-0.25, 0.25),
-        vy: random(-0.25, 0.25),
-        size: random(1.2, 2.4),
+        vx: random(-0.18, 0.18),
+        vy: random(-0.18, 0.18),
+        size: random(1, 2.1),
         color: Math.random() > 0.5 ? '56, 189, 248' : '6, 182, 212',
-        alpha: random(0.15, 0.25)
+        alpha: random(0.15, 0.22)
       }));
     }
 
@@ -152,24 +154,25 @@
         particle.x += particle.vx;
         particle.y += particle.vy;
 
-        if (particle.x < 0 || particle.x > width) particle.vx *= -1;
-        if (particle.y < 0 || particle.y > height) particle.vy *= -1;
+        if (particle.x < -10 || particle.x > width + 10) particle.vx *= -1;
+        if (particle.y < -10 || particle.y > height + 10) particle.vy *= -1;
 
         if (!isTouchDevice && mouse.active) {
           const dx = mouse.x - particle.x;
           const dy = mouse.y - particle.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < mouseDistance) {
+          if (distance < mouseDistance && distance > 0.1) {
             const force = (mouseDistance - distance) / mouseDistance;
-            particle.x -= (dx / distance) * force * 0.65;
-            particle.y -= (dy / distance) * force * 0.65;
+            particle.x -= (dx / distance) * force * 0.45;
+            particle.y -= (dy / distance) * force * 0.45;
           }
         }
       });
     }
 
     function drawConnections() {
+      ctx.lineWidth = 0.5;
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
@@ -177,12 +180,11 @@
           const distance = Math.sqrt(dx * dx + dy * dy);
 
           if (distance < connectionDistance) {
-            const opacity = (1 - distance / connectionDistance) * 0.22;
+            const opacity = (1 - distance / connectionDistance) * 0.18;
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
             ctx.strokeStyle = `rgba(56, 189, 248, ${opacity})`;
-            ctx.lineWidth = 0.5;
             ctx.stroke();
           }
         }
@@ -203,10 +205,16 @@
       updateParticles();
       drawConnections();
       drawParticles();
-      requestAnimationFrame(animate);
+      animationId = requestAnimationFrame(animate);
     }
 
-    window.addEventListener('resize', resizeCanvas, { passive: true });
+    function start() {
+      cancelAnimationFrame(animationId);
+      resizeCanvas();
+      animate();
+    }
+
+    window.addEventListener('resize', start, { passive: true });
 
     if (!isTouchDevice) {
       window.addEventListener('mousemove', (event) => {
@@ -220,8 +228,15 @@
       }, { passive: true });
     }
 
-    resizeCanvas();
-    animate();
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        cancelAnimationFrame(animationId);
+      } else {
+        start();
+      }
+    });
+
+    start();
   }
 
   form?.addEventListener('submit', (event) => {
