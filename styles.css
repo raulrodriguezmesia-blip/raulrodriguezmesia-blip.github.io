@@ -65,16 +65,20 @@ body::before {
   mask-image: linear-gradient(to bottom, black, transparent 80%);
 }
 
-/* Fondo animado tecnológico - Canvas */
+/* Fondo animado tecnológico premium - Canvas */
 #bg-canvas {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
+  width: 100dvw;
   height: 100vh;
+  height: 100dvh;
   z-index: -1;
   pointer-events: none;
-  opacity: 0.8;
+  opacity: 0.85;
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 a {
