@@ -3,16 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portafolio profesional de Raúl Rodriguez Mesia: Ingeniero en Informática, desarrollador Java, Spring Boot y Full Stack.">
-  <meta name="keywords" content="Raúl Rodriguez Mesia, portafolio, Java, Spring Boot, Full Stack, Backend, DevOps">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://github.com">
+  <link rel="preconnect" href="https://www.linkedin.com">
+  <link rel="preconnect" href="https://formspree.io">
+  <meta name="theme-color" content="#0a0f1d">
+  <meta name="description" content="Portafolio profesional de Raúl Rodriguez Mesia: Backend Developer Java/Spring Boot, Cloud Specialist AWS, Python, APIs REST, AI Agents y desarrollo Full Stack.">
+  <meta name="keywords" content="Raúl Rodriguez Mesia, portafolio, Java, Spring Boot, Python, AWS, APIs REST, AI Agents, Full Stack, Backend Developer, Cloud Specialist">
   <meta name="author" content="Raúl Rodriguez Mesia">
-  <meta property="og:title" content="Raúl Rodriguez Mesia | Portafolio">
-  <meta property="og:description" content="Portafolio profesional de desarrollo de software con proyectos en Java, Spring Boot, APIs REST y aplicaciones web.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://raulrodriguezmesia-blip.github.io/">
+  <meta property="og:title" content="Raúl Rodriguez Mesia | Backend Developer & Cloud Specialist">
+  <meta property="og:description" content="Portafolio profesional con proyectos en Java, Spring Boot, Python, AWS, AI Agents, APIs REST, serverless y aplicaciones web.">
   <meta property="og:type" content="website">
-  <title>Raúl Rodriguez Mesia | Portafolio</title>
+  <meta property="og:url" content="https://raulrodriguezmesia-blip.github.io/">
+  <meta property="og:image" content="https://raulrodriguezmesia-blip.github.io/assets/og-image.svg">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="data:application/json,{}">
+  <link rel="preload" as="style" href="styles.css">
   <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Raúl Rodriguez Mesia",
+    "jobTitle": "Backend Developer | Cloud Specialist AWS",
+    "url": "https://raulrodriguezmesia-blip.github.io/",
+    "sameAs": [
+      "https://github.com/raulrodriguezmesia-blip",
+      "https://www.linkedin.com/in/raul-rodriguez-mesia/"
+    ],
+    "telephone": ["+51966105289", "+51920157695"],
+    "email": "raulrodriguezmesia@gmail.com",
+    "knowsAbout": ["Java", "Spring Boot", "Python", "AWS", "APIs REST", "SQL", "Docker", "Serverless", "AI Agents", "GitHub Pages"]
+  }
+  </script>
 </head>
 <body>
+  <!-- Canvas de fondo animado tecnológico -->
+  <canvas id="bg-canvas" aria-hidden="true" aria-label="Fondo animado tecnológico"></canvas>
+  
   <a class="skip-link" href="#main">Saltar al contenido principal</a>
 
   <header class="site-header" data-reveal>
@@ -30,15 +60,17 @@
 
       <div class="nav-menu" id="nav-menu">
         <a href="#inicio">Inicio</a>
-        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#perfil">Perfil</a>
         <a href="#skills">Skills</a>
         <a href="#proyectos">Proyectos</a>
-        <a href="#experiencia">Experiencia</a>
+        <a href="#hackathon">Hackathon</a>
+        <a href="#cloud">Cloud AWS</a>
+        <a href="#trayectoria">Trayectoria</a>
         <a href="#contacto">Contacto</a>
       </div>
 
       <button class="theme-toggle" type="button" aria-label="Cambiar tema">
-        <span class="theme-icon" aria-hidden="true">☾</span>
+        <span class="theme-icon" aria-hidden="true">â˜¾</span>
       </button>
     </nav>
   </header>
@@ -46,19 +78,36 @@
   <main id="main">
     <section class="hero container" id="inicio">
       <div class="hero-copy" data-reveal>
-        <p class="eyebrow">Ingeniero en Informática · Desarrollador Backend / Full Stack</p>
-        <h1>Construyo soluciones digitales sólidas, escalables y orientadas a resultados.</h1>
+        <p class="eyebrow">Backend Developer · Cloud Specialist AWS · AI Agent Developer</p>
+        <h1>Desarrollo software backend, cloud y agentes de IA con enfoque profesional y orientado a resultados.</h1>
         <p class="hero-text">
-          Especializado en Java, Spring Boot, APIs REST, bases de datos y desarrollo web.
-          Mi enfoque combina arquitectura limpia, código mantenible y una comunicación clara para convertir ideas en productos útiles.
+          Soy <strong>Raúl Rodriguez Mesia</strong>, Ingeniero en InformÁ¡tica con experiencia prÁ¡ctica en Java,
+          Spring Boot, Python, AWS, APIs REST, SQL, Docker, serverless y desarrollo web.
+          Mi portafolio reúne proyectos de backend, cloud, machine learning y agentes de IA construidos para demostrar capacidad técnica real.
         </p>
+
+        <div class="chip-list" aria-label="Tecnologías principales">
+          <span class="chip">Java</span>
+          <span class="chip">Spring Boot</span>
+          <span class="chip">Python</span>
+          <span class="chip">AWS</span>
+          <span class="chip">REST APIs</span>
+          <span class="chip">SQL</span>
+          <span class="chip">Docker</span>
+          <span class="chip">AI Agents</span>
+        </div>
+
         <div class="hero-actions">
           <a class="btn btn-primary" href="#proyectos">Ver proyectos</a>
+          <a class="btn btn-secondary" href="#hackathon">Ver hackathon</a>
           <a class="btn btn-secondary" href="Raul_Rodriguez_Mesia_CV.pdf" target="_blank" rel="noopener">Descargar CV</a>
         </div>
+
         <div class="hero-links" aria-label="Enlaces profesionales">
           <a href="https://github.com/raulrodriguezmesia-blip" target="_blank" rel="noopener">GitHub</a>
           <a href="https://www.linkedin.com/in/raul-rodriguez-mesia/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:raulrodriguezmesia@gmail.com">Email</a>
+          <a href="tel:+51966105289">+51 966 105 289</a>
           <a href="#contacto">Contactar</a>
         </div>
       </div>
@@ -70,13 +119,13 @@
           <div class="code-dots">
             <span></span><span></span><span></span>
           </div>
-          <pre><code>class Portfolio {
-  focus = "Java + Spring Boot";
-  stack = ["Backend", "APIs", "SQL", "Web"];
-  mindset = "Clean Code";
+          <pre><code>class RaulRodriguez {
+  role = "Backend + Cloud";
+  stack = ["Java", "Spring Boot", "Python", "AWS"];
+  projects = ["REST APIs", "Serverless", "AI Agents", "ML"];
 
-  buildSolution(problem) {
-    return new ScalableSystem(problem);
+  deliver(value) {
+    return this.buildReliableSystems(value);
   }
 }</code></pre>
         </div>
@@ -85,50 +134,63 @@
 
     <section class="stats container" aria-label="Resumen profesional" data-reveal>
       <article>
-        <strong>+4</strong>
-        <span>Proyectos destacados</span>
+        <strong>11</strong>
+        <span>Repositorios públicos en GitHub</span>
       </article>
       <article>
-        <strong>Java</strong>
-        <span>Backend principal</span>
+        <strong>+7</strong>
+        <span>Proyectos técnicos visibles</span>
       </article>
       <article>
-        <strong>REST</strong>
-        <span>APIs y servicios</span>
+        <strong>R2 0.883</strong>
+        <span>Modelo ML de predicción AWS</span>
       </article>
       <article>
-        <strong>SQL</strong>
-        <span>Datos relacionales</span>
+        <strong>5 fases</strong>
+        <span>Pipeline de anÁ¡lisis de código IA</span>
       </article>
     </section>
 
-    <section class="section container" id="sobre-mi">
+    <section class="section container" id="perfil">
       <div class="section-heading" data-reveal>
         <p class="eyebrow">Perfil profesional</p>
-        <h2>Sobre mí</h2>
+        <h2>Backend, cloud e inteligencia artificial aplicada</h2>
         <p>
-          Soy un desarrollador enfocado en crear aplicaciones backend confiables, integraciones limpias y experiencias web funcionales.
-          Me interesa resolver problemas reales con buenas prácticas, documentación clara y tecnología adecuada para cada caso.
+          Mi objetivo profesional es crecer como desarrollador backend y cloud, aportando soluciones confiables,
+          documentación clara, código mantenible y capacidad de aprendizaje rÁ¡pido en entornos técnicos exigentes.
         </p>
       </div>
 
-      <div class="about-grid">
-        <article class="glass-card" data-reveal>
-          <h3>Lo que aporto</h3>
-          <ul class="check-list">
-            <li>Desarrollo backend con Java y Spring Boot.</li>
-            <li>Diseño e implementación de APIs REST.</li>
-            <li>Modelado de bases de datos relacionales.</li>
-            <li>Aplicaciones web responsivas con HTML, CSS y JavaScript.</li>
-            <li>Control de versiones con Git y trabajo colaborativo.</li>
-          </ul>
+      <div class="profile-grid">
+        <article class="glass-card profile-card" data-reveal>
+          <h3>Ubicación y formación</h3>
+          <p>
+            Ubicado en Perú, Tumbes. Formación en Ingeniería en InformÁ¡tica en el Instituto Universitario de los Llanos.
+            Perfil orientado a backend, cloud, bases de datos y automatización.
+          </p>
         </article>
 
-        <article class="glass-card" data-reveal>
-          <h3>Objetivo</h3>
+        <article class="glass-card profile-card" data-reveal>
+          <h3>Enfoque técnico</h3>
           <p>
-            Continuar creciendo como desarrollador de software, participar en proyectos desafiantes y aportar soluciones
-            que mejoren procesos, productos y experiencia de usuario.
+            Desarrollo aplicaciones backend con Java y Spring Boot, APIs REST, persistencia SQL, Python, machine learning,
+            arquitecturas serverless en AWS y agentes de IA con Microsoft Foundry.
+          </p>
+        </article>
+
+        <article class="glass-card profile-card" data-reveal>
+          <h3>Experiencia profesional adicional</h3>
+          <p>
+            Experiencia en atención al cliente y caja en Arequipa Expreso Marvisur, aportando comunicación, disciplina operativa,
+            resolución de incidencias y trato directo con usuarios.
+          </p>
+        </article>
+
+        <article class="glass-card profile-card availability-card" data-reveal>
+          <h3>Disponibilidad</h3>
+          <p>
+            Interesado en oportunidades como Backend Developer, Java Developer, Spring Boot Developer, Cloud Practitioner,
+            AI Agent Developer o proyectos freelance relacionados con automatización y software.
           </p>
         </article>
       </div>
@@ -136,40 +198,65 @@
 
     <section class="section container" id="skills">
       <div class="section-heading" data-reveal>
-        <p class="eyebrow">Tecnologías</p>
+        <p class="eyebrow">Stack técnico</p>
         <h2>Skills principales</h2>
       </div>
 
       <div class="skills-grid">
         <article class="skill-card" data-reveal>
-          <span class="skill-icon">☕</span>
+          <span class="skill-icon">J</span>
           <h3>Backend Java</h3>
-          <p>Programación orientada a objetos, patrones de diseño, APIs, validaciones y arquitectura modular.</p>
+          <p>Java, POO, JDBC, JPA/Hibernate, Maven, validaciones, manejo de errores, separación por capas y código limpio.</p>
         </article>
         <article class="skill-card" data-reveal>
-          <span class="skill-icon">🌱</span>
+          <span class="skill-icon">S</span>
           <h3>Spring Boot</h3>
-          <p>REST controllers, servicios, repositorios, JPA/Hibernate, seguridad básica y documentación.</p>
+          <p>APIs REST, controllers, servicios, repositorios, documentación Swagger/OpenAPI, manejo de excepciones y principios de microservicios.</p>
         </article>
         <article class="skill-card" data-reveal>
-          <span class="skill-icon">🗄️</span>
-          <h3>SQL / JPA</h3>
-          <p>Modelado de datos, consultas, relaciones, persistencia y optimización de operaciones básicas.</p>
+          <span class="skill-icon">P</span>
+          <h3>Python e IA</h3>
+          <p>Python, scikit-learn, pandas, numpy, FastAPI, machine learning, agentes de IA, anÁ¡lisis de código y automatización.</p>
         </article>
         <article class="skill-card" data-reveal>
-          <span class="skill-icon">🧩</span>
-          <h3>Frontend Web</h3>
-          <p>HTML semántico, CSS moderno, JavaScript vanilla, diseño responsivo y accesibilidad.</p>
+          <span class="skill-icon">A</span>
+          <h3>AWS y Cloud</h3>
+          <p>S3, IAM, EC2, VPC, Lambda, DynamoDB, API Gateway, RDS, SQS, SNS, EventBridge, ECS/Fargate y seguridad bÁ¡sica.</p>
         </article>
         <article class="skill-card" data-reveal>
-          <span class="skill-icon">🛠️</span>
-          <h3>DevOps básico</h3>
-          <p>Git, documentación técnica, despliegues estáticos y buenas prácticas de mantenimiento.</p>
+          <span class="skill-icon">D</span>
+          <h3>Bases de datos</h3>
+          <p>SQL, MySQL, modelado relacional, consultas, persistencia con JDBC/JPA y diseño de estructuras de datos.</p>
         </article>
         <article class="skill-card" data-reveal>
-          <span class="skill-icon">🚀</span>
-          <h3>Metodología</h3>
-          <p>Análisis de requerimientos, desarrollo incremental, pruebas manuales y comunicación clara.</p>
+          <span class="skill-icon">W</span>
+          <h3>Web y DevOps</h3>
+          <p>HTML semÁ¡ntico, CSS moderno, JavaScript vanilla, GitHub Pages, Docker, GitHub Actions, Git y documentación técnica.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" id="certificaciones">
+      <div class="section-heading center" data-reveal>
+        <p class="eyebrow">Certificaciones y aprendizaje</p>
+        <h2>Certificaciones en progreso</h2>
+        <p>
+          Información tomada del perfil público de LinkedIn y repositorios visibles.
+        </p>
+      </div>
+
+      <div class="cert-grid">
+        <article class="cert-card" data-reveal>
+          <h3>AWS Cloud Practitioner</h3>
+          <p>Certificación en progreso, alineada con proyectos prÁ¡cticos de S3, IAM, Lambda, DynamoDB, API Gateway, RDS, SQS, SNS, EventBridge y ECS/Fargate.</p>
+        </article>
+        <article class="cert-card" data-reveal>
+          <h3>Oracle Certified Associate</h3>
+          <p>Certificación en progreso, complementaria al perfil Java y al aprendizaje continuo en desarrollo backend.</p>
+        </article>
+        <article class="cert-card" data-reveal>
+          <h3>Aprendizaje AWS</h3>
+          <p>PrÁ¡ctica reciente con hosting estÁ¡tico en S3, políticas de acceso público, seguridad S3, mejores prÁ¡cticas IAM y arquitecturas serverless.</p>
         </article>
       </div>
     </section>
@@ -177,95 +264,265 @@
     <section class="section container" id="proyectos">
       <div class="section-heading split" data-reveal>
         <div>
-          <p class="eyebrow">Portafolio</p>
+          <p class="eyebrow">Portafolio técnico</p>
           <h2>Proyectos destacados</h2>
+          <p>
+            Proyectos seleccionados para mostrar backend, cloud, machine learning, AI agents, APIs REST, Java, Python y desarrollo web.
+          </p>
         </div>
         <div class="filters" role="group" aria-label="Filtrar proyectos">
           <button class="filter-btn is-active" type="button" data-filter="all">Todos</button>
           <button class="filter-btn" type="button" data-filter="backend">Backend</button>
-          <button class="filter-btn" type="button" data-filter="fullstack">Full Stack</button>
+          <button class="filter-btn" type="button" data-filter="cloud">Cloud</button>
+          <button class="filter-btn" type="button" data-filter="ai">IA</button>
           <button class="filter-btn" type="button" data-filter="java">Java</button>
+          <button class="filter-btn" type="button" data-filter="python">Python</button>
         </div>
       </div>
 
       <div class="projects-grid">
-        <article class="project-card" data-category="backend java fullstack" data-reveal>
+        <article class="project-card" data-category="ai python cloud backend" data-reveal>
           <div class="project-top">
-            <span class="project-badge">Spring Boot</span>
-            <span class="project-badge">SQL</span>
+            <span class="project-badge">Agents League 2026</span>
+            <span class="project-badge">Reasoning Agents</span>
           </div>
-          <h3>Sistema de Control de Acceso</h3>
-          <p>Aplicación para gestión de accesos, usuarios y respaldos, pensada para escenarios administrativos.</p>
-          <a class="project-link" href="https://github.com/raulrodriguezmesia-blip/Alcaldia" target="_blank" rel="noopener">Ver repositorio →</a>
+          <h3>Eros Code Analysis Agent</h3>
+          <p>Agente de IA para anÁ¡lisis de código con pipeline de 5 fases: sintaxis, calidad, seguridad OWASP, rendimiento y refactorización.</p>
+          <div class="project-metrics">
+            <span class="metric">Microsoft Foundry IQ</span>
+            <span class="metric">Azure Agent Server</span>
+            <span class="metric">JSON estructurado</span>
+          </div>
+          <a class="project-link" href="https://github.com/raulrodriguezmesia-blip/eros-code-analysis-agent" target="_blank" rel="noopener">Código</a>
         </article>
 
-        <article class="project-card" data-category="fullstack java" data-reveal>
+        <article class="project-card" data-category="python cloud ai backend" data-reveal>
+          <div class="project-top">
+            <span class="project-badge">FastAPI</span>
+            <span class="project-badge">Docker</span>
+          </div>
+          <h3>AWS Cost Optimizer ML</h3>
+          <p>Modelo de machine learning para predecir costos AWS usando RandomForest, validación temporal y API REST para predicciones.</p>
+          <div class="project-metrics">
+            <span class="metric">R2 0.883</span>
+            <span class="metric">RMSE 3.48</span>
+            <span class="metric">GitHub Actions</span>
+          </div>
+          <a class="project-link" href="https://github.com/raulrodriguezmesia-blip/aws-cost-optimizer-ml" target="_blank" rel="noopener">Código</a>
+        </article>
+
+        <article class="project-card" data-category="java backend fullstack" data-reveal>
           <div class="project-top">
             <span class="project-badge">Java</span>
+            <span class="project-badge">MySQL</span>
+          </div>
+          <h3>Sistema Alcaldía</h3>
+          <p>Sistema administrativo de gestión de empleados con enfoque en seguridad, control de acceso, respaldo y continuidad operativa.</p>
+          <div class="project-metrics">
+            <span class="metric">JDBC</span>
+            <span class="metric">SHA-256 / BCrypt</span>
+            <span class="metric">Backup</span>
+          </div>
+          <a class="project-link" href="https://github.com/raulrodriguezmesia-blip/Alcaldia" target="_blank" rel="noopener">Código</a>
+        </article>
+
+        <article class="project-card" data-category="java backend fullstack" data-reveal>
+          <div class="project-top">
             <span class="project-badge">JPA</span>
+            <span class="project-badge">Hibernate</span>
           </div>
           <h3>Sistema de Ferretería</h3>
-          <p>Gestión de inventario y operaciones comerciales con persistencia de datos y flujo de negocio definido.</p>
-          <a class="project-link" href="https://github.com/raulrodriguezmesia-blip/ferreteria" target="_blank" rel="noopener">Ver repositorio →</a>
-        </article>
-
-        <article class="project-card" data-category="backend java" data-reveal>
-          <div class="project-top">
-            <span class="project-badge">REST API</span>
-            <span class="project-badge">Spring</span>
+          <p>Aplicación para gestión de inventario y operaciones comerciales con persistencia de datos y consultas web.</p>
+          <div class="project-metrics">
+            <span class="metric">Java</span>
+            <span class="metric">SQL</span>
+            <span class="metric">Web</span>
           </div>
-          <h3>API REST con Spring Boot</h3>
-          <p>Implementación de servicios REST para gestionar recursos, peticiones HTTP y respuestas estructuradas.</p>
-          <a class="project-link" href="https://github.com/raulrodriguezmesia-blip/springboot" target="_blank" rel="noopener">Ver repositorio →</a>
+          <a class="project-link" href="https://github.com/raulrodriguezmesia-blip/ferreteria" target="_blank" rel="noopener">Código</a>
         </article>
 
-        <article class="project-card" data-category="java" data-reveal>
+        <article class="project-card" data-category="java backend" data-reveal>
           <div class="project-top">
-            <span class="project-badge">POO</span>
+            <span class="project-badge">Spring Boot</span>
+            <span class="project-badge">REST API</span>
+          </div>
+          <h3>Spring Boot API REST</h3>
+          <p>API RESTful con Spring Boot, validación de datos, manejo de excepciones, Maven y documentación Swagger/OpenAPI.</p>
+          <div class="project-metrics">
+            <span class="metric">Controllers</span>
+            <span class="metric">Swagger</span>
+            <span class="metric">Maven</span>
+          </div>
+          <a class="project-link" href="https://github.com/raulrodriguezmesia-blip/springboot" target="_blank" rel="noopener">Código</a>
+        </article>
+
+        <article class="project-card" data-category="java backend" data-reveal>
+          <div class="project-top">
+            <span class="project-badge">JUnit 5</span>
             <span class="project-badge">CRUD</span>
           </div>
-          <h3>CRUD Java Junior</h3>
-          <p>Proyecto base para consolidar fundamentos de Java, estructuras de datos y operaciones CRUD.</p>
-          <a class="project-link" href="https://github.com/raulrodriguezmesia-blip/java-junior-portfolio" target="_blank" rel="noopener">Ver repositorio →</a>
+          <h3>Java Junior Portfolio</h3>
+          <p>Aplicación de consola CRUD con validaciones, persistencia en JSON/TXT/CSV, consumo de API REST y pruebas unitarias.</p>
+          <div class="project-metrics">
+            <span class="metric">Jackson</span>
+            <span class="metric">Maven</span>
+            <span class="metric">Tests</span>
+          </div>
+          <a class="project-link" href="https://github.com/raulrodriguezmesia-blip/java-junior-portfolio" target="_blank" rel="noopener">Código</a>
+        </article>
+
+        <article class="project-card" data-category="cloud python" data-reveal>
+          <div class="project-top">
+            <span class="project-badge">AWS</span>
+            <span class="project-badge">Serverless</span>
+          </div>
+          <h3>AWS Portfolio</h3>
+          <p>Conjunto de prÁ¡cticas cloud con simuladores, arquitecturas serverless, S3, Lambda, DynamoDB, API Gateway, RDS, SQS, SNS, EventBridge y ECS/Fargate.</p>
+          <div class="project-metrics">
+            <span class="metric">IAM</span>
+            <span class="metric">S3</span>
+            <span class="metric">Fargate</span>
+          </div>
+          <a class="project-link" href="https://github.com/raulrodriguezmesia-blip/Aws-Portfolio-final" target="_blank" rel="noopener">Código</a>
         </article>
       </div>
     </section>
 
-    <section class="section container" id="experiencia">
+    <section class="section container" id="hackathon">
+      <div class="section-heading" data-reveal>
+        <p class="eyebrow">Hackathon</p>
+        <h2>Agents League Hackathon 2026</h2>
+        <p>
+          Participación en el track <strong>Reasoning Agents</strong> con <strong>Eros Code Analysis Agent</strong>,
+          un agente de anÁ¡lisis de código construido para Microsoft Foundry y Azure.
+        </p>
+      </div>
+
+      <div class="hackathon-card" data-reveal>
+        <div>
+          <h3>Qué se construyó</h3>
+          <p>
+            Un agente multi-paso que analiza código vulnerable y genera reportes estructurados con hallazgos,
+            recomendaciones y propuestas de mitigación.
+          </p>
+        </div>
+        <ul class="impact-list">
+          <li>Pipeline de 5 fases: sintaxis, calidad, seguridad, rendimiento y refactorización.</li>
+          <li>Integración conceptual con Microsoft Foundry IQ y Foundry Toolbox.</li>
+          <li>Salida determinista en JSON para consumo por herramientas o dashboards.</li>
+          <li>Demo técnica, simulación local y tests internos de validación.</li>
+          <li>Enfoque profesional: sin credenciales hardcodeadas, configuración por entorno y documentación técnica.</li>
+        </ul>
+        <a class="btn btn-secondary" href="https://github.com/raulrodriguezmesia-blip/eros-code-analysis-agent" target="_blank" rel="noopener">Ver proyecto del hackathon</a>
+      </div>
+    </section>
+
+    <section class="section container" id="cloud">
+      <div class="section-heading" data-reveal>
+        <p class="eyebrow">Cloud AWS</p>
+        <h2>PrÁ¡ctica aplicada en AWS</h2>
+        <p>
+          El portafolio incluye proyectos y prÁ¡cticas orientadas a cloud, serverless, seguridad bÁ¡sica y arquitecturas escalables.
+        </p>
+      </div>
+
+      <div class="cloud-grid">
+        <article class="glass-card" data-reveal>
+          <h3>Serverless</h3>
+          <p>Lambda, DynamoDB, API Gateway, RDS, SQS, SNS y EventBridge aplicados en simuladores interactivos AWS.</p>
+        </article>
+        <article class="glass-card" data-reveal>
+          <h3>Infraestructura</h3>
+          <p>PrÁ¡cticas con EC2, S3, IAM y VPC, enfocadas en seguridad, permisos y despliegue de activos estÁ¡ticos.</p>
+        </article>
+        <article class="glass-card" data-reveal>
+          <h3>Contenedores</h3>
+          <p>Uso de Docker y ECS/Fargate para empaquetar servicios y preparar despliegues cloud mÁ¡s reproducibles.</p>
+        </article>
+        <article class="glass-card" data-reveal>
+          <h3>Seguridad bÁ¡sica</h3>
+          <p>Aplicación de mejores prÁ¡cticas IAM, políticas S3, configuración por entorno y ausencia de credenciales en código.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" id="trayectoria">
       <div class="section-heading" data-reveal>
         <p class="eyebrow">Trayectoria</p>
-        <h2>Ruta de aprendizaje</h2>
+        <h2>Ruta profesional</h2>
       </div>
 
       <div class="timeline">
         <article class="timeline-item" data-reveal>
           <span class="timeline-dot"></span>
           <div>
-            <h3>Fundamentos de programación</h3>
-            <p>Java, lógica, POO, estructuras de control y resolución de problemas.</p>
+            <h3>Ingeniería en InformÁ¡tica</h3>
+            <p>Formación en programación, bases de datos, administración de sistemas y fundamentos de ingeniería de software.</p>
           </div>
         </article>
         <article class="timeline-item" data-reveal>
           <span class="timeline-dot"></span>
           <div>
-            <h3>Backend y bases de datos</h3>
-            <p>Spring Boot, APIs REST, JPA/Hibernate, SQL y modelado relacional.</p>
+            <h3>Backend Java y bases de datos</h3>
+            <p>Proyectos con Java, JDBC, MySQL, JPA/Hibernate, CRUD, validaciones, persistencia y manejo de errores.</p>
           </div>
         </article>
         <article class="timeline-item" data-reveal>
           <span class="timeline-dot"></span>
           <div>
-            <h3>Desarrollo web integral</h3>
-            <p>HTML semántico, CSS moderno, JavaScript y experiencia de usuario responsiva.</p>
+            <h3>APIs REST y Spring Boot</h3>
+            <p>Desarrollo de servicios REST con Spring Boot, Maven, Swagger/OpenAPI, controladores, servicios y repositorios.</p>
           </div>
         </article>
         <article class="timeline-item" data-reveal>
           <span class="timeline-dot"></span>
           <div>
-            <h3>Próximos pasos</h3>
-            <p>Profundizar en testing, seguridad, cloud, Docker y arquitecturas escalables.</p>
+            <h3>AWS y cloud prÁ¡ctico</h3>
+            <p>PrÁ¡cticas con S3, IAM, Lambda, DynamoDB, API Gateway, RDS, SQS, SNS, EventBridge, ECS/Fargate y Docker.</p>
           </div>
         </article>
+        <article class="timeline-item" data-reveal>
+          <span class="timeline-dot"></span>
+          <div>
+            <h3>Python, ML e IA</h3>
+            <p>Modelos predictivos con scikit-learn, FastAPI, Docker, GitHub Actions y agentes de IA para anÁ¡lisis de código.</p>
+          </div>
+        </article>
+        <article class="timeline-item" data-reveal>
+          <span class="timeline-dot"></span>
+          <div>
+            <h3>Agents League Hackathon 2026</h3>
+            <p>Participación en el track Reasoning Agents con Eros Code Analysis Agent, un proyecto de IA aplicado a calidad y seguridad de código.</p>
+          </div>
+        </article>
+      </div>
+
+      <p class="source-note" data-reveal>
+        Nota: la información profesional se consolidó a partir de los repositorios públicos de GitHub y de la información pública indexada del perfil de LinkedIn proporcionado.
+        LinkedIn no permitió acceso completo por bloqueo automÁ¡tico, por lo que los datos sensibles o no verificables no fueron añadidos.
+      </p>
+    </section>
+
+    <section class="section container" id="open-source">
+      <div class="section-heading" data-reveal>
+        <p class="eyebrow">GitHub</p>
+        <h2>Repositorios públicos</h2>
+        <p>
+          El perfil público de GitHub muestra múltiples proyectos orientados a Java, Spring Boot, AWS, Python, machine learning,
+          agentes de IA y portafolio profesional.
+        </p>
+      </div>
+
+      <div class="open-card" data-reveal>
+        <h3>Señales para reclutadores</h3>
+        <div class="stack-list">
+          <span>Commits y evolución de proyectos</span>
+          <span>READMEs técnicos</span>
+          <span>Demostración de backend</span>
+          <span>PrÁ¡cticas cloud</span>
+          <span>Proyectos de IA</span>
+          <span>Portafolio desplegado en GitHub Pages</span>
+        </div>
       </div>
     </section>
 
@@ -273,33 +530,49 @@
       <div class="contact-card" data-reveal>
         <div>
           <p class="eyebrow">Contacto</p>
-          <h2>Hablemos de tu próximo proyecto</h2>
+          <h2>Hablemos de backend, cloud o IA aplicada</h2>
           <p>
-            Si buscas alguien para apoyar en backend, APIs, mantenimiento de aplicaciones o desarrollo web,
+            Si buscas apoyo en APIs REST, Java, Spring Boot, Python, AWS, automatización, agentes de IA o desarrollo web,
             puedes escribirme y coordinar una conversación.
           </p>
           <div class="contact-links">
+            <a href="mailto:raulrodriguezmesia@gmail.com">raulrodriguezmesia@gmail.com</a>
+            <a href="tel:+51966105289">+51 966 105 289</a>
+            <a href="tel:+51920157695">+51 920 157 695</a>
             <a href="https://github.com/raulrodriguezmesia-blip" target="_blank" rel="noopener">GitHub</a>
             <a href="https://www.linkedin.com/in/raul-rodriguez-mesia/" target="_blank" rel="noopener">LinkedIn</a>
             <a href="Raul_Rodriguez_Mesia_CV.pdf" target="_blank" rel="noopener">CV PDF</a>
           </div>
         </div>
 
-        <form id="contact-form" class="contact-form" data-email="tu-email@dominio.com">
-          <label>
-            Nombre
-            <input name="nombre" type="text" placeholder="Tu nombre" autocomplete="name" required>
-          </label>
-          <label>
-            Email
-            <input name="email" type="email" placeholder="tu@email.com" autocomplete="email" required>
-          </label>
-          <label>
-            Mensaje
-            <textarea name="mensaje" rows="5" placeholder="Cuéntame qué necesitas..." required></textarea>
-          </label>
-          <button class="btn btn-primary" type="submit">Enviar mensaje</button>
-          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        <form id="contact-form" class="contact-form" action="https://formsubmit.co/raulrodriguezmesia@gmail.com" method="POST" novalidate>
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" type="text" name="nombre" placeholder="Tu nombre" required autocomplete="name">
+            <span class="field-hint" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" placeholder="tu@email.com" required autocomplete="email" inputmode="email">
+            <span class="field-hint" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntame qué necesitas..." required></textarea>
+            <span class="field-hint" aria-live="polite"></span>
+          </div>
+          <button type="submit" class="submit-btn">
+            <span class="btn-text">Enviar mensaje</span>
+            <span class="btn-loader" hidden>Enviando...</span>
+          </button>
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+          <div id="success-animation" class="success-animation" hidden aria-hidden="true">
+            <div class="success-icon">
+              <span class="success-circle"></span>
+              <span class="success-check">✓</span>
+            </div>
+            <p class="success-message">¡Gracias por contactarme! Tu mensaje ha sido enviado.</p>
+          </div>
         </form>
       </div>
     </section>
@@ -307,11 +580,386 @@
 
   <footer class="site-footer">
     <div class="container footer-content">
-      <p>© <span id="year"></span> Raúl Rodriguez Mesia. Todos los derechos reservados.</p>
-      <a href="#inicio">Volver arriba ↑</a>
+      <p>© <span id="year"></span> Raúl Rodriguez Mesia. Backend Developer, Cloud Specialist AWS e IA aplicada.</p>
+      <div class="footer-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+      </div>
     </div>
   </footer>
 
   <script src="script.js" defer></script>
+  
+  <!-- Fondo animado tecnológico premium - Canvas -->
+
+  <script>
+
+    (function() {
+
+      const canvas = document.getElementById('bg-canvas');
+
+      if (!canvas) return;
+
+      const ctx = canvas.getContext('2d');
+
+      
+
+      // Configuración responsive
+
+      let width, height;
+
+      let particles = [];
+
+      let mouse = { x: null, y: null, radius: 180 };
+
+      let isMobile = false;
+
+      let animationId;
+
+      let time = 0;
+
+      
+
+      // Detectar dispositivo móvil
+
+      function detectMobile() {
+
+        isMobile = /Android|iPhone|iPad|iPod|webOS/i.test(navigator.userAgent) || window.innerWidth < 768;
+
+      }
+
+      
+
+      // Redimensionar canvas
+
+      function resize() {
+
+        width = window.innerWidth;
+
+        height = window.innerHeight;
+
+        canvas.width = width;
+
+        canvas.height = height;
+
+        initParticles();
+
+      }
+
+      
+
+      // Inicializar partículas
+
+      function initParticles() {
+
+        detectMobile();
+
+        const count = isMobile ? Math.floor((width * height) / 12000) : Math.floor((width * height) / 5000);
+
+        particles = [];
+
+        
+
+        for (let i = 0; i < count; i++) {
+
+          particles.push({
+
+            x: Math.random() * width,
+
+            y: Math.random() * height,
+
+            vx: (Math.random() - 0.5) * 0.8,
+
+            vy: (Math.random() - 0.5) * 0.8,
+
+            radius: Math.random() * 2.5 + 1.5,
+
+            baseOpacity: Math.random() * 0.25 + 0.15,
+
+            pulse: Math.random() * Math.PI * 2,
+
+            pulseSpeed: Math.random() * 0.02 + 0.01
+
+          });
+
+        }
+
+      }
+
+      
+
+      // Dibujar partículas y conexiones
+
+      function draw() {
+
+        ctx.clearRect(0, 0, width, height);
+
+        time += 0.01;
+
+        
+
+        // Actualizar y dibujar partículas
+
+        particles.forEach((p, i) => {
+
+          // Movimiento con pulso
+
+          p.pulse += p.pulseSpeed;
+
+          const pulseFactor = Math.sin(p.pulse) * 0.3 + 1;
+
+          
+
+          p.x += p.vx * pulseFactor;
+
+          p.y += p.vy * pulseFactor;
+
+          
+
+          // Rebotar en bordes con suavizado
+
+          if (p.x < 0 || p.x > width) { 
+
+            p.vx *= -1; 
+
+            p.x = Math.max(0, Math.min(width, p.x));
+
+          }
+
+          if (p.y < 0 || p.y > height) { 
+
+            p.vy *= -1; 
+
+            p.y = Math.max(0, Math.min(height, p.y));
+
+          }
+
+          
+
+          // Efecto de mouse (repulsión/atracción suave)
+
+          if (!isMobile && mouse.x !== null) {
+
+            const dx = p.x - mouse.x;
+
+            const dy = p.y - mouse.y;
+
+            const dist = Math.sqrt(dx * dx + dy * dy);
+
+            
+
+            if (dist < mouse.radius) {
+
+              const force = (mouse.radius - dist) / mouse.radius;
+
+              const angle = Math.atan2(dy, dx);
+
+              // Efecto de halo magnético
+
+              const haloForce = force * 0.8;
+
+              p.x += Math.cos(angle) * haloForce;
+
+              p.y += Math.sin(angle) * haloForce;
+
+              
+
+              // Aumentar brillo cerca del mouse
+
+              p.currentOpacity = Math.min(1, p.baseOpacity + force * 0.4);
+
+            } else {
+
+              p.currentOpacity = p.baseOpacity;
+
+            }
+
+          } else {
+
+            p.currentOpacity = p.baseOpacity;
+
+          }
+
+          
+
+          // Dibujar partícula con glow
+
+          const glowRadius = p.radius * 3;
+
+          const gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, glowRadius);
+
+          gradient.addColorStop(0, `rgba(56, 189, 248, ${p.currentOpacity})`);
+
+          gradient.addColorStop(0.4, `rgba(6, 182, 212, ${p.currentOpacity * 0.6})`);
+
+          gradient.addColorStop(1, 'rgba(6, 182, 212, 0)');
+
+          
+
+          ctx.beginPath();
+
+          ctx.arc(p.x, p.y, glowRadius, 0, Math.PI * 2);
+
+          ctx.fillStyle = gradient;
+
+          ctx.fill();
+
+          
+
+          // Núcleo brillante
+
+          ctx.beginPath();
+
+          ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+
+          ctx.fillStyle = `rgba(255, 255, 255, ${p.currentOpacity * 0.9})`;
+
+          ctx.fill();
+
+          
+
+          // Conexiones entre partículas cercanas
+
+          for (let j = i + 1; j < particles.length; j++) {
+
+            const dx = particles[j].x - p.x;
+
+            const dy = particles[j].y - p.y;
+
+            const dist = Math.sqrt(dx * dx + dy * dy);
+
+            const maxDist = isMobile ? 120 : 180;
+
+            
+
+            if (dist < maxDist) {
+
+              const opacity = (1 - dist / maxDist) * 0.35;
+
+              const gradient = ctx.createLinearGradient(p.x, p.y, particles[j].x, particles[j].y);
+
+              gradient.addColorStop(0, `rgba(56, 189, 248, ${opacity})`);
+
+              gradient.addColorStop(0.5, `rgba(6, 182, 212, ${opacity * 0.7})`);
+
+              gradient.addColorStop(1, `rgba(155, 92, 255, ${opacity})`);
+
+              
+
+              ctx.beginPath();
+
+              ctx.moveTo(p.x, p.y);
+
+              ctx.lineTo(particles[j].x, particles[j].y);
+
+              ctx.strokeStyle = gradient;
+
+              ctx.lineWidth = isMobile ? 0.4 : 0.6;
+
+              ctx.stroke();
+
+            }
+
+          }
+
+          
+
+          // Conexión con mouse (solo desktop)
+
+          if (!isMobile && mouse.x !== null) {
+
+            const dx = p.x - mouse.x;
+
+            const dy = p.y - mouse.y;
+
+            const dist = Math.sqrt(dx * dx + dy * dy);
+
+            
+
+            if (dist < mouse.radius * 1.2) {
+
+              const opacity = (1 - dist / (mouse.radius * 1.2)) * 0.5;
+
+              ctx.beginPath();
+
+              ctx.moveTo(p.x, p.y);
+
+              ctx.lineTo(mouse.x, mouse.y);
+
+              ctx.strokeStyle = `rgba(56, 189, 248, ${opacity})`;
+
+              ctx.lineWidth = 0.8;
+
+              ctx.stroke();
+
+            }
+
+          }
+
+        });
+
+        
+
+        animationId = requestAnimationFrame(draw);
+
+      }
+
+      
+
+      // Eventos
+
+      window.addEventListener('resize', () => {
+
+        resize();
+
+      });
+
+      
+
+      if (!isMobile) {
+
+        window.addEventListener('mousemove', (e) => {
+
+          mouse.x = e.clientX;
+
+          mouse.y = e.clientY;
+
+        });
+
+        
+
+        window.addEventListener('mouseout', () => {
+
+          mouse.x = null;
+
+          mouse.y = null;
+
+        });
+
+      }
+
+      
+
+      // Iniciar
+
+      detectMobile();
+
+      resize();
+
+      draw();
+
+      
+
+      // Cleanup para SPA o navegación
+
+      window.addEventListener('beforeunload', () => {
+
+        cancelAnimationFrame(animationId);
+
+      });
+
+    })();
+
+  </script>
 </body>
-</html>
