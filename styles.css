@@ -530,6 +530,26 @@ pre {
   font-size: 1.35rem;
 }
 
+.project-card.featured {
+  border: 1px solid rgba(155, 92, 255, 0.5);
+  background: linear-gradient(145deg, rgba(155, 92, 255, 0.12), var(--surface));
+  box-shadow: 0 0 0 1px rgba(155, 92, 255, 0.15), 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.project-card.featured .project-badge {
+  background: rgba(155, 92, 255, 0.18);
+  border-color: rgba(155, 92, 255, 0.45);
+  color: #d8b4fe;
+}
+
+.project-card.featured .project-link {
+  color: #c084fc;
+}
+
+.project-card.featured .project-link:hover {
+  color: #e9d5ff;
+}
+
 /* ===== Projects ===== */
 .filters {
   display: flex;
