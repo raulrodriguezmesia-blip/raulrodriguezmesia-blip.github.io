@@ -383,30 +383,6 @@ pre {
   background: rgba(15, 23, 42, 0.9);
 }
 
-.orbit {
-  position: absolute;
-  border: 1px solid rgba(79, 140, 255, 0.22);
-  border-radius: 999px;
-  filter: blur(0.2px);
-}
-
-.orbit-one {
-  width: 430px;
-  height: 430px;
-  top: 18%;
-  right: 8%;
-  animation: float 7s ease-in-out infinite;
-}
-
-.orbit-two {
-  width: 260px;
-  height: 260px;
-  right: 22%;
-  bottom: 8%;
-  border-color: rgba(155, 92, 255, 0.22);
-  animation: float 8s ease-in-out infinite reverse;
-}
-
 /* ===== Stats ===== */
 .stats {
   display: grid;
@@ -869,24 +845,8 @@ pre {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
+  html {
     scroll-behavior: auto !important;
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-}
-
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-18px);
   }
 }
 
