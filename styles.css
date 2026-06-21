@@ -65,20 +65,17 @@ body::before {
   mask-image: linear-gradient(to bottom, black, transparent 80%);
 }
 
-/* Fondo animado tecnológico premium - Canvas */
-#bg-canvas {
+/* Fondo sutil tecnológico */
+body::before {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  width: 100dvw;
-  height: 100vh;
-  height: 100dvh;
-  z-index: -1;
-  pointer-events: none;
-  opacity: 0.85;
-  will-change: transform;
-  transform: translateZ(0);
+  inset: 0;
+  z-index: -2;
+  content: "";
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: linear-gradient(to bottom, black, transparent 80%);
 }
 
 a {
