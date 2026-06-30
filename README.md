@@ -75,6 +75,7 @@ LinkedIn no permite acceso completo mediante scraping automático, por lo que no
 - **Spring Boot API REST**: API RESTful con Spring Boot, Maven y Swagger/OpenAPI.
 - **Java Junior Portfolio**: CRUD en consola con validaciones, persistencia multi-formato, consumo de API REST y JUnit 5.
 - **AWS Portfolio**: prácticas con S3, IAM, Lambda, DynamoDB, API Gateway, RDS, SQS, SNS, EventBridge, ECS/Fargate y Docker.
+- **CI/CD Resiliencia Corporativa**: sistema completo de resiliencia corporativa que integra generación de reportes con Grafana Reporter, dashboards avanzados, automatización con Argo Workflows, resiliencia multi-cloud con backups en AWS S3 y Azure Blob, validación continua en CI/CD corporativo y monitoreo de salud con Prometheus + Grafana.
 
 ## Personalización
 
