@@ -127,6 +127,35 @@
 
   const form = document.getElementById('contact-form');
   const status = document.getElementById('form-status');
+  const submitBtn = form?.querySelector('.submit-btn');
+  const btnText = submitBtn?.querySelector('.btn-text');
+  const btnLoader = submitBtn?.querySelector('.btn-loader');
+  const hints = form ? Array.from(form.querySelectorAll('.field-hint')) : [];
+  const successAnim = document.getElementById('success-animation');
+
+  function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  function setFieldHint(input, message) {
+    const hint = input.closest('.form-group')?.querySelector('.field-hint');
+    if (!hint) return;
+    hint.textContent = message || '';
+    input.setAttribute('aria-invalid', message ? 'true' : 'false');
+  }
+
+  function setStatus(message, type) {
+    if (!status) return;
+    status.textContent = message;
+    status.className = 'form-status ' + (type ? 'is-' + type : '');
+  }
+
+  function setLoading(isLoading) {
+    if (!submitBtn) return;
+    submitBtn.disabled = isLoading;
+    if (btnText) btnText.hidden = isLoading;
+    if (btnLoader) btnLoader.hidden = !isLoading;
+  }
 
   const bgCanvas = document.getElementById('bg-canvas');
   const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
@@ -262,6 +291,8 @@
 
   form?.addEventListener('submit', (event) => {
     event.preventDefault();
+    setStatus('', '');
+    hints.forEach((h) => (h.textContent = ''));
 
     const formData = new FormData(form);
     const name = String(formData.get('nombre') || '').trim();
@@ -292,6 +323,35 @@
     if (!message) {
       setFieldError('mensaje', 'Escribe un mensaje.');
       setStatus('Revisa los campos marcados.', 'error');
+    const nameInput = form.querySelector('#nombre');
+    const emailInput = form.querySelector('#email');
+    const messageInput = form.querySelector('#mensaje');
+
+    const name = String(nameInput?.value || '').trim();
+    const email = String(emailInput?.value || '').trim();
+    const message = String(messageInput?.value || '').trim();
+    let isValid = true;
+
+    if (!name) {
+      setFieldHint(nameInput, 'Por favor ingresa tu nombre.');
+      isValid = false;
+    }
+    if (!email) {
+      setFieldHint(emailInput, 'Por favor ingresa tu correo.');
+      isValid = false;
+    } else if (!validateEmail(email)) {
+      setFieldHint(emailInput, 'Ingresa un correo válido.');
+      isValid = false;
+    }
+    if (!message) {
+      setFieldHint(messageInput, 'Escribe un mensaje para enviar.');
+      isValid = false;
+    }
+
+    if (!isValid) {
+      const firstInvalid = form.querySelector('[aria-invalid="true"]');
+      firstInvalid?.focus();
+      setStatus('Corrige los campos marcados.', 'error');
       return;
     }
 
@@ -304,6 +364,7 @@
       headers: {
         Accept: 'application/json'
       }
+      headers: { Accept: 'application/json' }
     })
       .then((response) => {
         setLoading(false);
@@ -313,6 +374,16 @@
           clearFormErrors();
         } else {
           setStatus('Oops! Hubo un problema al enviar. Intenta más tarde.', 'error');
+          hints.forEach((h) => (h.textContent = ''));
+          if (successAnim) {
+            successAnim.hidden = false;
+            successAnim.classList.add('is-visible');
+          }
+        } else {
+          return response.json().then((data) => {
+            const msg = data?.errors?.map((err) => err.message).join(', ');
+            setStatus(msg || 'Oops! Hubo un problema al enviar. Intenta más tarde.', 'error');
+          }).catch(() => setStatus('Oops! No pudimos procesar la respuesta.', 'error'));
         }
       })
       .catch(() => {
@@ -358,4 +429,7 @@
     submitBtn.disabled = isLoading;
     submitBtn.textContent = isLoading ? 'Enviando...' : 'Enviar mensaje';
   }
+  form?.querySelectorAll('input, textarea').forEach((el) => {
+    el.addEventListener('input', () => setFieldHint(el, ''));
+  });
 })();

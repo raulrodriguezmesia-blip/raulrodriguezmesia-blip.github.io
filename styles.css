@@ -75,6 +75,19 @@ main,
   z-index: 1;
 }
 
+/* Fondo sutil tecnológico */
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  content: "";
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: linear-gradient(to bottom, black, transparent 80%);
+}
+
 a {
   color: inherit;
 }
@@ -388,30 +401,6 @@ pre {
   background: rgba(15, 23, 42, 0.9);
 }
 
-.orbit {
-  position: absolute;
-  border: 1px solid rgba(79, 140, 255, 0.22);
-  border-radius: 999px;
-  filter: blur(0.2px);
-}
-
-.orbit-one {
-  width: 430px;
-  height: 430px;
-  top: 18%;
-  right: 8%;
-  animation: float 7s ease-in-out infinite;
-}
-
-.orbit-two {
-  width: 260px;
-  height: 260px;
-  right: 22%;
-  bottom: 8%;
-  border-color: rgba(155, 92, 255, 0.22);
-  animation: float 8s ease-in-out infinite reverse;
-}
-
 /* ===== Stats ===== */
 .stats {
   display: grid;
@@ -557,6 +546,136 @@ pre {
   border-radius: 16px;
   background: linear-gradient(135deg, rgba(79, 140, 255, 0.18), rgba(155, 92, 255, 0.18));
   font-size: 1.35rem;
+}
+
+.project-card.featured {
+  border: 1px solid rgba(155, 92, 255, 0.6);
+  background: linear-gradient(160deg, rgba(155, 92, 255, 0.18), rgba(79, 140, 255, 0.08), var(--surface));
+  box-shadow:
+    0 0 0 1px rgba(155, 92, 255, 0.25),
+    0 0 30px rgba(155, 92, 255, 0.18),
+    0 24px 80px rgba(0, 0, 0, 0.45);
+  transform: scale(1.02);
+  z-index: 2;
+  grid-column: span 2;
+}
+
+.project-card.featured .project-badge {
+  background: rgba(155, 92, 255, 0.22);
+  border-color: rgba(155, 92, 255, 0.6);
+  color: #e9d5ff;
+  font-weight: 900;
+}
+
+.project-card.featured .project-link {
+  color: #c084fc;
+  font-weight: 900;
+}
+
+.project-card.featured .project-link:hover {
+  color: #f3e8ff;
+  text-shadow: 0 0 12px rgba(192, 132, 252, 0.6);
+}
+
+/* ===== Featured Project (Eros) ===== */
+.featured-project-section {
+  padding-top: 2rem;
+}
+
+.featured-project-section .section-heading.center {
+  text-align: center;
+  margin-inline: auto;
+}
+
+.featured-project-card {
+  margin-top: 1.5rem;
+  padding: clamp(1.5rem, 4vw, 2.75rem);
+  border: 1px solid rgba(155, 92, 255, 0.55);
+  border-radius: calc(var(--radius) + 10px);
+  background:
+    radial-gradient(circle at top right, rgba(155, 92, 255, 0.22), transparent 45%),
+    linear-gradient(160deg, rgba(79, 140, 255, 0.12), rgba(155, 92, 255, 0.08), var(--surface));
+  box-shadow:
+    0 0 0 1px rgba(155, 92, 255, 0.25),
+    0 0 40px rgba(155, 92, 255, 0.18),
+    0 24px 80px rgba(0, 0, 0, 0.45);
+}
+
+.featured-project-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.featured-project-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.hero-badge {
+  background: rgba(155, 92, 255, 0.22);
+  border-color: rgba(155, 92, 255, 0.55);
+  color: #e9d5ff;
+  font-weight: 900;
+}
+
+.featured-project-card h3 {
+  margin: 0;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  line-height: 1.15;
+}
+
+.featured-project-description {
+  max-width: 960px;
+  margin: 0 0 2rem;
+  color: var(--muted);
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  line-height: 1.7;
+}
+
+.featured-project-body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.featured-project-col h4 {
+  margin: 0 0 0.7rem;
+  font-size: 1.05rem;
+}
+
+.featured-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.featured-project-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.featured-project-note {
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 980px) {
+  .featured-project-body {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ===== Projects ===== */
@@ -986,24 +1105,8 @@ pre {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
+  html {
     scroll-behavior: auto !important;
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-}
-
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-18px);
   }
 }
 
