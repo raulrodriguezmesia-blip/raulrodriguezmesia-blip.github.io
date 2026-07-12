@@ -1,0 +1,56 @@
+name: "Java CI Composite"
+description: "Build and test Java projects with Maven, supporting multiple JDK versions."
+inputs:
+  java-version:
+    description: "JDK version to use (e.g., 17, 21)"
+    required: true
+    type: string
+  maven-command:
+    description: "Maven command to run (e.g., verify, clean test, compile)"
+    required: false
+    default: "verify"
+  cache-dependency-path:
+    description: "Path to pom.xml for Maven cache"
+    required: false
+    default: "pom.xml"
+  working-directory:
+    description: "Directory containing the Maven project"
+    required: false
+    default: "."
+  run-coverage:
+    description: "Whether to run JaCoCo coverage report"
+    required: false
+    default: "false"
+runs:
+  using: "composite"
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up JDK ${{ inputs.java-version }}
+      uses: actions/setup-java@v4
+      with:
+        java-version: ${{ inputs.java-version }}
+        distribution: "temurin"
+        cache: "maven"
+        cache-dependency-path: ${{ inputs.working-directory }}/${{ inputs.cache-dependency-path }}
+
+    - name: Run Maven ${{ inputs.maven-command }}
+      working-directory: ${{ inputs.working-directory }}
+      run: mvn -B ${{ inputs.maven-command }}
+      shell: bash
+
+    - name: Generate JaCoCo coverage report
+      if: ${{ inputs.run-coverage == 'true' }}
+      working-directory: ${{ inputs.working-directory }}
+      run: mvn -B jacoco:report
+      shell: bash
+
+    - name: Upload JaCoCo coverage to Codecov
+      if: ${{ inputs.run-coverage == 'true' }}
+      uses: codecov/codecov-action@v4
+      with:
+        files: ${{ inputs.working-directory }}/target/site/jacoco/jacoco.xml
+        flags: java
+        fail_ci_if_error: false
+        token: ${{ inputs.codecov-token || '' }}

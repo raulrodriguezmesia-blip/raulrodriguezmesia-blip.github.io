@@ -1,0 +1,64 @@
+name: Reusable Java CI
+
+on:
+  workflow_call:
+    inputs:
+      java-versions:
+        description: "List of Java versions to test against"
+        required: false
+        type: string
+        default: '["17", "21"]'
+      maven-command:
+        description: "Maven command to run"
+        required: false
+        type: string
+        default: "verify"
+      run-coverage:
+        description: "Enable JaCoCo coverage reporting"
+        required: false
+        type: boolean
+        default: false
+      working-directory:
+        description: "Project directory"
+        required: false
+        type: string
+        default: "."
+      codecov-token:
+        description: "Codecov token for coverage uploads"
+        required: false
+        type: string
+        default: ""
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java-version: ${{ fromJson(inputs.java-versions) }}
+    steps:
+      - name: Run Java CI
+        uses: ./.github/actions/java-ci
+        with:
+          java-version: ${{ matrix.java-version }}
+          maven-command: ${{ inputs.maven-command }}
+          working-directory: ${{ inputs.working-directory }}
+          run-coverage: ${{ inputs.run-coverage }}
+          codecov-token: ${{ inputs.codecov-token }}
+
+  coverage-summary:
+    needs: build
+    if: ${{ inputs.run-coverage && github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download coverage reports
+        uses: actions/upload-artifact/upload@v4
+        with:
+          name: coverage-reports
+          path: ${{ inputs.working-directory }}/target/site/jacoco/
+
+      - name: Comment coverage on PR
+        if: ${{ github.event_name == 'pull_request' }}
+        uses: madrapps/jacoco-reporter@v0.3
+        with:
+          paths: ${{ inputs.working-directory }}/target/site/jacoco/jacoco.xml
+          token: ${{ github.token }}

@@ -1,0 +1,76 @@
+name: Reusable Python CI
+
+on:
+  workflow_call:
+    inputs:
+      python-versions:
+        description: "List of Python versions to test against"
+        required: false
+        type: string
+        default: '["3.11", "3.12"]'
+      working-directory:
+        description: "Project directory"
+        required: false
+        type: string
+        default: "."
+      requirements-file:
+        description: "Path to requirements.txt"
+        required: false
+        type: string
+        default: "requirements.txt"
+      test-command:
+        description: "Command to run tests"
+        required: false
+        type: string
+        default: "pytest -v --cov --cov-report=xml"
+      lint-command:
+        description: "Linter command (empty to skip)"
+        required: false
+        type: string
+        default: "ruff check ."
+      coverage-file:
+        description: "Path to coverage XML file"
+        required: false
+        type: string
+        default: "coverage.xml"
+      codecov-token:
+        description: "Codecov token for coverage uploads"
+        required: false
+        type: string
+        default: ""
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ${{ fromJson(inputs.python-versions) }}
+    steps:
+      - name: Run Python CI
+        uses: ./.github/actions/python-ci
+        with:
+          python-version: ${{ matrix.python-version }}
+          working-directory: ${{ inputs.working-directory }}
+          requirements-file: ${{ inputs.requirements-file }}
+          test-command: ${{ inputs.test-command }}
+          lint-command: ${{ inputs.lint-command }}
+          coverage-file: ${{ inputs.coverage-file }}
+          codecov-token: ${{ inputs.codecov-token }}
+
+  coverage-summary:
+    needs: lint-and-test
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download coverage reports
+        uses: actions/download-artifact@v4
+        with:
+          name: coverage-reports
+          path: ${{ inputs.working-directory }}/coverage/
+
+      - name: Comment coverage on PR
+        if: ${{ github.event_name == 'pull_request' }}
+        uses: madrapps/jacoco-reporter@v0.3
+        with:
+          paths: ${{ inputs.working-directory }}/${{ inputs.coverage-file }}
+          token: ${{ github.token }}
