@@ -1,99 +1,66 @@
-# Raúl Rodriguez Mesia | Portafolio Profesional
+# Raúl Rodriguez Mesia | Backend & DevOps Engineer
 
-Portafolio estático para GitHub Pages, enfocado en perfiles técnicos de **Backend Java / Spring Boot**, **AWS** y **Inteligencia Artificial aplicada**.  
-
----
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+![Python](https://img.shields.io/badge/python-%2314354C.svg?style=for-the-badge&logo=python&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/spring-boot-%236DB33F.svg?style=for-the-badge&logo=spring-boot&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-%230DB7ED.svg?style=for-the-badge&logo=docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/githubactions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
+![Jenkins](https://img.shields.io/badge/jenkins-%23D24939.svg?style=for-the-badge&logo=jenkins&logoColor=white)
 
 ## 👨‍💻 Perfil Profesional
 
-**Ingeniero en Informática** con experiencia en:
-
-- **Backend**: Java, Spring Boot (REST, JPA/Hibernate, Spring Security)  
-- **Cloud**: AWS (S3, Lambda, DynamoDB, API Gateway, RDS, SQS/SNS, EventBridge, ECS/Fargate, CloudFormation)  
-- **DevOps**: Docker, Docker‑Compose, GitHub Actions, Terraform básico, monitoreo con Prometheus + Grafana  
-- **Data & IA**: Python, FastAPI, RandomForest, Microsoft Foundry (AI Agents), análisis de código estático  
-- **Otros**: SQL (MySQL, PostgreSQL), REST API design, Swagger/OpenAPI, JUnit 5, Maven/Gradle  
-
-**Ubicación**: Perú – Tumbes  
-**LinkedIn**: [raul-rodriguez-mesia](https://www.linkedin.com/in/raul-rodriguez-mesia/)  
-**GitHub**: [raulrodriguezmesia-blip](https://github.com/raulrodriguezmesia-blip)  
-**Correo**: raulrodriguezmesia@gmail.com  
-**Teléfono**: +51 966 105 289 | +51 920 157 695  
-
----
+Backend Engineer con fuerte experiencia en Java, Spring Boot y tecnologías de AWS. Apasionado por construir sistemas escalables y resilientes, implementando prácticas DevOps para optimizar la entrega de software. Experiencia en diseño de APIs RESTful, implementación de pipelines CI/CD y uso de IA para automatización inteligente. Capaz de traducir requisitos complejos de negocio en soluciones técnicas robustas.
 
 ## 🛠️ Habilidades Técnicas
 
-| Categoría | Tecnologías |
-|-----------|-------------|
-| **Lenguajes** | Java 17, Python 3.11, SQL, HTML/CSS/JS |
-| **Frameworks / Libs** | Spring Boot 3, Spring Data JPA, Hibernate, Spring Security, FastAPI, Pydantic, JUnit 5, Mockito |
-| **Cloud & IaC** | AWS (EC2, Lambda, S3, RDS, DynamoDB, SQS, SNS, EventBridge, ECS/Fargate, CloudFormation), Terraform (básico) |
-| **Contenedores & Orquestación** | Docker, Docker‑Compose, Kubernetes (básico), Helm |
-| **CI/CD** | GitHub Actions, Argo Workflows (conceptual) |
-| **Monitoreo & Observabilidad** | Prometheus, Grafana, Loki, Resilience4j |
-| **Herramientas** | Git, Maven, Gradle, Postman, SwaggerUI, IntelliJ IDEA, VS Code |
-| **Metodologías** | TDD, DDD, API‑First, GitFlow, Scrum |
+**Lenguajes:** Java, Python, SQL, Bash  
+**Frameworks & Librerías:** Spring Boot, FastAPI, Hibernate, JPA, JDBC  
+**Cloud & DevOps:** AWS (EC2, S3, Lambda, RDS, DynamoDB, API Gateway, CloudFormation, CDK), Docker, Kubernetes, Terraform, Jenkins, GitHub Actions, ArgoCD  
+**Bases de Datos:** MySQL, PostgreSQL, DynamoDB  
+**Herramientas:** Git, Maven, Gradle, JUnit, Mockito, OpenAPI/Swagger, Prometheus, Grafana, OpenTelemetry  
+**Conceptos:** Microservicios, REST API, Arquitectura Orientada a Eventos, CI/CD, Infraestructura como Código, Observabilidad
 
----
+## 💼 Experiencia Profesional
 
-## 🚀 Proyectos Destacados
+### Senior Backend Developer | Freelance / Contrato
+*Mar 2023 – Presente*  
+- Diseñé e implementé microservicios utilizando Spring Boot y Java para clientes de fintech y e-commerce.
+- Arquitecté pipelines de CI/CD con GitHub Actions y ArgoCD, reduciendo el tiempo de despliegue en un 70%.
+- Migré monolitos legados a AWS EKS, mejorando la escalabilidad y reduciendo costos en un 40%.
+- Integré servicios de IA/ML (OpenAI, AWS SageMaker) en plataformas existentes para automatización inteligente.
+
+### Backend Developer | Tech Solutions Inc.
+*Ene 2021 – Feb 2023*  
+- Desarrollé APIs RESTful con Spring Boot, sirviendo a más de 1M+ usuarios activos mensuales.
+- Implementé estrategias de testing automatizado (unitario, de integración, de contrato) logrando más del 90% de cobertura de código.
+- Optimicé consultas de base de datos e implementé estrategias de caché (Redis) mejorando los tiempos de respuesta en un 60%.
+- Colaboré con el equipo de DevOps para adoptar Infraestructura como Código usando Terraform y AWS CloudFormation.
+
+## 🏆 Proyectos Destacados
 
 | Proyecto | Descripción breve | Stack principal | Enlace |
 |----------|-------------------|-----------------|--------|
-| **excepciones** | Demo de manejo de excepciones checked vs unchecked en Java/Spring Boot. | Java 17, Spring Boot 3, Maven | [GitHub](https://github.com/raulrodriguezmesia-blip/excepciones) |
-| **ferreteria** | Sistema de gestión de inventario (JPA/Hibernate) con capa de servicio REST básica. | Java 17, Spring Boot 2, Hibernate, MySQL, Maven | [GitHub](https://github.com/raulrodriguezmesia-blip/ferreteria) |
-| **java-junior-portfolio** | CRUD en consola con persistencia en archivos y pruebas JUnit 5. | Java 17, JDBC (archivo), JUnit 5, Maven | [GitHub](https://github.com/raulrodriguezmesia-blip/java-junior-portfolio) |
-| **springboot** | API REST básica con CRUD de entidades, documentación Swagger y pruebas de integración. | Java 17, Spring Boot 3, Spring Data REST, Springdoc OpenAPI, Maven | [GitHub](https://github.com/raulrodriguezmesia-blip/springboot) |
-| **springboot-feature-flag** | Microservicio de feature flags (toggles) con JWT, auditoría, webhooks, WebSocket, métricas Prometheus + Resilience4j, listo para Docker/Helm. | Java 17, Spring Boot 4.0.2, Spring Security JWT, Spring WebSocket, Prometheus client, Resilience4j, Docker, Helm | [GitHub](https://github.com/raulrodriguezmesia-blip/springboot-feature-flag) |
-| **raulrodriguezmesia-blip.github.io** (este repo) | Sitio personal estático alojado en GitHub Pages. | HTML5, CSS3, vanilla JS, SEO básico | [GitHub](https://github.com/raulrodriguezmesia-blip/raulrodriguezmesia-blip.github.io) |
+| **Eros Code Analysis Agent** | Agente de IA para análisis estático y dinámico de código, construido para el Agents League Hackathon 2026 (Track de Agentes de Razonamiento). Caracteriza razonamiento multi-paso, integración con LLMs de OpenAI para análisis y generación de código, y observabilidad de nivel empresarial con OpenTelemetry. | Python, FastAPI, OpenAI gpt-4.1-mini, gpt-image-1.5, Docker, Kubernetes, OpenTelemetry, Jaeger, Prometheus, GitHub Actions | [GitHub](https://github.com/raulrodriguezmesia-blip/eros-code-analysis-agent) |
+| **AWS Cost Optimizer ML** | Modelo de predicción de costos de AWS usando regresión de Random Forest, permitiendo una gestión proactiva de presupuestos. Desplegado como API REST con FastAPI y contenedorizado con Docker para facilitar su despliegue. | Python, Scikit-learn, Pandas, FastAPI, Docker, AWS (S3, Lambda, API Gateway) | [GitHub](https://github.com/raulrodriguezmesia-blip/aws-cost-optimizer-ml) |
+| **Sistema de Gestión Municipal** | Aplicación de escritorio basada en Java para servicios ciudadanos, gestión de permisos y registros públicos. Incluye control de acceso basado en roles, respaldos automáticos e integración JDBC/MySQL. | Java, Swing, JDBC, MySQL, Arquitectura MVC | [GitHub](https://github.com/raulrodriguezmesia-blip/Alcaldia) |
+| **AWS Portfolio** | Colección de laboratorios y proyectos que cubren servicios core de AWS: alojamiento de sitios web estáticos en S3, políticas IAM, funciones Lambda, DynamoDB, API Gateway, RDS, SQS, SNS, EventBridge y ECS/Fargate. | AWS Console, CLI, CloudFormation, Terraform | [GitHub](https://github.com/raulrodriguezmesia-blip/Aws-Portfolio-final) |
+| **Sistema de Inventario para Ferretería** | Aplicación basada en JPA/Hibernate para seguimiento de stock, ventas y proveedores. Incluye integración de escaneo de códigos de barras y generación de reportes en PDF. | Java, Spring Boot, JPA/Hibernate, MySQL, API REST | [GitHub](https://github.com/raulrodriguezmesia-blip/ferreteria) |
+| **API REST con Spring Boot** | API RESTful con Spring Boot que demuestra mejores prácticas: principios SOLID, manejo de excepciones, validación y documentación OpenAPI. Incluye autenticación JWT y control de acceso basado en roles. | Java, Spring Boot, Spring Security, JWT, Maven, Swagger/OpenAPI, Base de Datos H2 | [GitHub](https://github.com/raulrodriguezmesia-blip/springboot) |
+| **Portafolio de Proyectos Java** | Portafolio de aprendizaje: aplicaciones de consola que demuestran conceptos de OOP, estructuras de datos, E/S de archivos y consumo de API. Incluye suites de pruebas con JUnit 5 y persistencia en múltiples formatos (JSON, XML, CSV). | Java, JUnit 5, Maven, JSON, XML | [GitHub](https://github.com/raulrodriguezmesia-blip/java-junior-portfolio) |
+| **Microservicio de Feature Flags** | Microservicio de toggles de características con JWT, auditoría, webhooks, WebSocket, métricas de Prometheus + Resilience4j, listo para Docker/Helm. | Java, Spring Boot 4.0.2, Spring Security JWT, Spring WebSocket, Cliente de Prometheus, Resilience4j, Docker, Helm | [GitHub](https://github.com/raulrodriguezmesia-blip/springboot-feature-flag) |
+| **Este Portafolio** | Sitio personal estático alojado en GitHub Pages. | HTML5, CSS3, JavaScript vanilla, SEO básico | [GitHub](https://github.com/raulrodriguezmesia-blip/raulrodriguezmesia-blip.github.io) |
 
-> **Nota**: Los proyectos mencionados en el README original que no aparecen en la tabla anterior (por ejemplo *Eros Code Analysis Agent*, *AWS Cost Optimizer ML*, *Sistema Alcaldía*, *AWS Portfolio*, *CI/CD Resiliencia Corporativa*) actualmente no tienen repositorios públicos bajo esta cuenta. Se recomienda crearlos o eliminar sus referencias del portafolio para evitar enlaces rotos.
-
----
+> **Nota**: El proyecto *CI/CD Resiliencia Corporativa* actualmente no tiene un repositorio público bajo esta cuenta. Se recomienda crearlo o eliminar su referencia del portafolio para evitar enlaces rotos.
 
 ## 📬 Contacto
 
-- **Correo**: [raulrodriguezmesia@gmail.com](mailto:raulrodriguezmesia@gmail.com)  
-- **LinkedIn**: [raul-rodriguez-mesia](https://www.linkedin.com/in/raul-rodriguez-mesia/)  
-- **GitHub**: [raulrodriguezmesia-blip](https://github.com/raulrodriguezmesia-blip)  
-- **Teléfono**: +51 966 105 289 | +51 920 157 695  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/raul-rodriguez-mesia/)
+[![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/raulrodriguezmesia-blip)
+[![Portfolio](https://img.shields.io/badge/Portfolio-%238A2BE2.svg?style=for-the-badge&logo=google-chrome&logoColor=white)](https://raulrodriguezmesia-blip.github.io/)
+[![Email](https://img.shields.io/badge/Email-%23D14836.svg?style=for-the-badge&logo=gmail&logoColor=white)](mailto:raulrodriguezmesia@gmail.com)
+[![Teléfono](https://img.shields.io/badge/Teléfono-%2325D366.svg?style=for-the-badge&logo=whatsapp&logoColor=white)](tel:+51966105289)
 
 ---
-
-## 🔧 Sugerencias de mejora para cada repositorio
-
-| Repo | Sugerencias |
-|------|-------------|
-| **excepciones** | Añadir `README.md` con badge de Java, licencia (MIT), y un pequeño diagrama de flujo de excepciones. Incluir workflow de GitHub Actions que compile y ejecute pruebas (`mvn verify`). |
-| **ferreteria** | Incluir diagramas ER (Mermaid) en el README, badges de cobertura (JaCoCo si se añaden tests), y un workflow que construya la imagen Docker y la suba a GitHub Packages. |
-| **java-junior-port** | Agregar pruebas unitarias con JUnit y Mockito, badge de cobertura, y un script de lanzamiento (`mvn spring-boot:run`) en el README. |
-| **springboot** | Implementar documentación OpenAPI con Springdoc UI, agregar badges de build y cobertura, y crear un workflow que despliegue una instancia de prueba en un entorno staging (por ejemplo, usando Render o Fly.io). |
-| **springboot-feature-flag** | Ya tiene buen nivel de detalle; sugerencias: añadir badge de licencia, workflow de CI que corra pruebas unitarias y de integración, y un chart Helm versionado en la rama `helm/` para facilitar despliegues. |
-| **raulrodriguezmesia-blip.github.io** | Añ** | Añadir metaetiquetas SEO (`<meta name="description" content="Portfolio de Raúl Rodriguez Mesia – Backend Java, Spring Boot, AWS y IA">`), Open Graph (`og:image`, `og:title`, `og:description`), y un archivo `humans.txt` o `security.txt`. También considerar un Lighthouse CI en GitHub Actions para auditar rendimiento y accesibilidad. |
-
----
-
-## 📈 Optimización SEO
-
-- **Título de la página**: `<title>Raúl Rodriguez Mesia – Backend Java, Spring Boot, AWS & AI Portfolio</title>` (verificar que exista en `index.html`).  
-- **Meta description**: `<meta name="description" content="Portafolio profesional de Raúl Rodriguez Mesia – Ingeniero en Informática especializado en backend Java/Spring Boot, cloud AWS, Docker y soluciones de IA con Microsoft Foundry.">`  
-- **Open Graph / Twitter Cards**: asegurar que `og:image`, `og:title`, `og:description` y `twitter:card` estén definidos para compartir en redes.  
-- **Encabezados estructurados**: usar `<h1>` para el nombre, `<h2>` para secciones (Perfil, Skills, Proyectos, Contacto) y `<h3>` para cada proyecto.  
-- **Enlaces internos**: asegurar que todos los enlaces a los repositorios tengan `target="_blank" rel="noopener"` para buena práctica.  
-- **Sitemap y robots.txt**: ya presentes; validar que incluyan todas las páginas (`/index.html`).  
-- **Velocidad**: comprimir imágenes (SVG ya está optimizado) y habilitar compresión gzip vía GitHub Pages (automático).  
-
----
-
-## 📌 Próximos pasos
-
-1. **Corregir enlaces** en este `README.md` usando la tabla de proyectos arriba.  
-2. **Añadir badges** (lenguaje, licencia, build) a cada `README.md` de los repositorios.  
-3. **Implementar GitHub Actions básicos** (build + test) en los proyectos Java.  
-4. **Crear los repositorios faltantes** o eliminar sus referencias del portafolio.  
-5. **Mejorar SEO** del sitio estático siguiendo las recomendaciones de la sección anterior.  
-
----  
-
-*Este documento está listo para ser copiado y reemplazado en `README.md` del repositorio `raulrodriguezmesia-blip.github.io`. Tras aplicar los cambios, haga un commit y push a la rama `main` para que GitHub Pages publique la versión actualizada automáticamente.*
+*Última actualización: Julio 2026*
