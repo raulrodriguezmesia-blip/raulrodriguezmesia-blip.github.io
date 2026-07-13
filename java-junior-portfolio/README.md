@@ -1,4 +1,4 @@
-# 🚀 Java Junior Portfolio - Enterprise Grade
+# 🚀 Backend Showcase - Enterprise Java Portfolio
 
 [![Java 17](https://img.shields.io/badge/Java-17-ED8B00?logo=java&logoColor=white)](https://adoptium.net/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2-6DB33F?logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
@@ -14,7 +14,7 @@
 
 Aplicación **enterprise-grade** de gestión de usuarios que demuestra las mejores prácticas de desarrollo backend con Java 17 y Spring Boot. Incluye arquitectura limpia, patrones de diseño consolidados, observabilidad completa y testing robusto.
 
-> **Nota**: Este proyecto ha sido transformado de un enfoque junior a un enfoque senior, reflejando buenas prácticas profesionales del sector.
+> Un showcase profesional construido para demostrar habilidades de desarrollo backend senior para el mercado español e internacional.
 
 ---
 
