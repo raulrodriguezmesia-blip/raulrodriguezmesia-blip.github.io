@@ -1,4 +1,4 @@
-# 🚀 Recruitment Automation Platform - Enterprise Grade
+# 🚀 Java Junior Portfolio - Enterprise Grade
 
 [![Java 17](https://img.shields.io/badge/Java-17-ED8B00?logo=java&logoColor=white)](https://adoptium.net/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2-6DB33F?logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
@@ -12,7 +12,7 @@
 
 ## 📖 Descripción
 
-Aplicación **enterprise-grade** de automatización de convocatorias laborales que demuestra las mejores prácticas de desarrollo backend con Java 17 y Spring Boot. Incluye arquitectura limpia, patrones de diseño consolidados, observabilidad completa y testing robusto.
+Aplicación **enterprise-grade** de gestión de usuarios que demuestra las mejores prácticas de desarrollo backend con Java 17 y Spring Boot. Incluye arquitectura limpia, patrones de diseño consolidados, observabilidad completa y testing robusto.
 
 > **Nota**: Este proyecto ha sido transformado de un enfoque junior a un enfoque senior, reflejando buenas prácticas profesionales del sector.
 
@@ -93,8 +93,8 @@ graph TD
 
 ```bash
 # 1. Clonar el repositorio
-git clone https://github.com/raulrodriguezmesia-blip/recruitment-automation-platform.git
-cd recruitment-automation-platform
+git clone https://github.com/raulrodriguezmesia-blip/java-junior-portfolio.git
+cd java-junior-portfolio
 
 # 2. Compilar el proyecto
 mvn clean compile
@@ -114,10 +114,10 @@ mvn test jacoco:report
 
 ```bash
 # Construir imagen
-docker build -t recruitment-platform:latest .
+docker build -t java-portfolio:latest .
 
 # Ejecutar contenedor
-docker run -p 8080:8080 recruitment-platform:latest
+docker run -p 8080:8080 java-portfolio:latest
 ```
 
 ---
@@ -244,7 +244,7 @@ El proyecto utiliza GitHub Actions para CI con los siguientes pasos:
 
 ### Badging
 
-[![CI](https://github.com/raulrodriguezmesia-blip/recruitment-automation-platform/actions/workflows/ci.yml/badge.svg)](https://github.com/raulrodriguezmesia-blip/recruitment-automation-platform/actions/workflows/ci.yml)
+[![CI](https://github.com/raulrodriguezmesia-blip/java-junior-portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/raulrodriguezmesia-blip/java-junior-portfolio/actions/workflows/ci.yml)
 
 ---
 

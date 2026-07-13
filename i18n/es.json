@@ -1,0 +1,80 @@
+{
+  "nav": {
+    "inicio": "Inicio",
+    "sobreMi": "Sobre mí",
+    "skills": "Skills",
+    "proyectos": "Proyectos",
+    "experiencia": "Experiencia",
+    "contacto": "Contacto"
+  },
+  "hero": {
+    "eyebrow": "Ingeniero en Informática · Desarrollador Backend / Full Stack",
+    "title": "Construyo soluciones digitales sólidas, escalables y orientadas a resultados.",
+    "description": "Especializado en Java, Spring Boot, APIs REST, bases de datos y desarrollo web. Mi enfoque combina arquitectura limpia, código mantenible y una comunicación clara para convertir ideas en productos útiles.",
+    "viewProjects": "Ver proyectos",
+    "downloadCV": "Descargar CV",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "contact": "Contactar"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "subtitle": "Perfil profesional",
+    "description": "Soy un desarrollador enfocado en crear aplicaciones backend confiables, integraciones limpias y experiencias web funcionales. Me interesa resolver problemas reales con buenas prácticas, documentación clara y tecnología adecuada para cada caso.",
+    "whatIContribute": "Lo que aporto",
+    "contribution1": "Desarrollo backend con Java y Spring Boot.",
+    "contribution2": "Diseño e implementación de APIs REST.",
+    "contribution3": "Modelado de bases de datos relacionales.",
+    "contribution4": "Aplicaciones web responsivas con HTML, CSS y JavaScript.",
+    "contribution5": "Control de versiones con Git y trabajo colaborativo.",
+    "objective": "Objetivo",
+    "objectiveDesc": "Continuar creciendo como desarrollador de software, participar en proyectos desafiantes y aportar soluciones que mejoren procesos, productos y experiencia de usuario."
+  },
+  "skills": {
+    "title": "Skills principales",
+    "subtitle": "Tecnologías"
+  },
+  "projects": {
+    "title": "Proyectos destacados",
+    "subtitle": "Portafolio"
+  },
+  "experience": {
+    "title": "Trayectoria",
+    "subtitle": "Ruta de aprendizaje",
+    "fundamentals": "Fundamentos de programación",
+    "fundamentalsDesc": "Java, lógica, POO, estructuras de control y resolución de problemas.",
+    "backend": "Backend y bases de datos",
+    "backendDesc": "Spring Boot, APIs REST, JPA/Hibernate, SQL y modelado relacional.",
+    "web": "Desarrollo web integral",
+    "webDesc": "HTML semántico, CSS moderno, JavaScript y experiencia de usuario responsiva.",
+    "nextSteps": "Próximos pasos",
+    "nextStepsDesc": "Profundizar en testing, seguridad, cloud, Docker y arquitecturas escalables."
+  },
+  "contact": {
+    "title": "Hablemos de tu próximo proyecto",
+    "description": "Si buscas alguien para apoyar en backend, APIs, mantenimiento de aplicaciones o desarrollo web, puedes escribirme y coordinar una conversación.",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "cv": "CV PDF",
+    "sendMessage": "Enviar mensaje"
+  },
+  "certifications": {
+    "title": "Certificaciones en progreso",
+    "subtitle": "Formación continua",
+    "table": {
+      "certification": "Certificación",
+      "organization": "Organización",
+      "status": "Estado",
+      "estimatedDate": "Fecha estimada"
+    },
+    "awsSolutionsArchitect": "AWS Certified Solutions Architect – Associate",
+    "oracleJava": "Oracle Certified Professional: Java SE 17 Developer",
+    "cka": "Certified Kubernetes Administrator (CKA)",
+    "awsDevOps": "AWS Certified DevOps Engineer – Professional",
+    "gcpCloudArchitect": "Google Professional Cloud Architect",
+    "inProgress": "En curso (práctica)",
+    "inStudy": "En estudio (exámenes)",
+    "planned": "En preparación",
+    "plannedDesc": "Planificado"
+  }
+}

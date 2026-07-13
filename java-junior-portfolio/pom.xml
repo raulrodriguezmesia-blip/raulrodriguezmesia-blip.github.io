@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.raulrodriguez.portfolio</groupId>
-    <artifactId>recruitment-automation-platform</artifactId>
+    <artifactId>java-junior-portfolio</artifactId>
     <packaging>jar</packaging>
     <version>2.0.0</version>
-    <name>recruitment-automation-platform</name>
-    <description>Enterprise-grade recruitment automation platform with clean architecture</description>
-    <url>https://github.com/raulrodriguezmesia-blip/recruitment-automation-platform</url>
+    <name>java-junior-portfolio</name>
+    <description>Enterprise-grade Java portfolio application with clean architecture</description>
+    <url>https://github.com/raulrodriguezmesia-blip/java-junior-portfolio</url>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>

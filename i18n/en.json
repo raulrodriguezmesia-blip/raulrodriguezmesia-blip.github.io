@@ -1,0 +1,80 @@
+{
+  "nav": {
+    "inicio": "Home",
+    "sobreMi": "About Me",
+    "skills": "Skills",
+    "proyectos": "Projects",
+    "experiencia": "Experience",
+    "contacto": "Contact"
+  },
+  "hero": {
+    "eyebrow": "Computer Engineer · Backend / Full Stack Developer",
+    "title": "I build solid, scalable, results-driven digital solutions.",
+    "description": "Specialized in Java, Spring Boot, REST APIs, databases, and web development. My approach combines clean architecture, maintainable code, and clear communication to turn ideas into useful products.",
+    "viewProjects": "View projects",
+    "downloadCV": "Download CV",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Professional Profile",
+    "description": "I am a developer focused on creating reliable backend applications, clean integrations, and functional web experiences. I enjoy solving real-world problems with best practices, clear documentation, and appropriate technology for each case.",
+    "whatIContribute": "What I Bring",
+    "contribution1": "Backend development with Java and Spring Boot.",
+    "contribution2": "Design and implementation of REST APIs.",
+    "contribution3": "Relational database modeling.",
+    "contribution4": "Responsive web applications with HTML, CSS, and JavaScript.",
+    "contribution5": "Version control with Git and collaborative work.",
+    "objective": "Objective",
+    "objectiveDesc": "Continue growing as a software developer, participate in challenging projects, and contribute solutions that improve processes, products, and user experience."
+  },
+  "skills": {
+    "title": "Core Skills",
+    "subtitle": "Technologies"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "Portfolio"
+  },
+  "experience": {
+    "title": "Career Path",
+    "subtitle": "Learning Journey",
+    "fundamentals": "Programming Fundamentals",
+    "fundamentalsDesc": "Java, logic, OOP, control structures, and problem solving.",
+    "backend": "Backend and Databases",
+    "backendDesc": "Spring Boot, REST APIs, JPA/Hibernate, SQL, and relational modeling.",
+    "web": "Integral Web Development",
+    "webDesc": "Semantic HTML, modern CSS, JavaScript, and responsive user experience.",
+    "nextSteps": "Next Steps",
+    "nextStepsDesc": "Deepen knowledge in testing, security, cloud, Docker, and scalable architectures."
+  },
+  "contact": {
+    "title": "Let's Talk About Your Next Project",
+    "description": "If you're looking for someone to support with backend, APIs, application maintenance, or web development, you can write me and coordinate a conversation.",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "cv": "CV PDF",
+    "sendMessage": "Send Message"
+  },
+  "certifications": {
+    "title": "Certifications in Progress",
+    "subtitle": "Continuous Learning",
+    "table": {
+      "certification": "Certification",
+      "organization": "Organization",
+      "status": "Status",
+      "estimatedDate": "Estimated Date"
+    },
+    "awsSolutionsArchitect": "AWS Certified Solutions Architect – Associate",
+    "oracleJava": "Oracle Certified Professional: Java SE 17 Developer",
+    "cka": "Certified Kubernetes Administrator (CKA)",
+    "awsDevOps": "AWS Certified DevOps Engineer – Professional",
+    "gcpCloudArchitect": "Google Professional Cloud Architect",
+    "inProgress": "In Progress (practice)",
+    "inStudy": "In Study (exams)",
+    "planned": "In Preparation",
+    "plannedDesc": "Planned"
+  }
+}

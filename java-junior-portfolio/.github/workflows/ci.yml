@@ -64,7 +64,7 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
-        name: recruitment-platform-${{ github.sha }}
+        name: java-portfolio-${{ github.sha }}
         path: |
           target/*.jar
           target/site/jacoco/
