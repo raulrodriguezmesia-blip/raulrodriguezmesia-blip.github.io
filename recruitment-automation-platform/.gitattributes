@@ -1,0 +1,47 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Java files - always use LF
+*.java text eol=lf
+
+# XML files - always use LF
+*.xml text eol=lf
+
+# YAML files - always use LF
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# Markdown files - always use LF
+*.md text eol=lf
+
+# Properties files - always use LF
+*.properties text eol=lf
+
+# JSON files - always use LF
+*.json text eol=lf
+
+# CSV files - always use LF
+*.csv text eol=lf
+
+# Shell scripts - always use LF
+*.sh text eol=lf
+
+# Batch files - always use CRLF on Windows
+*.bat text eol=crlf
+
+# Executable binaries
+*.dll binary
+*.so binary
+*.exe binary
+
+# Archives
+*.zip binary
+*.tar.gz binary
+*.jar binary
+
+# IDE
+.idea text eol=lf
+*.iml text eol=lf
+
+# Documentation
+docs/** text eol=lf

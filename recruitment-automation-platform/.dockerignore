@@ -1,0 +1,67 @@
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/**/*.class
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Logs
+*.log
+hs_err_pid*
+replay_pid*
+
+# Temporary files
+Null
+*.tmp
+*.temp
+.gitkeep
+
+# Test results
+*.json
+!usuarios.json
+!usuarios.txt
+!usuarios.csv
+data/*.json
+data/*.txt
+data/*.csv
+!data/.gitkeep
+
+# Coverage
+jacoco*.xml
+jacoco/
+site/
+
+# Build artifacts
+*.jar
+*.war
+*.ear
+
+# Documentation
+docs/**
+!**/README.md
+!**/ARCHITECTURE.md
+!**/TESTING.md
+!**/DEPLOYMENT.md
+docs/DEPLOYMENT.md
+docs/ARCHITECTURE.md
+docs/TESTING.md
+
+# Secrets (never commit)
+.env
+.env.local
+*.pem
+*.key

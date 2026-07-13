@@ -1,0 +1,76 @@
+# Maven / Gradle
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/**/*.class
+*.jar
+*.war
+*.ear
+build/
+out/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# OS
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Logs
+*.log
+hs_err_pid*
+replay_pid*
+
+# Temporary files
+Null
+*.tmp
+*.temp
+*.swp
+
+# Environment files and secrets
+.env
+.env.local
+*.pem
+*.key
+.env.*
+!.env.example
+
+# Test artifacts
+*.json
+!usuarios.json
+!usuarios.txt
+!usuarios.csv
+data/*.json
+data/*.txt
+data/*.csv
+!data/.gitkeep
+
+# Coverage reports
+jacoco*.xml
+jacoco/
+site/
+
+# Maven wrapper
+.mvn/wrapper/maven-wrapper.jar
+
+# GitHub
+.github/JOB_PROTECTION_RULES.json
+
+# NetBeans
+nbproject/private/
+nbproject/build-impl.xml
+
+# IntelliJ
+*.iws
+*.iml

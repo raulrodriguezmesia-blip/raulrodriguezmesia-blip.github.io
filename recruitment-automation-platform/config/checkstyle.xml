@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC
+          "-//Checkstyle//Config Checkstyle//Telemetry Server//en"
+          "https://checkstyle.org/config.xml">
+<module name="Checker">
+    <module name="TreeWalker">
+        <!-- Import order -->
+        <module name="ImportOrder">
+            <property name="groups" value="java,javax,org,jakarta"/>
+            <property name="option" value="alphabetical"/>
+        </module>
+
+        <!-- File header -->
+        <module name="Header">
+            <property name="header" value="${project.name} - Enterprise Grade Java Portfolio Application
+ Copyright (c) 2026 Raul Rodriguez Mesia
+ Licensed under MIT License"/>
+        </module>
+
+        <!-- Line length -->
+        <module name="LineLength">
+            <property name="max" value="120"/>
+        </module>
+
+        <!-- Indentation -->
+        <module name="Indentation">
+            <property name="basicOffset" value="4"/>
+            <property name="braceAdjustment" value="0"/>
+            <property name="caseIndent" value="4"/>
+        </module>
+
+        <!-- Whitespace -->
+        <module name="WhitespaceAround">
+            <property name="allowEmptyArrayInitialization" value="true"/>
+        </module>
+
+        <!-- Naming conventions -->
+        <module name="TypeName">
+            <property name="format" value="^[A-Z][a-zA-Z0-9]*$"/>
+        </module>
+
+        <module name="VariableName">
+            <property name="format" value="^[a-z][a-zA-Z0-9]*$"/>
+            <property name="formatTokens" value="FIELD_LITERAL,ENUM_MEMBER"/>
+            <property name="ignorePatterns" value="^_[a-z].*$"/>
+        </module>
+
+        <!-- Method size -->
+        <module name="MethodLength">
+            <property name="max" value="50"/>
+        </module>
+
+        <!-- Line of code -->
+        <module name="LinewrapLimit">
+            <property name="max" value="120"/>
+        </module>
+
+        <!-- Allow @Generated annotation -->
+        <module name="SuppressWithPlainTextCommentFilter">
+            <property name="offCommentFormat" value="CHECKSTYLE_OFF: (.*)"/>
+            <property name="onCommentFormat" value="CHECKSTYLE_ON: (.*)"/>
+            <property name="offTagFormat" value="CHECKSTYLE_OFF: (.*)"/>
+            <property name="onTagFormat" value="CHECKSTYLE_ON: (.*)"/>
+        </module>
+    </module>
+</module>
