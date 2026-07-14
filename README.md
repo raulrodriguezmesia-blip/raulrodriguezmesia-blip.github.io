@@ -29,6 +29,21 @@ Apasionado por la escritura de código limpio, la automatización de ciclos CI/C
 
 ---  
 
+<p align="center">
+  <img src="docs/images/banner.png" alt="Banner profesional" width="100%" />
+</p>
+
+## 🎯 Certificaciones en progreso
+<p align="center">
+  <img src="docs/certs/aws-sa.png" alt="AWS Solutions Architect" width="120"/>
+  <img src="docs/certs/oracle-java.png" alt="Oracle Java SE 17" width="120"/>
+  <img src="docs/certs/cka.webp" alt="Certified Kubernetes Administrator" width="120"/>
+  <img src="docs/certs/gcp-architect.png" alt="Google Cloud Architect" width="120"/>
+  <img src="docs/certs/kra.png" alt="KRA" width="120"/>
+</p>
+
+---  
+
 ## 💼 Experiencia profesional
 
 ### Senior Backend Engineer (Freelance / Contrato)
