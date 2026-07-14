@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/raulrodriguezmesia-blip/raulrodriguezmesia-blip.github.io/raw/main/images/banner.png" alt="Banner profesional" width="100%" />
+  <img src="https://raw.githubusercontent.com/raulrodriguezmesia-blip/raulrodriguezmesia-blip.github.io/main/images/banner.png" alt="Banner profesional" width="100%" />
 </p>
 
 <h1 align="center">🚀 Raúl Rodríguez Mesía</h1>
@@ -32,11 +32,11 @@
 ## 🎯 Certificaciones en progreso
 
 <p align="center">
-  <img src="https://github.com/raulrodriguezmesia-blip/raulrodriguezmesia-blip.github.io/raw/main/certs/aws-sa.png" alt="AWS Solutions Architect" width="140" title="AWS Solutions Architect — ⏳ En curso (2026‑09)"/>
-  <img src="https://github.com/raulrodriguezmesia-blip/raulrodriguezmesia-blip.github.io/raw/main/certs/oracle-java.png" alt="Oracle Java SE 17" width="140" title="Oracle Java SE 17 — ⏳ En curso (2026‑10)"/>
-  <img src="https://github.com/raulrodriguezmesia-blip/raulrodriguezmesia-blip.github.io/raw/main/certs/cka.png" alt="Certified Kubernetes Administrator" width="140" title="CKA — ⏳ En curso (2026‑11)"/>
-  <img src="https://github.com/raulrodriguezmesia-blip/raulrodriguezmesia-blip.github.io/raw/main/certs/gcp-architect.png" alt="Google Cloud Architect" width="140" title="Google Cloud Architect — ⏳ En curso (2027‑01)"/>
-  <img src="https://github.com/raulrodriguezmesia-blip/raulrodriguezmesia-blip.github.io/raw/main/certs/kra.png" alt="KRA" width="140" title="KRA — ⏳ En curso"/>
+  <img src="https://raw.githubusercontent.com/raulrodriguezmesia-blip/raulrodriguezmesia-blip.github.io/main/certs/aws-sa.png" alt="AWS Solutions Architect" width="140" title="AWS Solutions Architect — ⏳ En curso (2026‑09)"/>
+  <img src="https://raw.githubusercontent.com/raulrodriguezmesia-blip/raulrodriguezmesia-blip.github.io/main/certs/oracle-java.png" alt="Oracle Java SE 17" width="140" title="Oracle Java SE 17 — ⏳ En curso (2026‑10)"/>
+  <img src="https://raw.githubusercontent.com/raulrodriguezmesia-blip/raulrodriguezmesia-blip.github.io/main/certs/cka.png" alt="Certified Kubernetes Administrator" width="140" title="CKA — ⏳ En curso (2026‑11)"/>
+  <img src="https://raw.githubusercontent.com/raulrodriguezmesia-blip/raulrodriguezmesia-blip.github.io/main/certs/gcp-architect.png" alt="Google Cloud Architect" width="140" title="Google Cloud Architect — ⏳ En curso (2027‑01)"/>
+  <img src="https://raw.githubusercontent.com/raulrodriguezmesia-blip/raulrodriguezmesia-blip.github.io/main/certs/kra.png" alt="KRA" width="140" title="KRA — ⏳ En curso"/>
 </p>
 
 ---
