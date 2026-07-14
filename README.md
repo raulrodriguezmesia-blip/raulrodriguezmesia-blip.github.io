@@ -2,41 +2,13 @@
   <img src="docs/images/banner.png" alt="Banner profesional" width="100%" />
 </p>
 
-<h1 align="center">🚀 Raúl Rodríguez Mesía</h1>
-<h3 align="center">Backend & DevOps Engineer | Java & Spring Boot | AWS | Docker | Terraform</h3>
-
-<p align="center">
-  📍 Perú (GMT-5) • 🌐 Disponible para trabajo remoto internacional • 📅 Flexibilidad horaria para sincronizar con CET/CEST  
-</p>
-
-<p align="center">
-  <a href="https://raulrodriguezmesia-blip.github.io">
-    <img src="https://img.shields.io/badge/Portafolio-8A2BE2?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portafolio" />
-  </a>
-  <a href="https://linkedin.com/in/raul-rodriguez-mesia-bb8178149">
-    <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-  </a>
-  <a href="https://github.com/raulrodriguezmesia-blip">
-    <img src="https://img.shields.io/badge/GitHub-121011?style=for-the-badge&logo=github" alt="GitHub" />
-  </a>
-  <a href="mailto:raulrodriguezmesia@gmail.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail" alt="Email" />
-  </a>
-  <a href="tel:+51966105289">
-    <img src="https://img.shields.io/badge/Teléfono-25D366?style=for-the-badge&logo=whatsapp" alt="Teléfono" />
-  </a>
-</p>
-
----
-
 ## 🎯 Certificaciones en progreso
-
 <p align="center">
-  <img src="docs/certs/aws-sa.png" alt="AWS Solutions Architect" width="140" title="AWS Solutions Architect — ⏳ En curso (2026‑09)"/>
-  <img src="docs/certs/oracle-java.png" alt="Oracle Java SE 17" width="140" title="Oracle Java SE 17 — ⏳ En curso (2026‑10)"/>
-  <img src="docs/certs/cka.webp" alt="Certified Kubernetes Administrator" width="140" title="CKA — ⏳ En curso (2026‑11)"/>
-  <img src="docs/certs/gcp-architect.png" alt="Google Cloud Architect" width="140" title="Google Cloud Architect — ⏳ En curso (2027‑01)"/>
-  <img src="docs/certs/kra.png" alt="KRA" width="140" title="KRA — ⏳ En curso"/>
+  <img src="docs/certs/aws-sa.png" alt="AWS Solutions Architect" width="120"/>
+  <img src="docs/certs/oracle-java.png" alt="Oracle Java SE 17" width="120"/>
+  <img src="docs/certs/cka.webp" alt="Certified Kubernetes Administrator" width="120"/>
+  <img src="docs/certs/gcp-architect.png" alt="Google Cloud Architect" width="120"/>
+  <img src="docs/certs/kra.png" alt="KRA" width="120"/>
 </p>
 
 ---

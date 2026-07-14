@@ -113,11 +113,13 @@ mvn test jacoco:report
 ### Ejecutar con Docker
 
 ```bash
-# Construir imagen
-docker build -t backend-showcase:latest .
+# Levantar servicios completo (app + Prometheus + Grafana)
+docker-compose up --build -d
 
-# Ejecutar contenedor
-docker run -p 8080:8080 backend-showcase:latest
+# Acceder a la aplicación
+# Frontend: http://localhost:8080
+# Grafana: http://localhost:3001 (admin/admin)
+# Prometheus: http://localhost:9090
 ```
 
 ---
@@ -237,7 +239,7 @@ El proyecto utiliza GitHub Actions para CI con los siguientes pasos:
 │  4. Run static analysis (SpotBugs, Checkstyle)               │
 │  5. Execute unit tests                                       │
 │  6. Generate coverage report                                 │
-│  7. Upload artifacts                                         │
+│  7. Upload artifacts                                           │
 └─────────────────────────────────────────────────────────────┘
 ```
 
