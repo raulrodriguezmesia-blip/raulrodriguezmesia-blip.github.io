@@ -1,14 +1,14 @@
 <p align="center">
-  <img src="https://github.com/raulrodriguezmesia-blip/raulrodriguezmesia-blip.github.io/raw/main/docs/images/banner.png" alt="Banner profesional" width="100%" />
+  <img src="images/banner.png" alt="Banner profesional" width="100%" />
 </p>
 
 ## 🎯 Certificaciones en progreso
 <p align="center">
-  <img src="https://github.com/raulrodriguezmesia-blip/raulrodriguezmesia-blip.github.io/raw/main/docs/certs/aws-sa.png" alt="AWS Solutions Architect" width="120"/>
-  <img src="https://github.com/raulrodriguezmesia-blip/raulrodriguezmesia-blip.github.io/raw/main/docs/certs/oracle-java.png" alt="Oracle Java SE 17" width="120"/>
-  <img src="https://github.com/raulrodriguezmesia-blip/raulrodriguezmesia-blip.github.io/raw/main/docs/certs/cka.png" alt="Certified Kubernetes Administrator" width="120"/>
-  <img src="https://github.com/raulrodriguezmesia-blip/raulrodriguezmesia-blip.github.io/raw/main/docs/certs/gcp-architect.png" alt="Google Cloud Architect" width="120"/>
-  <img src="https://github.com/raulrodriguezmesia-blip/raulrodriguezmesia-blip.github.io/raw/main/docs/certs/kra.png" alt="KRA" width="120"/>
+  <img src="certs/aws-sa.png" alt="AWS Solutions Architect" width="120"/>
+  <img src="certs/oracle-java.png" alt="Oracle Java SE 17" width="120"/>
+  <img src="certs/cka.png" alt="Certified Kubernetes Administrator" width="120"/>
+  <img src="certs/gcp-architect.png" alt="Google Cloud Architect" width="120"/>
+  <img src="certs/kra.png" alt="KRA" width="120"/>
 </p>
 
 ---
