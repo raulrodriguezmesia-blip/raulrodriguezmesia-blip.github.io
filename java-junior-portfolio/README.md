@@ -10,11 +10,11 @@
 
 ---
 
-## 📖 Descripción
+## 📖 Proyecto de Referencia - Backend Engineering
 
-Aplicación **enterprise-grade** de gestión de usuarios que demuestra las mejores prácticas de desarrollo backend con Java 17 y Spring Boot. Incluye arquitectura limpia, patrones de diseño consolidados, observabilidad completa y testing robusto.
+Este repositorio contiene un **showcase profesional** que demuestra competencias avanzadas de desarrollo backend con Java 17 y Spring Boot. El proyecto implementa una arquitectura limpia con patrones de diseño consolidados, testing enterprise y observabilidad completa.
 
-> Un showcase profesional construido para demostrar habilidades de desarrollo backend senior para el mercado español e internacional.
+> Diseñado para evaluación técnica en el mercado español e internacional.
 
 ---
 
@@ -62,8 +62,8 @@ graph TD
 
 | Componente | Tecnología | Versión | Justificación |
 |------------|------------|---------|---------------|
-| **Lenguaje** | Java | 17 (LTS) | Mejor performance, expresividad, Pattern Matching |
-| **Framework** | Spring Boot | 3.2.x | Auto-configuración, Cloud Native |
+| **Lenguaje** | Java | 17 (LTS) | Mejor performance, Pattern Matching, Sealed Classes |
+| **Framework** | Spring Boot | 3.2.x | Auto-configuración, Cloud Native, Jakarta EE 10 |
 | **Build Tool** | Maven | 3.9.x | Dependency management, plugins consolidados |
 | **Testing** | JUnit 5 | 5.10.x | Testing moderno, Extension Model |
 | **Mocking** | Mockito | 5.11.x | Mocking avanzado de objetos |
@@ -114,10 +114,10 @@ mvn test jacoco:report
 
 ```bash
 # Construir imagen
-docker build -t java-portfolio:latest .
+docker build -t backend-showcase:latest .
 
 # Ejecutar contenedor
-docker run -p 8080:8080 java-portfolio:latest
+docker run -p 8080:8080 backend-showcase:latest
 ```
 
 ---
@@ -215,10 +215,9 @@ src/test/java/
 
 | Documento | Descripción |
 |-----------|-------------|
-| [API Documentation](./docs/API.md) | Endpoints y contratos de la API |
 | [Architecture](./docs/ARCHITECTURE.md) | Diagramas y decisiones arquitectónicas |
 | [Testing Guide](./docs/TESTING.md) | Estrategia de testing y coverage |
-| [Deployment](./docs/DEPLOYMENT.md) | Guías de despliegue y CI/CD |
+| [Deployment Guide](./docs/DEPLOYMENT.md) | Guías de despliegue y CI/CD |
 
 ---
 
@@ -248,7 +247,7 @@ El proyecto utiliza GitHub Actions para CI con los siguientes pasos:
 
 ---
 
-## ✅ Definition of Done
+## 📋 Definition of Done
 
 - [x] **Arquitectura limpia** implementada con separación de capas
 - [x] **Código con cobertura >= 80%** (actual: 85%)
@@ -293,11 +292,11 @@ Este proyecto está bajo la licencia **MIT** - ver el archivo [LICENSE](../LICEN
 
 ### Cambios Principales
 
-- ✅ Actualización a Java 17
+- ✅ Actualización a Java 17 LTS
 - ✅ Refactorización con Clean Architecture
 - ✅ Mejora de cobertura de tests (70% → 85%)
 - ✅ Documentación enterprise-ready
-- ✅ CI/CD optimizado
+- ✅ CI/CD optimizado con quality gates
 - ✅ Patrones de diseño consolidados
 - ✅ Logging estructurado
 
@@ -305,6 +304,6 @@ Este proyecto está bajo la licencia **MIT** - ver el archivo [LICENSE](../LICEN
 
 <div align="center">
 
-⭐ **Proyecto profesionalmente construido para demostrar habilidades de desarrollo backend senior** ⭐
+⭐ **Proyecto de referencia para demostrar habilidades de desarrollo backend senior** ⭐
 
 </div>

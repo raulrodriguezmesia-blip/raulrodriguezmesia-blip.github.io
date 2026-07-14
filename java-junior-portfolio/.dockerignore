@@ -12,9 +12,12 @@ target/
 *.swp
 *.swo
 *~
-.DS_Store
+.project
+.classpath
+.settings/
 
 # OS
+.DS_Store
 Thumbs.db
 ehthumbs.db
 Desktop.ini
@@ -28,9 +31,17 @@ replay_pid*
 Null
 *.tmp
 *.temp
-.gitkeep
+*.swp
 
-# Test results
+# Environment files and secrets
+.env
+.env.local
+*.pem
+*.key
+.env.*
+!.env.example
+
+# Test artifacts
 *.json
 !usuarios.json
 !usuarios.txt
@@ -40,28 +51,43 @@ data/*.txt
 data/*.csv
 !data/.gitkeep
 
-# Coverage
+# Coverage reports
 jacoco*.xml
 jacoco/
 site/
+
+# Maven wrapper
+.mvn/wrapper/maven-wrapper.jar
+
+# Docker
+docker-compose.override.yml
+.docker/
+
+# Documentation - keep key docs
+!README.md
+!ARCHITECTURE.md
+!TESTING.md
+!DEPLOYMENT.md
+docs/
+!prometheus/
 
 # Build artifacts
 *.jar
 *.war
 *.ear
 
-# Documentation
-docs/**
-!**/README.md
-!**/ARCHITECTURE.md
-!**/TESTING.md
-!**/DEPLOYMENT.md
-docs/DEPLOYMENT.md
-docs/ARCHITECTURE.md
-docs/TESTING.md
+# Git
+.git/
+.gitignore
+.gitattributes
 
-# Secrets (never commit)
-.env
-.env.local
-*.pem
-*.key
+# GitHub
+.github/
+
+# Dockerfile artifacts
+Dockerfile
+docker-compose.yml
+prometheus/
+
+# Source code
+src/
