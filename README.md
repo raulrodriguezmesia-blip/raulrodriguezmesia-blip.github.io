@@ -1,96 +1,86 @@
-# Raúl Rodríguez Mesía | Backend & DevOps Engineer
-
-📍 Perú (GMT-5) • 🌐 Disponible para trabajo remoto internacional • 📅 Flexibilidad horaria para sincronizar con CET/CEST  
-
-📧 contacto@raulrodriguezmesia.dev  
-
----  
-
-## 🎯 Resumen profesional
-
-Ingeniero en Informática con **más de 5 años** de experiencia especializada en **arquitecturas Java/Spring Boot**, **automatización DevOps** y **diseño de sistemas escalables**. Combino profundo dominio del backend (REST APIs, microservicios, bases de datos) con capacidad de provisionar, monitorizar y operar la infraestructura subyacente (Docker, Kubernetes, AWS). 
-
-Apasionado por la escritura de código limpio, la automatización de ciclos CI/CD y la integración de inteligencia artificial en flujos productivos.  
-
----  
-
-## 🛠️ Stack técnico
-
-| Área                | Tecnologías                                                                 |
-|---------------------|-----------------------------------------------------------------------------|
-| **Lenguajes**       | Java 17, Python, SQL, Bash                                                  |
-| **Backend**         | Spring Boot, Spring Security, JPA/Hibernate, REST, OpenAPI/Swagger          |
-| **Frontend**        | React 18, TypeScript, Vite                                                 |
-| **DevOps / Cloud**  | Docker, Docker‑Compose, Kubernetes, Terraform, AWS (ECS, RDS, Lambda, S3)   |
-| **CI/CD**           | GitHub Actions, ArgoCD, Jenkins                                            |
-| **Observabilidad**  | Spring Boot Actuator, Micrometer, Prometheus, Grafana, OpenTelemetry       |
-| **Bases de datos**  | PostgreSQL, MySQL, DynamoDB                                                |
-| **Testing**         | JUnit 5, Mockito, Testcontainers                                           |
-
----  
-
 <p align="center">
   <img src="docs/images/banner.png" alt="Banner profesional" width="100%" />
 </p>
 
-## 🎯 Certificaciones en progreso
+<h1 align="center">🚀 Raúl Rodríguez Mesía</h1>
+<h3 align="center">Backend & DevOps Engineer | Java & Spring Boot | AWS | Docker | Terraform</h3>
+
 <p align="center">
-  <img src="docs/certs/aws-sa.png" alt="AWS Solutions Architect" width="120"/>
-  <img src="docs/certs/oracle-java.png" alt="Oracle Java SE 17" width="120"/>
-  <img src="docs/certs/cka.webp" alt="Certified Kubernetes Administrator" width="120"/>
-  <img src="docs/certs/gcp-architect.png" alt="Google Cloud Architect" width="120"/>
-  <img src="docs/certs/kra.png" alt="KRA" width="120"/>
+  📍 Perú (GMT-5) • 🌐 Disponible para trabajo remoto internacional • 📅 Flexibilidad horaria para sincronizar con CET/CEST  
 </p>
 
----  
+<p align="center">
+  <a href="https://raulrodriguezmesia-blip.github.io">
+    <img src="https://img.shields.io/badge/Portafolio-8A2BE2?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portafolio" />
+  </a>
+  <a href="https://linkedin.com/in/raul-rodriguez-mesia-bb8178149">
+    <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+  <a href="https://github.com/raulrodriguezmesia-blip">
+    <img src="https://img.shields.io/badge/GitHub-121011?style=for-the-badge&logo=github" alt="GitHub" />
+  </a>
+  <a href="mailto:raulrodriguezmesia@gmail.com">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail" alt="Email" />
+  </a>
+  <a href="tel:+51966105289">
+    <img src="https://img.shields.io/badge/Teléfono-25D366?style=for-the-badge&logo=whatsapp" alt="Teléfono" />
+  </a>
+</p>
 
-## 💼 Experiencia profesional
+---
 
-### Senior Backend Engineer (Freelance / Contrato)
-*Mar 2023 – Presente*  
-- Diseño e implementación de microservicios con **Spring Boot** para fintech y e‑commerce.  
-- Arquitectura y gestión de pipelines CI/CD con **GitHub Actions** y **ArgoCD**, reduciendo tiempos de despliegue en un **70 %**.  
-- Migración de monolitos legacy a **AWS EKS**, mejorando escalabilidad y reduciendo costes en un **40 %**.  
-- Integración de IA/ML (OpenAI, AWS SageMaker) para automatización inteligente de procesos.  
+## 🎯 Certificaciones en progreso
 
-### Backend Engineer
-*Tech Solutions Inc.* — *Ene 2021 – Feb 2023*  
-- Desarrollo de APIs RESTful con **Spring Boot**, sirviendo a más de **1 M+** usuarios mensuales.  
-- Implementación de pruebas automatizadas (unitarias, integración, contrato) alcanzando **>90 %** de cobertura.  
-- Optimización de consultas SQL y cacheo con **Redis**, mejorando tiempos de respuesta en un **60 %**.  
-- Colaboración estrecha con equipos DevOps para adoptar **IaC** mediante **Terraform** y **CloudFormation**.  
+<p align="center">
+  <img src="docs/certs/aws-sa.png" alt="AWS Solutions Architect" width="140" title="AWS Solutions Architect — ⏳ En curso (2026‑09)"/>
+  <img src="docs/certs/oracle-java.png" alt="Oracle Java SE 17" width="140" title="Oracle Java SE 17 — ⏳ En curso (2026‑10)"/>
+  <img src="docs/certs/cka.webp" alt="Certified Kubernetes Administrator" width="140" title="CKA — ⏳ En curso (2026‑11)"/>
+  <img src="docs/certs/gcp-architect.png" alt="Google Cloud Architect" width="140" title="Google Cloud Architect — ⏳ En curso (2027‑01)"/>
+  <img src="docs/certs/kra.png" alt="KRA" width="140" title="KRA — ⏳ En curso"/>
+</p>
 
----  
+---
+
+## ⚡ Skills & Tools
+
+**Java • Spring Boot • AWS • Terraform • Docker • GitHub Actions • Jenkins • Grafana • Prometheus • Linux**
+
+---
+
+## 📊 Impacto
+
+- 🚀 Mejora de disponibilidad de sistemas en **+30%** con observabilidad avanzada.  
+- ⚡ Reducción de latencia en **200ms** aplicando caching distribuido.  
+- 🔒 Implementación de pipelines CI/CD con **Shift-Left Security**.  
+
+---
+
+## 🔥 Lo que estoy construyendo ahora
+
+- Portafolio PWA con i18n + Service Worker  
+- Optimización de costos en AWS con MLflow  
+- Arquitectura hexagonal en proyectos Spring Boot  
+
+---
+
+## 📈 Roadmap público
+
+- [ ] Completar 5 certificaciones  
+- [ ] Migrar proyectos a arquitectura hexagonal  
+- [ ] Optimizar Lighthouse (Perf >90, Acc >95, SEO >95)  
+
+---
 
 ## 📂 Proyectos destacados
 
-| Proyecto | Descripción breve | Stack principal | Enlace |
-|----------|-------------------|-----------------|--------|
-| **Eros Code Analysis Agent** | Agente de IA para análisis estático y dinámico de código, ganador del *Agents League Hackathon 2026* (Track de Razonamiento). Incluye integración con LLMs de OpenAI, OpenTelemetry y Jaeger. | Python, FastAPI, OpenAI gpt‑4.1‑mini, Docker, Kubernetes, Prometheus, Grafana | [GitHub](https://github.com/raulrodriguezmesia-blip/eros-code-analysis-agent) |
-| **AWS Cost Optimizer ML** | Modelo de predicción de costes AWS con Random Forest, expuesto como API REST y contenerizado. | Python, Scikit‑learn, Pandas, FastAPI, Docker, AWS (S3, Lambda) | [GitHub](https://github.com/raulrodriguezmesia-blip/aws-cost-optimizer-ml) |
-| **Microservicio de Feature Flags** | Gestión de toggles de funcionalidad con JWT, auditoría, webhooks, métricas Prometheus y Resilience4j, listo para Docker/Helm. | Java 17, Spring Boot, Spring Security JWT, Spring WebSocket, Resilience4j, Docker, Helm | [GitHub](https://github.com/raulrodriguezmesia-blip/springboot-feature-flag) |
-| **Sistema de Gestión Municipal** | Aplicación desktop Java para servicios ciudadanos, con control de acceso basado en roles y respaldos automáticos. | Java, Swing, JDBC, MySQL, MVC | [GitHub](https://github.com/raulrodriguezmesia-blip/Alcaldia) |
-| **Portafolio de Proyectos Java** | Colección de aplicaciones de consola que demuestran OOP, estructuras de datos y persistencia en JSON/XML/CSV. | Java, JUnit 5, Maven, JSON, XML | [GitHub](https://github.com/raulrodriguezmesia-blip/java-junior-portfolio) |
-| **Portafolio personal** | Sitio estático alojado en GitHub Pages. | HTML5, CSS3, JavaScript vanilla | [GitHub Pages](https://raulrodriguezmesia-blip.github.io/) |
+* 📂 **[Automatización de Convocatorias](https://github.com/raulrodriguezmesia-blip/automatizacion-convocatorias):** Sistema empresarial Fullstack desarrollado con Java 17, Spring Boot y React. Cuenta con arquitectura desacoplada, despliegue automatizado con Docker Compose y observabilidad nativa usando Spring Actuator, Prometheus y Grafana.
 
----  
+* 📂 **[Resilient Feature Flag Manager](https://github.com/raulrodriguezmesia-blip/springboot-feature-flag):** Implementación avanzada de gestión de banderas de funcionalidad optimizada con caché distribuida en Redis para asegurar alta disponibilidad y baja latencia en entornos productivos.
 
-## 🌍 Disponibilidad internacional
+---
 
-- **Modalidad:** Trabajo remoto 100 % (contractor independiente).  
-- **Facturación:** Recibos electrónicos para honorarios (exportación de servicios, sin IVA según normativa peruana).  
-- **Horario:** Total disponibilidad para madrugar y alinear mi jornada con el horario de **Madrid (CET/CEST)**, garantizando 4‑5 h de superposición diaria en tiempo real con equipos técnicos.  
+¡Haz los cambios que consideres necesarios en tu perfil y repositorios! Avísame cuando los tengas listos pasándome el enlace o los textos modificados, y procederé a hacerte la **auditoría técnica final y el informe de preparación para el mercado español**. 
 
----  
-
-## 📬 Contacto
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/raul-rodriguez-mesia/)  
-[![GitHub](https://img.shields.io/badge/GitHub-121011?style=for-the-badge&logo=github)](https://github.com/raulrodriguezmesia-blip)  
-[![Portfolio](https://img.shields.io/badge/Portfolio-8A2BE2?style=for-the-badge&logo=google-chrome)](https://raulrodriguezmesia-blip.github.io/)  
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail)](mailto:raulrodriguezmesia@gmail.com)  
-[![Teléfono](https://img.shields.io/badge/Teléfono-25D366?style=for-the-badge&logo=whatsapp)](tel:+51966105289)  
-
----  
+---
 
 *Última actualización: julio 2026*
