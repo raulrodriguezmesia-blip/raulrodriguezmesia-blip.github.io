@@ -1,129 +1,648 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://formspree.io; script-src 'self' 'unsafe-inline' https://formspree.io; worker-src 'self' blob:; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio Futurista</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Raul Rodriguez Mesia — Senior Java Backend & Agentic AI Engineer</title>
+  <meta name="description" content="Senior Software Engineer specializing in Java/Spring Boot, MCP (Model Context Protocol), Agentic AI, DevOps, and Cloud-Native architectures. Certified Top Talent by Micro1.">
+  <meta name="author" content="Raul Rodriguez Mesia">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --panel: #12121a;
+      --border: #24242f;
+      --text: #e5e7eb;
+      --sub: #9ca3af;
+      --accent: #8b5cf6;
+      --accent2: #06b6d4;
+      --safe: #10b981;
+      --caution: #f59e0b;
+      --danger: #ef4444;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: radial-gradient(ellipse at top, #151521, var(--bg));
+      color: var(--text);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Glassmorphism */
+    .glass {
+      background: rgba(18, 18, 26, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(139, 92, 246, 0.15);
+      border-radius: 16px;
+    }
+    .glass-card {
+      background: rgba(30, 30, 46, 0.5);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+    .glass-card:hover {
+      border-color: rgba(139, 92, 246, 0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px -15px rgba(139, 92, 246, 0.2);
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(10, 10, 15, 0.85); backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+      padding: 16px 0;
+    }
+    .navbar .container { display: flex; justify-content: space-between; align-items: center; }
+    .navbar .logo { font-size: 18px; font-weight: 700; color: var(--text); text-decoration: none; }
+    .navbar .logo span { color: var(--accent); }
+    .navbar nav { display: flex; gap: 24px; }
+    .navbar nav a { color: var(--sub); text-decoration: none; font-size: 13px; font-weight: 500; transition: color 0.2s; }
+    .navbar nav a:hover { color: var(--accent); }
+    .navbar .cta-btn {
+      background: linear-gradient(90deg, #8b5cf6, #a855f7); color: #fff;
+      padding: 8px 18px; border-radius: 999px; font-size: 13px; font-weight: 600;
+      text-decoration: none; transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .navbar .cta-btn:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(139,92,246,0.4); }
+
+    /* Container */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* Hero */
+    .hero { min-height: 100vh; display: flex; align-items: center; padding-top: 80px; position: relative; overflow: hidden; }
+    .hero::before {
+      content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+      background: radial-gradient(circle at 30% 40%, rgba(139,92,246,0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 70% 60%, rgba(6,182,212,0.06) 0%, transparent 50%);
+      animation: float 20s ease-in-out infinite;
+    }
+    @keyframes float { 0%,100% { transform: translate(0,0); } 50% { transform: translate(-2%,2%); } }
+    .hero-content { position: relative; z-index: 1; max-width: 700px; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(139,92,246,0.1); border: 1px solid rgba(139,92,246,0.3);
+      border-radius: 999px; padding: 6px 16px; font-size: 12px; color: #c4b5fd;
+      margin-bottom: 24px; font-family: 'JetBrains Mono', monospace;
+    }
+    .hero-badge .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--safe); animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+    .hero h1 { font-size: clamp(36px, 5vw, 56px); font-weight: 800; line-height: 1.1; margin-bottom: 16px; }
+    .hero h1 .gradient { background: linear-gradient(135deg, #8b5cf6, #06b6d4, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero p { font-size: 18px; color: var(--sub); margin-bottom: 32px; max-width: 600px; }
+    .hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-primary {
+      background: linear-gradient(90deg, #8b5cf6, #a855f7); color: #fff;
+      padding: 12px 28px; border-radius: 999px; font-weight: 600; font-size: 14px;
+      text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; border: none; cursor: pointer;
+    }
+    .btn-primary:hover { transform: scale(1.05); box-shadow: 0 0 30px rgba(139,92,246,0.4); }
+    .btn-secondary {
+      background: rgba(139,92,246,0.1); border: 1px solid rgba(139,92,246,0.3);
+      color: #c4b5fd; padding: 12px 28px; border-radius: 999px; font-weight: 600; font-size: 14px;
+      text-decoration: none; transition: all 0.2s;
+    }
+    .btn-secondary:hover { background: rgba(139,92,246,0.2); border-color: rgba(139,92,246,0.5); }
+    .hero-stats { display: flex; gap: 40px; margin-top: 48px; }
+    .hero-stats .stat { text-align: center; }
+    .hero-stats .stat .number { font-size: 28px; font-weight: 800; color: var(--accent); font-family: 'JetBrains Mono', monospace; }
+    .hero-stats .stat .label { font-size: 11px; color: var(--sub); text-transform: uppercase; letter-spacing: 0.1em; }
+
+    /* Sections */
+    section { padding: 100px 0; }
+    .section-title { font-size: 32px; font-weight: 800; margin-bottom: 8px; }
+    .section-subtitle { font-size: 16px; color: var(--sub); margin-bottom: 48px; max-width: 600px; }
+    .section-label { font-size: 12px; color: var(--accent); text-transform: uppercase; letter-spacing: 0.2em; font-weight: 600; margin-bottom: 8px; font-family: 'JetBrains Mono', monospace; }
+
+    /* About */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .about-text { font-size: 16px; color: var(--sub); line-height: 1.8; }
+    .about-text p { margin-bottom: 16px; }
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 32px; }
+    .skill-card { padding: 20px; }
+    .skill-card .icon { font-size: 24px; margin-bottom: 8px; }
+    .skill-card h4 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+    .skill-card p { font-size: 12px; color: var(--sub); }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+    .skill-tag { font-size: 11px; padding: 4px 10px; border-radius: 999px; background: rgba(139,92,246,0.1); border: 1px solid rgba(139,92,246,0.2); color: #c4b5fd; font-family: 'JetBrains Mono', monospace; }
+
+    /* Projects */
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 24px; }
+    .project-card { padding: 24px; position: relative; overflow: hidden; }
+    .project-card .badge { display: inline-block; font-size: 10px; padding: 3px 10px; border-radius: 999px; margin-bottom: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; }
+    .project-card .badge.flagship { background: rgba(139,92,246,0.2); color: #c4b5fd; border: 1px solid rgba(139,92,246,0.4); }
+    .project-card .badge.ai { background: rgba(6,182,212,0.15); color: #67e8f9; border: 1px solid rgba(6,182,212,0.3); }
+    .project-card .badge.cloud { background: rgba(16,185,129,0.15); color: #6ee7b7; border: 1px solid rgba(16,185,129,0.3); }
+    .project-card .badge.java { background: rgba(245,158,11,0.15); color: #fcd34d; border: 1px solid rgba(245,158,11,0.3); }
+    .project-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .project-card p { font-size: 13px; color: var(--sub); line-height: 1.6; margin-bottom: 16px; }
+    .project-card .tech-stack { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+    .project-card .tech-stack span { font-size: 10px; padding: 3px 8px; border-radius: 6px; background: rgba(255,255,255,0.05); color: #9ca3af; font-family: 'JetBrains Mono', monospace; }
+    .project-card .links { display: flex; gap: 12px; }
+    .project-card .links a { font-size: 12px; color: var(--accent); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+    .project-card .links a:hover { color: #c4b5fd; }
+    .project-card .links a i { margin-right: 4px; }
+
+    /* Experience */
+    .timeline { position: relative; padding-left: 32px; }
+    .timeline::before { content: ''; position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: linear-gradient(180deg, var(--accent), transparent); }
+    .timeline-item { position: relative; margin-bottom: 32px; }
+    .timeline-item::before { content: ''; position: absolute; left: -28px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); border: 2px solid var(--bg); }
+    .timeline-item .date { font-size: 11px; color: var(--accent); font-family: 'JetBrains Mono', monospace; margin-bottom: 4px; }
+    .timeline-item h4 { font-size: 16px; font-weight: 600; margin-bottom: 2px; }
+    .timeline-item .company { font-size: 13px; color: var(--sub); margin-bottom: 8px; }
+    .timeline-item p { font-size: 13px; color: var(--sub); line-height: 1.6; }
+    .timeline-item .tech { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
+    .timeline-item .tech span { font-size: 10px; padding: 2px 8px; border-radius: 4px; background: rgba(139,92,246,0.1); color: #c4b5fd; }
+
+    /* Certifications */
+    .certs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+    .cert-card { padding: 20px; display: flex; align-items: center; gap: 16px; }
+    .cert-card .icon { font-size: 32px; color: var(--accent); }
+    .cert-card h4 { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+    .cert-card p { font-size: 11px; color: var(--sub); }
+
+    /* Contact */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+    .contact-info { display: flex; flex-direction: column; gap: 16px; }
+    .contact-item { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--sub); }
+    .contact-item i { color: var(--accent); width: 20px; }
+    .contact-item a { color: var(--accent); text-decoration: none; }
+    .contact-form input, .contact-form textarea {
+      width: 100%; background: rgba(15,15,23,0.9); border: 1px solid rgba(139,92,246,0.2);
+      border-radius: 8px; padding: 12px 16px; color: var(--text); font-size: 13px;
+      font-family: 'Inter', sans-serif; margin-bottom: 12px; transition: border-color 0.2s;
+    }
+    .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: rgba(139,92,246,0.5); }
+    .contact-form button {
+      background: linear-gradient(90deg, #8b5cf6, #a855f7); color: #fff;
+      border: none; border-radius: 8px; padding: 12px 24px; font-weight: 600; font-size: 13px;
+      cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .contact-form button:hover { transform: scale(1.02); box-shadow: 0 0 20px rgba(139,92,246,0.3); }
+
+    /* Footer */
+    footer { padding: 40px 0; border-top: 1px solid var(--border); text-align: center; }
+    footer p { font-size: 12px; color: var(--sub); }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .hero-stats { gap: 20px; }
+      .navbar nav { display: none; }
+      .projects-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Animations */
+    .fade-in { opacity: 0; transform: translateY(20px); animation: fadeInUp 0.6s ease forwards; }
+    @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+    .delay-4 { animation-delay: 0.4s; }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: rgba(139,92,246,0.3); border-radius: 4px; }
+  </style>
 </head>
 <body>
 
-<header class="hero" role="banner" name="main-header">
-  <div class="hero-content">
-    <h1>Raul Rodriguez Mesia</h1>
-    <p>Ingeniero en Informática & Desarrollador Full Stack</p>
-    <a href="#projects" class="cta-button">Ver Proyectos</a>
-  </div>
-  <div class="hero-image">
-    <img src="assets/img1.jpg" alt="Tecnología futurista">
-  </div>
-</header>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#inicio" class="logo">RR<span>.</span></a>
+      <nav>
+        <a href="#sobre-mi">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#proyectos">Projects</a>
+        <a href="#experiencia">Experience</a>
+        <a href="#contacto">Contact</a>
+      </nav>
+      <a href="https://github.com/raulrodriguezmesia-blip" target="_blank" class="cta-btn">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+    </div>
+  </nav>
 
-<!-- SOLUCIÓN ACCESIBILIDAD: Etiqueta <main> añadida como landmark principal -->
-<main role="main" name="main-content">
-  <section id="about" class="section" name="about-section">
-    <h2>Sobre Mí</h2>
-    <div class="about-content">
-      <img src="assets/img2.jpg" alt="Foto de Raul" class="about-img">
-      <div class="about-text">
-        <p>Desarrollo de aplicaciones backend, APIs REST y sistemas de gestión con Java, Spring Boot y tecnologías web.</p>
-        <div class="skills">
-          <span class="skill-tag">Java</span>
-          <span class="skill-tag">Spring Boot</span>
-          <span class="skill-tag">JavaScript</span>
-          <span class="skill-tag">HTML/CSS</span>
-          <span class="skill-tag">SQL</span>
+  <!-- Hero -->
+  <section class="hero" id="inicio">
+    <div class="container">
+      <div class="hero-content fade-in">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Available for Remote Opportunities
+        </div>
+        <h1>
+          Senior <span class="gradient">Java Backend</span> &<br>
+          Agentic AI Engineer
+        </h1>
+        <p>
+          Software Engineer with 7+ years building enterprise microservices, cloud-native architectures, and AI-powered systems. Specialized in MCP (Model Context Protocol), LangChain, and bridging Java ecosystems with LLM agents. Certified Top Talent by Micro1.
+        </p>
+        <div class="hero-buttons">
+          <a href="#proyectos" class="btn-primary">View Projects</a>
+          <a href="https://github.com/raulrodriguezmesia-blip" target="_blank" class="btn-secondary">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="https://raulrodriguezmesia-blip.github.io/Raul_Rodriguez_Mesia_CV.pdf" target="_blank" class="btn-secondary">
+            <i class="fas fa-file-pdf"></i> Download CV
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="number">7+</div>
+            <div class="label">Years Exp</div>
+          </div>
+          <div class="stat">
+            <div class="number">34</div>
+            <div class="label">Verified Skills</div>
+          </div>
+          <div class="stat">
+            <div class="number">21</div>
+            <div class="label">Repositories</div>
+          </div>
+          <div class="stat">
+            <div class="number">9.5</div>
+            <div class="label">Hackathon Score</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="projects" class="section" name="projects-section">
-    <h2>Proyectos</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <img src="assets/img3.jpg" alt="Sistema de Control de Acceso" class="project-img">
-        <h3>Sistema de Control de Acceso</h3>
-        <p>Aplicación Java con Spring Boot para gestión de acceso y backups.</p>
-        <a href="#" class="project-link">Ver Detalle</a>
-      </div>
-      <div class="project-card">
-        <img src="assets/img1.jpg" alt="Sistema de Ferretería" class="project-img">
-        <h3>Sistema de Ferretería</h3>
-        <p>Gestión de inventario con JPA/Hibernate y interfaz web.</p>
-        <a href="#" class="project-link">Ver Detalle</a>
-      </div>
-      <div class="project-card">
-        <img src="assets/img2.jpg" alt="API REST con Spring Boot" class="project-img">
-        <h3>API REST con Spring Boot</h3>
-        <p>API RESTful completa con documentación Swagger.</p>
-        <a href="#" class="project-link">Ver Detalle</a>
-      </div>
-      <div class="project-card">
-        <img src="assets/img3.jpg" alt="CRUD en Consola" class="project-img">
-        <h3>CRUD en Consola</h3>
-        <p>Proyecto Java Junior para aprender fundamentos de POO.</p>
-        <a href="#" class="project-link">Ver Detalle</a>
+  <!-- About -->
+  <section id="sobre-mi" style="padding: 100px 0;">
+    <div class="container">
+      <div class="section-label">About Me</div>
+      <h2 class="section-title">Building intelligent systems that scale</h2>
+      <p class="section-subtitle">From enterprise Java microservices to AI agentic workflows and 3D tactile visualization dashboards.</p>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Computer Engineer with 7+ years of experience in Java Backend development, Spring Boot microservices, and DevOps engineering. Specialized in bridging enterprise JVM architectures with Artificial Intelligence systems.
+          </p>
+          <p>
+            Certified Top Talent by Micro1 with proven domain expertise in AI evaluation, benchmark calibration, and agentic workflows (LangChain, IDP). Currently specializing in the Model Context Protocol (MCP), designing deterministic tool-calling interfaces, JSON-RPC schema contracts, and SSE/Stdio transport layers to connect enterprise backends with LLM agents.
+          </p>
+          <p>
+            Strong foundation in Kubernetes (AKS), CI/CD automation, and low-latency multithreaded execution. Based in Tumbes, Peru — available for remote opportunities worldwide.
+          </p>
+        </div>
+        <div>
+          <div class="skills-grid">
+            <div class="glass-card skill-card">
+              <div class="icon">☕</div>
+              <h4>Java Backend</h4>
+              <p>Advanced Java, Spring Boot, Spring Cloud, Hexagonal Architecture, Microservices</p>
+              <div class="skill-tags">
+                <span class="skill-tag">Java 17+</span>
+                <span class="skill-tag">Spring Boot</span>
+                <span class="skill-tag">JPA/Hibernate</span>
+                <span class="skill-tag">Microservices</span>
+              </div>
+            </div>
+            <div class="glass-card skill-card">
+              <div class="icon">🤖</div>
+              <h4>Agentic AI & MCP</h4>
+              <p>Model Context Protocol, LangChain, IDP, tool-calling, prompt engineering, LLM evaluation</p>
+              <div class="skill-tags">
+                <span class="skill-tag">MCP</span>
+                <span class="skill-tag">LangChain</span>
+                <span class="skill-tag">OpenAI</span>
+                <span class="skill-tag">Python</span>
+              </div>
+            </div>
+            <div class="glass-card skill-card">
+              <div class="icon">☁️</div>
+              <h4>DevOps & Cloud</h4>
+              <p>Azure (AKS, ACR), AWS, Docker, Kubernetes, Terraform, GitHub Actions, CI/CD</p>
+              <div class="skill-tags">
+                <span class="skill-tag">AKS</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Terraform</span>
+                <span class="skill-tag">GitHub Actions</span>
+              </div>
+            </div>
+            <div class="glass-card skill-card">
+              <div class="icon">🎨</div>
+              <h4>Frontend & 3D</h4>
+              <p>React, Vite, TypeScript, Three.js, Tailwind CSS, WebSocket real-time UI</p>
+              <div class="skill-tags">
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Three.js</span>
+                <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">Tailwind</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="section" name="contact-section">
-    <h2>Contacto</h2>
-    <form id="contact-form" action="https://formspree.io/f/TU_ID_DE_FORMSPREE" method="POST">
-      <input type="text" name="nombre" placeholder="Nombre" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <textarea name="mensaje" placeholder="Mensaje" required></textarea>
-      <button type="submit">Enviar Mensaje</button>
-      <p id="form-status" style="margin-top: 1rem; min-height: 1.5em;"></p>
-    </form>
+  <!-- Projects -->
+  <section id="proyectos" style="padding: 100px 0;">
+    <div class="container">
+      <div class="section-label">Portfolio</div>
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="section-subtitle">Enterprise-grade systems, AI agents, and cloud-native platforms.</p>
+      <div class="projects-grid">
+        <!-- Afferent-Omni (Flagship) -->
+        <div class="glass-card project-card fade-in">
+          <span class="badge flagship">Flagship · Robotics AI</span>
+          <h3>Afferent-Omni</h3>
+          <p>Causal Vision-to-Touch Prior & C2 Control Dashboard. NASA/ESA-grade somatosensorial robotics system with 3D gel deformation, neuromorphic reflex arc (<10ms), acoustic spectrogram, multi-digit topology, and AI copilot. FastAPI + React + Three.js + WebSocket 50Hz.</p>
+          <div class="tech-stack">
+            <span>FastAPI</span><span>React</span><span>Three.js</span><span>WebSocket</span><span>Python</span><span>TypeScript</span><span>Meta SAM 3.1</span>
+          </div>
+          <div class="links">
+            <a href="https://github.com/raulrodriguezmesia-blip/afferent-omni" target="_blank"><i class="fab fa-github"></i> Repository</a>
+          </div>
+        </div>
+
+        <!-- FinGuard -->
+        <div class="glass-card project-card fade-in delay-1">
+          <span class="badge ai">AI · Fintech</span>
+          <h3>FinGuard Agentic Treasury Core</h3>
+          <p>AI agentic adaptive treasury management system powered by Model Context Protocol (MCP). Java/Spring Boot enterprise backend integrated with Python/FastAPI. Features cloud-native microservices, CI/CD with quality gates, and MCP tool-calling.</p>
+          <div class="tech-stack">
+            <span>Java</span><span>Spring Boot</span><span>Python</span><span>FastAPI</span><span>MCP</span><span>Kubernetes</span><span>Azure</span>
+          </div>
+          <div class="links">
+            <a href="https://github.com/raulrodriguezmesia-blip/finguard-agentic-core" target="_blank"><i class="fab fa-github"></i> Repository</a>
+          </div>
+        </div>
+
+        <!-- EROS -->
+        <div class="glass-card project-card fade-in delay-2">
+          <span class="badge ai">AI Agent</span>
+          <h3>EROS Code Analysis Agent</h3>
+          <p>Multi-step reasoning AI agent with Microsoft Foundry IQ integration. 5-phase code analysis: syntax, quality, security (OWASP), performance, refactoring. Top Pick at Agents League Hackathon 2026.</p>
+          <div class="tech-stack">
+            <span>Python</span><span>Microsoft Foundry</span><span>Azure</span><span>AI Agent</span>
+          </div>
+          <div class="links">
+            <a href="https://github.com/raulrodriguezmesia-blip/eros-code-analysis-agent" target="_blank"><i class="fab fa-github"></i> Repository</a>
+          </div>
+        </div>
+
+        <!-- Spring Boot Feature Flag -->
+        <div class="glass-card project-card fade-in delay-3">
+          <span class="badge java">DevOps · Backend</span>
+          <h3>Resilient Feature Flag Manager</h3>
+          <p>Production-ready feature flag service with JWT auth, Redis caching, WebSocket/SSE real-time updates, Prometheus/Grafana observability, CI/CD pipeline, Docker Compose orchestration.</p>
+          <div class="tech-stack">
+            <span>Spring Boot</span><span>Redis</span><span>JWT</span><span>Prometheus</span><span>Docker</span><span>GitHub Actions</span>
+          </div>
+          <div class="links">
+            <a href="https://github.com/raulrodriguezmesia-blip/springboot-feature-flag" target="_blank"><i class="fab fa-github"></i> Repository</a>
+          </div>
+        </div>
+
+        <!-- Automatizacion Convocatorias -->
+        <div class="glass-card project-card fade-in delay-4">
+          <span class="badge cloud">Cloud-Native</span>
+          <h3>Automatización de Convocatorias</h3>
+          <p>Enterprise cloud-native platform for automated calendar convocatorias. OpenTelemetry observability, Istio service mesh, multi-cloud deployment, chaos engineering.</p>
+          <div class="tech-stack">
+            <span>Python</span><span>Istio</span><span>OpenTelemetry</span><span>Kubernetes</span><span>Multi-Cloud</span>
+          </div>
+          <div class="links">
+            <a href="https://github.com/raulrodriguezmesia-blip/automatizacion-convocatorias" target="_blank"><i class="fab fa-github"></i> Repository</a>
+          </div>
+        </div>
+
+        <!-- Campaign Studio -->
+        <div class="glass-card project-card fade-in">
+          <span class="badge ai">AI · Creative</span>
+          <h3>Campaign Studio</h3>
+          <p>AI-powered campaign concept studio with FastAPI + OpenAI (gpt-4.1-mini, gpt-image-1.5). OpenTelemetry observability and enterprise-ready deployment.</p>
+          <div class="tech-stack">
+            <span>FastAPI</span><span>OpenAI</span><span>Python</span><span>OpenTelemetry</span>
+          </div>
+          <div class="links">
+            <a href="https://github.com/raulrodriguezmesia-blip/campaign-studio" target="_blank"><i class="fab fa-github"></i> Repository</a>
+          </div>
+        </div>
+
+        <!-- AWS Cost Optimizer -->
+        <div class="glass-card project-card fade-in">
+          <span class="badge cloud">ML · AWS</span>
+          <h3>AWS Cost Optimizer ML</h3>
+          <p>ML model for AWS cost prediction using RandomForest. R²=0.883 accuracy. REST API for predictions.</p>
+          <div class="tech-stack">
+            <span>Python</span><span>scikit-learn</span><span>RandomForest</span><span>AWS</span>
+          </div>
+          <div class="links">
+            <a href="https://github.com/raulrodriguezmesia-blip/aws-cost-optimizer-ml" target="_blank"><i class="fab fa-github"></i> Repository</a>
+          </div>
+        </div>
+
+        <!-- Spring Boot API -->
+        <div class="glass-card project-card fade-in">
+          <span class="badge java">Backend</span>
+          <h3>Spring Boot REST API</h3>
+          <p>Complete REST API implementation with resource management, HTTP methods, structured responses, and Swagger documentation.</p>
+          <div class="tech-stack">
+            <span>Java</span><span>Spring Boot</span><span>REST</span><span>Swagger</span>
+          </div>
+          <div class="links">
+            <a href="https://github.com/raulrodriguezmesia-blip/springboot" target="_blank"><i class="fab fa-github"></i> Repository</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
-</main>
 
-<footer role="contentinfo" name="main-footer">
-  <p>&copy; 2026 Raul Rodriguez Mesia</p>
-</footer>
+  <!-- Experience -->
+  <section id="experiencia" style="padding: 100px 0;">
+    <div class="container">
+      <div class="section-label">Career</div>
+      <h2 class="section-title">Professional Experience</h2>
+      <p class="section-subtitle">7+ years building enterprise systems, AI evaluation, and cloud-native architectures.</p>
+      <div class="timeline">
+        <div class="timeline-item fade-in">
+          <div class="date">2026 – Present</div>
+          <h4>Senior Software Engineer — AI Evaluation & Agentic Workflows</h4>
+          <div class="company">Alignerr</div>
+          <p>Evaluated and calibrated state-of-the-art LLMs specialized in complex code generation, automated refactoring, and backend software engineering. Designed high-complexity evaluation benchmarks, unit tests, and gold-standard solutions for autonomous coding agents.</p>
+          <div class="tech">
+            <span>Java</span><span>Python</span><span>Agentic Frameworks</span><span>Benchmarking</span><span>Git</span>
+          </div>
+        </div>
+        <div class="timeline-item fade-in">
+          <div class="date">2026 – Present</div>
+          <h4>Senior AI Trainer & Agent Evaluation Specialist</h4>
+          <div class="company">Micro1</div>
+          <p>AI data annotation, model calibration, and technical benchmark evaluations. Evaluated agentic tool execution, operator vs. robotic arm behavior logs, and automated workflows. Contributed to onboarding workflows, rubric definition, and technical validation.</p>
+          <div class="tech">
+            <span>Python</span><span>LangChain</span><span>Kubernetes (AKS)</span><span>Azure DevOps</span><span>CI/CD</span>
+          </div>
+        </div>
+        <div class="timeline-item fade-in">
+          <div class="date">2026</div>
+          <h4>DevOps & Backend Engineer</h4>
+          <div class="company">FinGuard Project</div>
+          <p>Architected end-to-end cloud-native microservices backend with Spring Boot and Kubernetes (AKS). Implemented CI/CD pipelines with Maven, Docker, ACR, GitHub Actions. Configured LoadBalancer, DNS, SSL, health probes.</p>
+          <div class="tech">
+            <span>Spring Boot</span><span>Kubernetes</span><span>Docker</span><span>Azure</span><span>GitHub Actions</span>
+          </div>
+        </div>
+        <div class="timeline-item fade-in">
+          <div class="date">2019 – 2023</div>
+          <h4>Software Engineer / Consultant</h4>
+          <div class="company">Enterprise Backend Development</div>
+          <p>Designed and deployed scalable RESTful APIs and distributed microservices with Java & Spring Boot. Optimized database queries, multithreading, caching layers. Enforced Clean Code, SOLID, unit/integration testing.</p>
+          <div class="tech">
+            <span>Java</span><span>Spring Boot</span><span>SQL</span><span>REST APIs</span><span>Microservices</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<script>
-  const contactForm = document.getElementById('contact-form');
-  const status = document.getElementById('form-status');
+  <!-- Certifications -->
+  <section style="padding: 100px 0;">
+    <div class="container">
+      <div class="section-label">Credentials</div>
+      <h2 class="section-title">Certifications & Achievements</h2>
+      <p class="section-subtitle">Verified skills and professional certifications.</p>
+      <div class="certs-grid">
+        <div class="glass-card cert-card fade-in">
+          <div class="icon"><i class="fas fa-certificate"></i></div>
+          <div>
+            <h4>Micro1 Top Talent</h4>
+            <p>Outstanding Performance in AI Interview & Technical Screening (July 2026) — 34 Verified Skills</p>
+          </div>
+        </div>
+        <div class="glass-card cert-card fade-in delay-1">
+          <div class="icon"><i class="fas fa-award"></i></div>
+          <div>
+            <h4>Agents League 2026 — Top Pick</h4>
+            <p>Reasoning Agents track. EROS Code Analysis Agent — 5-phase code analysis with Microsoft Foundry IQ.</p>
+          </div>
+        </div>
+        <div class="glass-card cert-card fade-in delay-2">
+          <div class="icon"><i class="fas fa-graduation-cap"></i></div>
+          <div>
+            <h4>Bachelor's in Computer Science Engineering</h4>
+            <p>Graduated. Continuous training in ML, Generative AI, Cloud Computing (Coursera, Microsoft Learn, Google Cloud).</p>
+          </div>
+        </div>
+        <div class="glass-card cert-card fade-in delay-3">
+          <div class="icon"><i class="fas fa-shield-alt"></i></div>
+          <div>
+            <h4>GitHub Achievements</h4>
+            <p>Pull Shark (merged PRs) & YOLO (merged without review). 21 public repositories, 19 stars.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const form = e.target;
-    
-    status.textContent = 'Enviando...';
-    status.style.color = 'white';
+  <!-- Contact -->
+  <section id="contacto" style="padding: 100px 0;">
+    <div class="container">
+      <div class="section-label">Contact</div>
+      <h2 class="section-title">Let's build something great</h2>
+      <p class="section-subtitle">Available for remote opportunities worldwide. Specializing in Java Backend, Agentic AI, MCP, and Cloud-Native architectures.</p>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:raulrodriguezmesia@gmail.com">raulrodriguezmesia@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <span>+51 966 1 05 289 / +51 920 1 57 695</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Tumbes, Peru — Available Remote</span>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-github"></i>
+            <a href="https://github.com/raulrodriguezmesia-blip" target="_blank">github.com/raulrodriguezmesia-blip</a>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/raul-rodriguez-mesia/" target="_blank">linkedin.com/in/raul-rodriguez-mesia</a>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-globe"></i>
+            <a href="https://raulrodriguezmesia-blip.github.io/" target="_blank">raulrodriguezmesia-blip.github.io</a>
+          </div>
+        </div>
+        <form class="contact-form" action="https://formspree.io/f/TU_ID_DE_FORMSPREE" method="POST">
+          <input type="text" name="nombre" placeholder="Name" required>
+          <input type="email" name="email" placeholder="Email" required>
+          <textarea name="mensaje" placeholder="Message" rows="5" required></textarea>
+          <button type="submit">Send Message</button>
+          <p id="form-status" style="margin-top: 1rem; min-height: 1.5em; font-size: 12px;"></p>
+        </form>
+      </div>
+    </div>
+  </section>
 
-    fetch(form.action, {
-      method: form.method,
-      body: new FormData(form),
-      headers: {
-        'Accept': 'application/json'
-      }
-    }).then(response => {
-      if (response.ok) {
-        status.textContent = '¡Mensaje enviado! Gracias por contactarme.';
-        status.style.color = '#00ff00';
-        form.reset();
-      } else {
-        response.json().then(data => {
-          if (data.errors) {
-            status.textContent = data.errors.map(err => err.message).join(', ');
-          } else {
-            status.textContent = 'Oops! Hubo un problema al enviar.';
-          }
-          status.style.color = '#ff4444';
-        });
-      }
-    }).catch(error => {
-      status.textContent = 'Error de red. Intenta de nuevo.';
-      status.style.color = '#ff4444';
-      console.error('Error:', error);
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2026 Raul Rodriguez Mesia. Built with passion for next-generation software engineering.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Contact form handler
+    const contactForm = document.getElementById('contact-form');
+    const status = document.getElementById('form-status');
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const form = e.target;
+      status.textContent = 'Sending...';
+      status.style.color = 'white';
+      fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          status.textContent = 'Message sent! Thank you for reaching out.';
+          status.style.color = '#10b981';
+          form.reset();
+        } else {
+          status.textContent = 'Oops! There was a problem sending.';
+          status.style.color = '#ef4444';
+        }
+      }).catch(error => {
+        status.textContent = 'Network error. Please try again.';
+        status.style.color = '#ef4444';
+      });
     });
-  });
-</script>
 
+    // Intersection Observer for fade-in animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => {
+      el.style.animationPlayState = 'paused';
+      observer.observe(el);
+    });
+  </script>
 </body>
 </html>
+PYEOF
